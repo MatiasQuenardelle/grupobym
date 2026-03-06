@@ -79,11 +79,11 @@ export default function GoogleReviews() {
           <span className="text-sm font-medium">Google Reviews</span>
         </a>
         <h2 className="text-3xl font-extrabold text-secondary-700 sm:text-4xl">
-          {STATS.reviews} resenas de 5 estrellas
+          Lo que dicen nuestros pacientes
         </h2>
         <p className="mx-auto mt-3 max-w-lg text-secondary-500">
-          Nuestros pacientes comparten su experiencia. Estas son resenas reales
-          y verificadas de Google.
+          Historias reales de personas que confiaron en nuestro equipo.
+          Todas las resenas son verificadas en Google.
         </p>
 
         {/* Rating badge linking to Google */}
