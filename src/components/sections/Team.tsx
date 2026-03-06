@@ -54,7 +54,7 @@ export default function Team() {
           Abordaje integral
         </p>
         <h2 className="mt-2 text-3xl font-extrabold text-secondary-700 sm:text-4xl">
-          No te acompana un medico. Te acompana un equipo.
+          No te acompaña un médico. Te acompaña un equipo.
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-secondary-500">
           El exito de la cirugia bariatrica depende de un abordaje integral.
