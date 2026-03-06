@@ -96,40 +96,28 @@ export const PROCEDURES = [
 
 export const REVIEWS = [
   {
-    name: "Maria G.",
+    name: "Fannyines Tejerina",
     rating: 5,
-    text: "Excelente profesional. Me cambio la vida. El equipo es increible y el seguimiento post-operatorio es impecable.",
+    text: "Esa intervencion no solo cambio mi cuerpo, sino tambien mi vida entera. Tengo mas energia, puedo hacer actividades que antes no podia y mi calidad de vida ha mejorado de forma increible. Todo esto es gracias a la habilidad del Dr. Pablo Rodriguez como cirujano, a su cuidado y a la confianza que me transmitio en todo momento. Tambien quiero agradecer su trato humano, por escuchar mis dudas y por estar ahi para guiarme en este proceso. Hoy, un ano y cinco meses despues, su trabajo ha tenido un impacto profundo en mi vida. Muchas gracias a todo el increible grupo ByM, nutricionista Fernanda Farias y psicologa Ivana Quiroz.",
     date: "Hace 2 meses",
   },
   {
-    name: "Carlos R.",
+    name: "Alicia",
     rating: 5,
-    text: "Despues de anos luchando con la obesidad, el Dr. Pablo Rodriguez y su equipo me dieron una nueva oportunidad. Baje 45 kilos.",
-    date: "Hace 3 meses",
-  },
-  {
-    name: "Ana L.",
-    rating: 5,
-    text: "Vine desde Paraguay y la experiencia fue excelente. Me ayudaron con toda la logistica. 100% recomendable.",
+    text: "Excelente experiencia con el Grupo ByM y el equipo del Dr. Rodriguez. Desde el primer momento, me senti en buenas manos gracias a la calidez, compromiso y profesionalismo del equipo. Me opere en enero del 2025 y llevo bajados 45 kilos, no solo me despoje de kilos fisicos sino tambien emocionales, ahora me gusta lo que veo y no estoy limitada en mis movimientos. Gracias a Daiana nutri del equipo por su dedicacion en mi seguimiento. Muchas gracias por devolverme a mi y sobre todo la salud! Un gran equipo!",
     date: "Hace 1 mes",
   },
   {
-    name: "Roberto M.",
+    name: "Yanina Mansilla",
     rating: 5,
-    text: "Profesionalismo y calidez humana. El equipo interdisciplinario marca la diferencia. Gracias por todo.",
-    date: "Hace 4 meses",
+    text: "Hace 4 meses tome una de las decisiones mas importantes de mi vida: mi cirugia bariatrica. Fue un cambio completo, no solo fisico, sino tambien mental y emocional. Hoy puedo decir que mejore mi Diabetes tipo 2, mi sobrepeso y, sobre todo, recupere mi confianza. Gracias al mejor cirujano, doc Pablo Rodriguez, por su profesionalismo, humanidad y acompanamiento. A mi nutri, Dai Svoboda, la mejor de todas. A mi psico, Ivana Quiroz, porque no es facil confiar y ella lo logro. Son un equipo tan profesional como humano, y eso hace toda la diferencia. Hoy me miro y no solo veo un cambio fisico... veo fuerza, resiliencia y una nueva oportunidad de vida.",
+    date: "Hace 3 meses",
   },
   {
-    name: "Lucia P.",
+    name: "Talia Wolcoff",
     rating: 5,
-    text: "La mejor decision de mi vida. Baje 50 kilos en un ano. El acompanamiento es constante.",
+    text: "No tengo mas que palabras de agradecimiento para todo el Grupo ByM. Mi hijo volvio a nacer gracias a ustedes. Desde el minuto 1, nos sentimos contenidos y seguros con la decision. Hoy 7 meses despues puedo confirmar que seguimos igual de contenidos y seguros. Muchas gracias Dr Pablo por haber sido el faro que guio el barco a la deriva de mi hijo, hacia un puerto seguro. Gracias a todos los que forman parte de este maravilloso equipo de profesionales.",
     date: "Hace 2 meses",
-  },
-  {
-    name: "Fernando D.",
-    rating: 5,
-    text: "Llegue con muchas dudas y miedos. Hoy, 8 meses despues, soy otra persona. Gracias Dr. Pablo Rodriguez y equipo.",
-    date: "Hace 5 meses",
   },
 ];
 
@@ -174,18 +162,23 @@ export const FAQ_ITEMS = [
 export const TEAM_MEMBERS = [
   {
     name: "Dr. Pablo Rodriguez",
-    role: "Cirujano General, Laparoscopista, Bariatrico y Esofago-Gastroduodenal",
+    role: "Cirujano Bariatrico",
     description: "Lider del equipo. Cirujano general y laparoscopista, especialista en cirugia bariatrica y esofago-gastroduodenal.",
   },
   {
-    name: "Lic. en Nutricion",
+    name: "Lic. Fernanda Farias",
     role: "Nutricionista",
-    description: "Acompanamiento nutricional pre y post-quirurgico. Plan alimentario personalizado.",
+    description: "Acompanamiento nutricional pre y post-quirurgico. Plan alimentario personalizado para cada etapa.",
   },
   {
-    name: "Lic. en Psicologia",
-    role: "Psicologo/a",
-    description: "Apoyo emocional y evaluacion psicologica. Manejo de la relacion con la comida.",
+    name: "Lic. Dai Svoboda",
+    role: "Nutricionista",
+    description: "Seguimiento nutricional dedicado y personalizado. Guia en cada paso del proceso alimentario.",
+  },
+  {
+    name: "Lic. Ivana Quiroz",
+    role: "Psicologa",
+    description: "Apoyo emocional y evaluacion psicologica. Acompanamiento para construir confianza y bienestar.",
   },
   {
     name: "Prof. de Educacion Fisica",
