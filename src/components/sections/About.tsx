@@ -69,9 +69,9 @@ export default function About() {
           <div className="mt-6 space-y-4 text-secondary-600 leading-relaxed">
             <p>
               Cirujano general y laparoscopista, especialista en cirugia
-              bariatrica y esofago-gastroduodenal, el {DOCTOR_NAME} lidera un
-              equipo interdisciplinario comprometido con la salud y el bienestar
-              de cada paciente.
+              bariatrica y esofago-gastroduodenal, el {DOCTOR_NAME} lleva mas
+              de 15 anos ayudando a pacientes a transformar su calidad de vida
+              junto a un equipo interdisciplinario.
             </p>
             <p>
               Formado en las instituciones mas prestigiosas del pais, con

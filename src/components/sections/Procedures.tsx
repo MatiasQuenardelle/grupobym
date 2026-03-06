@@ -50,11 +50,11 @@ export default function Procedures() {
           Nuestros servicios
         </p>
         <h2 className="mt-2 text-3xl font-extrabold text-secondary-700 sm:text-4xl">
-          Procedimientos
+          Encontra el procedimiento adecuado para vos
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-secondary-500">
-          Ofrecemos las tecnicas mas avanzadas en cirugia bariatrica y
-          metabolica, adaptadas a las necesidades de cada paciente.
+          Cada paciente es diferente. Por eso trabajamos con las tecnicas
+          mas avanzadas para encontrar la mejor opcion para tu caso.
         </p>
       </div>
 

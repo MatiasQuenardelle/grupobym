@@ -54,11 +54,12 @@ export default function Team() {
           Abordaje integral
         </p>
         <h2 className="mt-2 text-3xl font-extrabold text-secondary-700 sm:text-4xl">
-          Equipo Interdisciplinario
+          No te acompana un medico. Te acompana un equipo.
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-secondary-500">
           El exito de la cirugia bariatrica depende de un abordaje integral.
-          Nuestro equipo te acompana en cada etapa del proceso.
+          Por eso cada paciente cuenta con profesionales de distintas
+          especialidades en cada etapa del proceso.
         </p>
       </div>
 

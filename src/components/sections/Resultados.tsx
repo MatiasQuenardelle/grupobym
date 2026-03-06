@@ -77,9 +77,9 @@ export default function Resultados() {
           El verdadero exito se mide en calidad de vida
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-secondary-500">
-          El exito de una cirugia bariatrica no se mide en kilos, sino en
-          calidad de vida recuperada. Los cambios reales empiezan cuando el
-          cuerpo sana y la vida vuelve a sentirse propia.
+          Despues de la cirugia, nuestros pacientes experimentan cambios que
+          van mucho mas alla de la balanza. Los cambios reales empiezan cuando
+          el cuerpo sana y la vida vuelve a sentirse propia.
         </p>
       </div>
 

@@ -17,14 +17,16 @@ export default function Hero() {
             Cirugia Bariatrica en Argentina
           </p>
           <h1 className="text-balance text-4xl font-extrabold tracking-tight text-secondary-700 sm:text-5xl lg:text-6xl">
-            La obesidad <span className="text-primary-400">NO</span> se elige.
+            Recupera tu salud, tu energia
             <br />
-            Se trata, se acompana y se puede superar.
+            y tu <span className="text-primary-400">confianza</span>.
           </h1>
-          <p className="mt-6 text-lg text-secondary-500 md:text-xl">
-            Detras de cada cuerpo hay una historia. En GrupoByM te ofrecemos un
-            abordaje integral con un equipo interdisciplinario para transformar
-            tu calidad de vida.
+          <p className="mt-6 text-xl font-medium text-secondary-600 md:text-2xl">
+            Un nuevo comienzo es posible.
+          </p>
+          <p className="mt-4 text-lg text-secondary-500 md:text-xl">
+            En GrupoByM te acompanamos con un equipo interdisciplinario
+            para transformar tu calidad de vida.
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">

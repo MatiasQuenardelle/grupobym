@@ -44,7 +44,7 @@ export default function ContactForm() {
           Contactanos
         </p>
         <h2 className="mt-2 text-3xl font-extrabold text-secondary-700 sm:text-4xl">
-          Solicita tu consulta
+          Da el primer paso
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-secondary-500">
           Completa el formulario y te contactamos por WhatsApp con toda la
