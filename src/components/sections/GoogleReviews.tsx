@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import SectionWrapper from "@/components/ui/SectionWrapper";
-import { REVIEWS, STATS, GOOGLE_MAPS_URL } from "@/lib/constants";
+import { REVIEWS, SHORT_REVIEWS, STATS, GOOGLE_MAPS_URL } from "@/lib/constants";
 
 const avatarColors = [
   "bg-primary-400",
@@ -167,6 +167,36 @@ export default function GoogleReviews() {
             </svg>
           </button>
         </div>
+      </div>
+
+      {/* Short reviews grid */}
+      <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        {SHORT_REVIEWS.map((r, i) => (
+          <a
+            key={r.name}
+            href={GOOGLE_MAPS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex flex-col rounded-xl border border-gray-200/70 bg-white p-4 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-primary-200 hover:shadow-md"
+          >
+            <div className="mb-2 flex items-center gap-2">
+              <div
+                className={`flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full text-xs font-bold text-white ${avatarColors[(i + REVIEWS.length) % avatarColors.length]}`}
+              >
+                {r.name.charAt(0)}
+              </div>
+              <div className="min-w-0 flex-1">
+                <p className="truncate text-xs font-semibold text-secondary-700">
+                  {r.name}
+                </p>
+                <Stars rating={5} />
+              </div>
+            </div>
+            <p className="flex-1 text-xs leading-relaxed text-secondary-500">
+              &ldquo;{r.text}&rdquo;
+            </p>
+          </a>
+        ))}
       </div>
 
       {/* CTA */}

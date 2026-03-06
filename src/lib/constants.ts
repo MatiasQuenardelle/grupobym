@@ -121,6 +121,44 @@ export const REVIEWS = [
   },
 ];
 
+export const SHORT_REVIEWS = [
+  {
+    name: "Daniel Esquivel",
+    text: "Me siento re feliz de haber conocido al Grupo ByM y al Dr. Pablo Rodriguez. Mi recuperacion fue espectacular, cero complicaciones. Voy bajando 67 kilos a la fecha... me cambiaron la vida.",
+    date: "Hace 3 dias",
+  },
+  {
+    name: "Tomy",
+    text: "Excelente atencion! El proceso de la operacion todo con seguimientos, el doc un crack. Hoy a casi 2 anos de la operacion tengo una vida distinta.",
+    date: "Hace 3 dias",
+  },
+  {
+    name: "Rocio Pereyra Wettstein",
+    text: "Este equipo no te hace una cirugia... TE DEVUELVE LA VIDA. Gracias!!!",
+    date: "Hace 3 dias",
+  },
+  {
+    name: "Martha Medina",
+    text: "Gozan de un equipo extremadamente profesionales y con un corazon y trato hacia los pacientes indescriptible. Sumamente conforme con cada consulta y tratamiento. Equipo totalmente recomendable.",
+    date: "Hace 3 dias",
+  },
+  {
+    name: "Luciana",
+    text: "A todo el equipo de BYM: solo tengo gratitud por como me acompanaron en todo el proceso.",
+    date: "Hace 2 dias",
+  },
+  {
+    name: "Maria Jose Bogado",
+    text: "El acompanamiento del equipo es incondicional. Pablo me salvo la vida y me dio una nueva en la que aprendi a cuidarme, a tratarme con carino, a alimentarme mejor. Recupere anos y energia.",
+    date: "Hace 3 dias",
+  },
+  {
+    name: "Myriam Gimenez",
+    text: "Excelente acompanamiento, explicacion, contencion. Todo el equipo medico super preparados para todo. Mejore mi calidad de vida 100%. Eternas gracias Dr Rodriguez y equipo.",
+    date: "Hace 2 dias",
+  },
+];
+
 export const FAQ_ITEMS = [
   {
     question: "Que es la cirugia bariatrica?",
