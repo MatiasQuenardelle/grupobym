@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import {
   getContentBySlug,
@@ -30,6 +31,7 @@ export async function generateMetadata({ params }: Props) {
     description: content.meta.description,
     path: `/blog/${params.slug}`,
     type: "article",
+    ...(content.meta.image && { image: content.meta.image }),
   });
 }
 
@@ -45,6 +47,7 @@ export default function BlogPage({ params }: Props) {
     "@type": "MedicalWebPage",
     headline: content.meta.title,
     description: content.meta.description,
+    ...(content.meta.image && { image: `${SITE_URL}${content.meta.image}` }),
     datePublished: content.meta.date,
     dateModified: content.meta.lastModified || content.meta.date,
     url: `${SITE_URL}/blog/${params.slug}`,
@@ -151,6 +154,18 @@ export default function BlogPage({ params }: Props) {
             </div>
           )}
 
+          {content.meta.image && (
+            <div className="relative mt-8 h-48 w-full overflow-hidden rounded-2xl sm:h-64 md:h-72">
+              <Image
+                src={content.meta.image}
+                alt={content.meta.title}
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          )}
+
           <div className="prose mt-10">
             <MDXRemote source={content.content} />
           </div>
@@ -180,20 +195,32 @@ export default function BlogPage({ params }: Props) {
               <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {relatedPosts.map((post) => (
                   <Link key={post.slug} href={`/blog/${post.slug}`}>
-                    <Card className="h-full group cursor-pointer border border-transparent hover:border-primary-200">
-                      <p className="text-xs text-secondary-400 mb-2">
-                        {new Date(post.date).toLocaleDateString("es-AR", {
-                          year: "numeric",
-                          month: "long",
-                          day: "numeric",
-                        })}
-                      </p>
-                      <h3 className="text-base font-bold text-secondary-700 group-hover:text-primary-400 transition-colors">
-                        {post.title}
-                      </h3>
-                      <p className="mt-1 text-sm text-secondary-500 leading-relaxed line-clamp-2">
-                        {post.description}
-                      </p>
+                    <Card className="h-full group cursor-pointer border border-transparent hover:border-primary-200 overflow-hidden !p-0">
+                      {post.image && (
+                        <div className="relative h-32 w-full">
+                          <Image
+                            src={post.image}
+                            alt={post.title}
+                            fill
+                            className="object-cover"
+                          />
+                        </div>
+                      )}
+                      <div className="p-4">
+                        <p className="text-xs text-secondary-400 mb-2">
+                          {new Date(post.date).toLocaleDateString("es-AR", {
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric",
+                          })}
+                        </p>
+                        <h3 className="text-base font-bold text-secondary-700 group-hover:text-primary-400 transition-colors">
+                          {post.title}
+                        </h3>
+                        <p className="mt-1 text-sm text-secondary-500 leading-relaxed line-clamp-2">
+                          {post.description}
+                        </p>
+                      </div>
                     </Card>
                   </Link>
                 ))}

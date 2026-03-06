@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EBF8FF"/>
+      <stop offset="100%" style="stop-color:#D1EEFC"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3AADE0"/>
+      <stop offset="100%" style="stop-color:#186590"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="900" cy="315" r="200" fill="url(#accent)" opacity="0.08"/>
+  <circle cx="950" cy="280" r="140" fill="url(#accent)" opacity="0.06"/>
+  <!-- Scalpel icon -->
+  <g transform="translate(520, 180)" fill="none" stroke="#3AADE0" stroke-width="3" opacity="0.35">
+    <path d="M80 20 L160 100 L150 110 L70 30 Z" fill="#3AADE0" opacity="0.15"/>
+    <path d="M80 20 L160 100" stroke-linecap="round"/>
+    <path d="M60 40 L50 80 L70 30" stroke-linecap="round"/>
+  </g>
+  <!-- Heart with pulse -->
+  <g transform="translate(700, 220)" opacity="0.2">
+    <path d="M60 30 C60 10, 90 0, 90 25 C90 0, 120 10, 120 30 C120 60, 90 85, 90 85 C90 85, 60 60, 60 30Z" fill="#3AADE0"/>
+    <path d="M30 55 L55 55 L65 35 L75 75 L85 45 L95 55 L150 55" fill="none" stroke="#186590" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <!-- Decorative dots -->
+  <g fill="#3AADE0" opacity="0.12">
+    <circle cx="100" cy="100" r="4"/><circle cx="120" cy="100" r="4"/><circle cx="140" cy="100" r="4"/>
+    <circle cx="100" cy="120" r="4"/><circle cx="120" cy="120" r="4"/><circle cx="140" cy="120" r="4"/>
+    <circle cx="100" cy="140" r="4"/><circle cx="120" cy="140" r="4"/><circle cx="140" cy="140" r="4"/>
+    <circle cx="1060" cy="490" r="4"/><circle cx="1080" cy="490" r="4"/><circle cx="1100" cy="490" r="4"/>
+    <circle cx="1060" cy="510" r="4"/><circle cx="1080" cy="510" r="4"/><circle cx="1100" cy="510" r="4"/>
+    <circle cx="1060" cy="530" r="4"/><circle cx="1080" cy="530" r="4"/><circle cx="1100" cy="530" r="4"/>
+  </g>
+  <!-- Cross medical symbol -->
+  <g transform="translate(180, 350)" opacity="0.15">
+    <rect x="25" y="0" width="30" height="80" rx="5" fill="#3AADE0"/>
+    <rect x="0" y="25" width="80" height="30" rx="5" fill="#3AADE0"/>
+  </g>
+</svg>

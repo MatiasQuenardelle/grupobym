@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F0FFF4"/>
+      <stop offset="100%" style="stop-color:#D1EEFC"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#48BB78"/>
+      <stop offset="100%" style="stop-color:#2B9AD0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="880" cy="300" r="220" fill="url(#accent)" opacity="0.06"/>
+  <circle cx="320" cy="500" r="160" fill="#48BB78" opacity="0.05"/>
+  <!-- Clipboard icon -->
+  <g transform="translate(680, 160)" opacity="0.2">
+    <rect x="20" y="10" width="120" height="160" rx="10" fill="none" stroke="#2B9AD0" stroke-width="4"/>
+    <rect x="50" y="0" width="60" height="25" rx="8" fill="#2B9AD0" opacity="0.3"/>
+    <line x1="45" y1="60" x2="115" y2="60" stroke="#2B9AD0" stroke-width="3" stroke-linecap="round"/>
+    <line x1="45" y1="85" x2="115" y2="85" stroke="#2B9AD0" stroke-width="3" stroke-linecap="round"/>
+    <line x1="45" y1="110" x2="90" y2="110" stroke="#2B9AD0" stroke-width="3" stroke-linecap="round"/>
+    <!-- Checkmarks -->
+    <path d="M38 57 L45 64 L58 51" stroke="#48BB78" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M38 82 L45 89 L58 76" stroke="#48BB78" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <!-- Stethoscope hint -->
+  <g transform="translate(200, 200)" opacity="0.12">
+    <circle cx="40" cy="120" r="30" fill="none" stroke="#2B9AD0" stroke-width="4"/>
+    <path d="M40 90 C40 40, 80 20, 80 60" fill="none" stroke="#2B9AD0" stroke-width="4"/>
+    <circle cx="80" cy="60" r="6" fill="#48BB78"/>
+  </g>
+  <!-- Decorative dots -->
+  <g fill="#2B9AD0" opacity="0.1">
+    <circle cx="100" cy="80" r="4"/><circle cx="120" cy="80" r="4"/><circle cx="140" cy="80" r="4"/>
+    <circle cx="100" cy="100" r="4"/><circle cx="120" cy="100" r="4"/><circle cx="140" cy="100" r="4"/>
+    <circle cx="1060" cy="510" r="4"/><circle cx="1080" cy="510" r="4"/><circle cx="1100" cy="510" r="4"/>
+    <circle cx="1060" cy="530" r="4"/><circle cx="1080" cy="530" r="4"/><circle cx="1100" cy="530" r="4"/>
+  </g>
+</svg>
