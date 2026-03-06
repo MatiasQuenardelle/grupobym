@@ -35,9 +35,8 @@ export const LOCATIONS = [
 
 export const ADDRESS = "Carlos Pellegrini 677, H3500 Resistencia, Chaco";
 
-// TODO: Replace with actual Google Maps URL once available
 export const GOOGLE_MAPS_URL =
-  "https://www.google.com/maps/search/Grupo+ByM+Resistencia+Chaco";
+  "https://www.google.com/maps/place/Grupo+ByM/data=!4m2!3m1!1s0x0:0x9b25ee678b6cf360";
 
 export const SOCIAL_LINKS = {
   instagram: "https://www.instagram.com/grupobymoficial",
