@@ -56,7 +56,6 @@ export const NAV_LINKS = [
   { label: "Inicio", href: "/" },
   { label: "Procedimientos", href: "/#procedimientos" },
   { label: "Resultados", href: "/#resultados" },
-  { label: "Transformaciones", href: "/#transformaciones" },
   { label: "Equipo", href: "/#equipo" },
   { label: "Blog", href: "/#blog" },
   { label: "FAQ", href: "/#faq" },
@@ -98,14 +97,14 @@ export const REVIEWS = [
   {
     name: "Fannyines Tejerina",
     rating: 5,
-    text: "Esa intervencion no solo cambio mi cuerpo, sino tambien mi vida entera. Tengo mas energia, puedo hacer actividades que antes no podia y mi calidad de vida ha mejorado de forma increible. Todo esto es gracias a la habilidad del Dr. Pablo Rodriguez como cirujano, a su cuidado y a la confianza que me transmitio en todo momento. Tambien quiero agradecer su trato humano, por escuchar mis dudas y por estar ahi para guiarme en este proceso. Hoy, un ano y cinco meses despues, su trabajo ha tenido un impacto profundo en mi vida. Muchas gracias a todo el increible grupo ByM, nutricionista Fernanda Farias y psicologa Ivana Quiroz.",
+    text: "Quiero agradecerle de todo corazon por la cirugia bariatrica que me realizo hace un ano y cinco meses. Esa intervencion no solo cambio mi cuerpo, sino tambien mi vida entera. Antes de la cirugia, pasaba por momentos dificiles con mi salud y mi bienestar, pero hoy me siento una persona nueva. Tengo mas energia, puedo hacer actividades que antes no podia y mi calidad de vida ha mejorado de forma increible. Todo esto es gracias a su habilidad como cirujano, a su cuidado y a la confianza que me transmitio en todo momento. Tambien quiero agradecerle por su trato humano, por escuchar mis dudas y por estar ahi para guiarme en este proceso. Saber que contaba con un profesional tan comprometido y amable me dio mucha tranquilidad durante todo el camino. Hoy, un ano y cinco meses despues, quiero que sepa que su trabajo ha tenido un impacto profundo en mi vida y que siempre lo llevare en mi corazon como alguien que me dio una nueva oportunidad. Muchas gracias por todo a ud y al increible grupo ByM, nutricionista Fernanda Farias y psicologa Ivana Quiroz.",
     date: "Hace 2 meses",
     image: "/images/review-fannyines.jpg",
   },
   {
     name: "Alicia",
     rating: 5,
-    text: "Excelente experiencia con el Grupo ByM y el equipo del Dr. Rodriguez. Desde el primer momento, me senti en buenas manos gracias a la calidez, compromiso y profesionalismo del equipo. Me opere en enero del 2025 y llevo bajados 45 kilos, no solo me despoje de kilos fisicos sino tambien emocionales, ahora me gusta lo que veo y no estoy limitada en mis movimientos. Gracias a Daiana nutri del equipo por su dedicacion en mi seguimiento. Muchas gracias por devolverme a mi y sobre todo la salud! Un gran equipo!",
+    text: "Excelente experiencia con el Grupo ByM y el equipo del Dr. Rodriguez. Desde el primer momento, me senti en buenas manos gracias a la calidez, compromiso y profesionalismo del equipo. Gracias a Daiana nutri del equipo por su dedicacion en mi seguimiento. Muchas gracias, por devolverme a mi y sobre todo la salud! Me opere en enero del 2025 y llevo bajados 45 kilos, no solo me despoje de kilos fisicos sino tambien emocionales, ahora me gusta lo que veo y no estoy limitada en mis movimientos. Muchas gracias grupo ByM. Un gran equipo!",
     date: "Hace 1 mes",
     beforeImage: "/images/review-alicia-before.png",
     afterImage: "/images/review-alicia-after.png",
@@ -113,7 +112,7 @@ export const REVIEWS = [
   {
     name: "Yanina Mansilla",
     rating: 5,
-    text: "Hace 4 meses tome una de las decisiones mas importantes de mi vida: mi cirugia bariatrica. Fue un cambio completo, no solo fisico, sino tambien mental y emocional. Hoy puedo decir que mejore mi Diabetes tipo 2, mi sobrepeso y, sobre todo, recupere mi confianza. Gracias al mejor cirujano, doc Pablo Rodriguez, por su profesionalismo, humanidad y acompanamiento. A mi nutri, Dai Svoboda, la mejor de todas. A mi psico, Ivana Quiroz, porque no es facil confiar y ella lo logro. Son un equipo tan profesional como humano, y eso hace toda la diferencia. Hoy me miro y no solo veo un cambio fisico... veo fuerza, resiliencia y una nueva oportunidad de vida.",
+    text: "Hace 4 meses tome una de las decisiones mas importantes de mi vida: mi cirugia bariatrica. Fue un cambio completo, no solo fisico, sino tambien mental y emocional. Hoy puedo decir que mejore mi Diabetes tipo 2, mi sobrepeso y, sobre todo, recupere mi confianza. Nada de esto hubiese sido posible sin Dios, que puso en mi camino a personas maravillosas. Gracias al mejor cirujano, doc Pablo Rodriguez, por su profesionalismo, humanidad, por brindarme esa confianza y seguridad en mi misma, su acompanamiento. A mi nutri, Dai Svoboda, la mejor de todas, por guiarme en cada paso. A mi psico, Ivana Quiroz, porque no es facil confiar, abrir el corazon y contar lo que uno tiene guardado... y ella lo logro. Y Ruth, la mejor secretaria de este equipazo, siempre atenta a todo, recordando laboratorios, consultas, dudas. Son un equipo tan profesional como humano, y eso hace toda la diferencia. Soy una bendecida por estar rodeada de amigos incondicionales y personas que me sostienen en cada etapa. Hoy me miro y no solo veo un cambio fisico... veo fuerza, resiliencia y una nueva oportunidad de vida.",
     date: "Hace 3 meses",
     image: "/images/review-yanina.jpg",
   },
