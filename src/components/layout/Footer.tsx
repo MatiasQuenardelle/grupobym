@@ -1,12 +1,11 @@
 import Link from "next/link";
 import {
   PRACTICE_NAME,
-  PHONE_NUMBER,
   EMAIL,
-  ADDRESS,
   SOCIAL_LINKS,
   NAV_LINKS,
   WHATSAPP_URL,
+  LOCATIONS,
 } from "@/lib/constants";
 
 export default function Footer() {
@@ -50,20 +49,27 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-400">
-              Contacto
+              Turnos y consultas
             </h3>
-            <ul className="space-y-2 text-sm text-gray-300">
-              <li>
-                <a href={`tel:${PHONE_NUMBER.replace(/\s/g, "")}`} className="hover:text-primary-400 transition-colors">
-                  {PHONE_NUMBER}
-                </a>
-              </li>
+            <ul className="space-y-3 text-sm text-gray-300">
+              {LOCATIONS.map((loc) => (
+                <li key={loc.city}>
+                  <p className="font-semibold text-white">{loc.city}</p>
+                  <a
+                    href={`https://wa.me/${loc.whatsapp}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary-400 transition-colors"
+                  >
+                    {loc.phone}
+                  </a>
+                </li>
+              ))}
               <li>
                 <a href={`mailto:${EMAIL}`} className="hover:text-primary-400 transition-colors">
                   {EMAIL}
                 </a>
               </li>
-              <li>{ADDRESS}</li>
             </ul>
           </div>
 

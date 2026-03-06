@@ -6,15 +6,31 @@ export const SITE_DESCRIPTION =
 export const DOCTOR_NAME = "Dr. Pablo Rodriguez";
 export const PRACTICE_NAME = "GrupoByM";
 
-export const WHATSAPP_NUMBER = "5491112345678";
+export const WHATSAPP_RESISTENCIA = "5493625195169";
+export const WHATSAPP_SAENZ_PENA = "5493644222136";
+export const WHATSAPP_NUMBER = WHATSAPP_RESISTENCIA;
 export const WHATSAPP_MESSAGE = "Hola, me gustaria solicitar una consulta sobre cirugia bariatrica.";
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
-export const PHONE_NUMBER = "+54 11 1234-5678";
+export const PHONE_RESISTENCIA = "362 519 5169";
+export const PHONE_SAENZ_PENA = "364 422 2136";
+export const PHONE_NUMBER = PHONE_RESISTENCIA;
 export const EMAIL = "contacto@grupobym.com.ar";
-export const ADDRESS = "Av. Ejemplo 1234, CABA, Argentina";
-export const GOOGLE_MAPS_EMBED =
-  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0168878895463!2d-58.38375908477033!3d-34.60373888045943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDM2JzEzLjUiUyA1OMKwMjInNTcuNSJX!5e0!3m2!1ses-419!2sar!4v1234567890";
+
+export const LOCATIONS = [
+  {
+    city: "Resistencia",
+    phone: PHONE_RESISTENCIA,
+    whatsapp: WHATSAPP_RESISTENCIA,
+  },
+  {
+    city: "Saenz Pena",
+    phone: PHONE_SAENZ_PENA,
+    whatsapp: WHATSAPP_SAENZ_PENA,
+  },
+];
+
+export const ADDRESS = "Resistencia y Saenz Pena, Chaco, Argentina";
 
 export const SOCIAL_LINKS = {
   instagram: "https://www.instagram.com/grupobym",
@@ -33,8 +49,10 @@ export const STATS = {
 export const NAV_LINKS = [
   { label: "Inicio", href: "/" },
   { label: "Procedimientos", href: "/#procedimientos" },
+  { label: "Resultados", href: "/#resultados" },
   { label: "Casos de Exito", href: "/#casos-de-exito" },
   { label: "Equipo", href: "/#equipo" },
+  { label: "Blog", href: "/#blog" },
   { label: "FAQ", href: "/#faq" },
   { label: "Contacto", href: "/#contacto" },
 ];
