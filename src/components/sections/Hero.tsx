@@ -1,5 +1,5 @@
 import Button from "@/components/ui/Button";
-import { WHATSAPP_URL, STATS } from "@/lib/constants";
+import { WHATSAPP_URL } from "@/lib/constants";
 
 export default function Hero() {
   return (
@@ -59,16 +59,16 @@ export default function Hero() {
                 ))}
               </div>
               <span className="text-sm font-semibold text-secondary-600">
-                {STATS.reviews} resenas 5 estrellas
+                50+ resenas 5 estrellas
               </span>
             </div>
             <div className="h-6 w-px bg-gray-300 hidden sm:block" />
             <span className="text-sm font-semibold text-secondary-600">
-              {STATS.surgeries} cirugias exitosas
+              500+ cirugias exitosas
             </span>
             <div className="h-6 w-px bg-gray-300 hidden sm:block" />
             <span className="text-sm font-semibold text-secondary-600">
-              Pacientes de {STATS.countries} paises
+              15+ años de experiencia
             </span>
           </div>
         </div>

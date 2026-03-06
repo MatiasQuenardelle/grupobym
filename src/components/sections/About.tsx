@@ -10,7 +10,7 @@ export default function About() {
         <div className="relative mx-auto w-full max-w-md">
           <div className="relative aspect-[3/4] overflow-hidden rounded-2xl">
             <Image
-              src="/images/dr-pablo-rodriguez.png"
+              src="/images/pablo-rodriguez.png"
               alt={DOCTOR_NAME}
               fill
               className="object-cover object-top"
