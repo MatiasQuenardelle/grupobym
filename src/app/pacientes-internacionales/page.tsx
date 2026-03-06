@@ -95,7 +95,7 @@ export default function PacientesInternacionalesPage() {
             <div className="mt-6 space-y-4">
               {[
                 { title: "Ubicacion estrategica", desc: "Resistencia, Chaco, esta en el noreste argentino, a pocas horas de las principales ciudades de Paraguay y cerca de la frontera con Brasil." },
-                { title: "Calidad medica de primer nivel", desc: `Equipo interdisciplinario liderado por el ${DOCTOR_NAME}, con mas de ${STATS.surgeries} cirugias realizadas y ${STATS.reviews} resenas 5 estrellas.` },
+                { title: "Calidad medica de primer nivel", desc: `Equipo liderado por el ${DOCTOR_NAME}, con mas de ${STATS.surgeries} cirugias realizadas y ${STATS.reviews} resenas 5 estrellas en Google.` },
                 { title: "Costo competitivo", desc: "El costo de la cirugia bariatrica en Argentina es significativamente menor que en otros paises de la region, con estandares de calidad equivalentes." },
                 { title: "Consulta virtual inicial", desc: "La primera evaluacion puede hacerse por videollamada, sin necesidad de viajar. Solo viaja para la cirugia y los estudios finales." },
                 { title: "Seguimiento a distancia", desc: "Despues de la cirugia, el seguimiento continua de forma virtual con todo el equipo: cirujano, nutricionista y psicologa." },

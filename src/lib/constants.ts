@@ -47,8 +47,8 @@ export const SOCIAL_LINKS = {
 export const STATS = {
   reviews: "50+",
   rating: "5.0",
-  surgeries: "500+",
-  yearsExperience: "15+",
+  surgeries: "200+",
+  yearsExperience: "3+",
   countries: "3",
 };
 

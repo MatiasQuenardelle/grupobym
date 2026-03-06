@@ -14,7 +14,7 @@ import {
 
 export const metadata = generatePageMetadata({
   title: `${DOCTOR_NAME} - Cirujano Bariatrico`,
-  description: `${DOCTOR_NAME}, cirujano general y laparoscopista especializado en cirugia bariatrica y esofago-gastroduodenal. Mas de ${STATS.yearsExperience} anos de experiencia y ${STATS.surgeries} cirugias realizadas en Resistencia, Chaco.`,
+  description: `${DOCTOR_NAME}, cirujano general y laparoscopista especializado en cirugia bariatrica y esofago-gastroduodenal. Mas de ${STATS.surgeries} cirugias realizadas en Resistencia, Chaco.`,
   path: "/equipo/dr-pablo-rodriguez",
 });
 
@@ -138,11 +138,10 @@ export default function DoctorProfilePage() {
               </p>
               <p className="mt-4 text-secondary-500 leading-relaxed">
                 Cirujano general y laparoscopista, especializado en cirugia
-                bariatrica y esofago-gastroduodenal. Con mas de {STATS.yearsExperience}{" "}
-                anos de experiencia y {STATS.surgeries} cirugias realizadas, el
-                Dr. Rodriguez lidera el equipo interdisciplinario de GrupoByM
-                con un enfoque centrado en el paciente, la seguridad y los
-                resultados a largo plazo.
+                bariatrica y esofago-gastroduodenal. Con mas de {STATS.surgeries}{" "}
+                cirugias realizadas, el Dr. Rodriguez lidera el equipo de
+                GrupoByM con un enfoque centrado en el paciente, la seguridad
+                y los resultados a largo plazo.
               </p>
             </div>
           </div>

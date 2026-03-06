@@ -56,11 +56,11 @@ export default function Hero() {
           {/* Trust badges */}
           <div className="mt-12 flex flex-wrap items-center justify-center gap-6 md:gap-10">
             <span className="text-sm font-semibold text-secondary-600">
-              500+ cirugias exitosas
+              200+ cirugias realizadas
             </span>
             <div className="h-6 w-px bg-gray-300 hidden sm:block" />
             <span className="text-sm font-semibold text-secondary-600">
-              15+ anos de experiencia
+              3+ anos de experiencia
             </span>
             <div className="h-6 w-px bg-gray-300 hidden sm:block" />
             <div className="flex items-center gap-1.5">
