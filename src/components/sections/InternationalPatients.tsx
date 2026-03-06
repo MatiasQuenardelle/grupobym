@@ -31,7 +31,7 @@ export default function InternationalPatients() {
             Pacientes internacionales
           </p>
           <h2 className="mt-2 text-3xl font-extrabold text-secondary-700 sm:text-4xl">
-            Venis de Paraguay o Brasil? Te acompanamos en todo el proceso
+            Venis de Paraguay o Brasil? Te acompañamos en todo el proceso
           </h2>
           <p className="mt-4 text-lg text-secondary-500 leading-relaxed">
             Argentina es un destino reconocido mundialmente por la calidad de su
