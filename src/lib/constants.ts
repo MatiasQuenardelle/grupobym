@@ -36,7 +36,7 @@ export const LOCATIONS = [
 export const ADDRESS = "Carlos Pellegrini 677, H3500 Resistencia, Chaco";
 
 export const GOOGLE_MAPS_URL =
-  "https://www.google.com/maps/place/Grupo+ByM/data=!4m2!3m1!1s0x0:0x9b25ee678b6cf360";
+  "https://www.google.com/maps/place/Grupo+ByM/@-27.4474037,-58.9791898,17z/data=!4m8!3m7!1s0x94450dc300af83ef:0x9b25ee678b6cf360!8m2!3d-27.4474037!4d-58.9791898!9m1!1b1!16s%2Fg%2F11z1rnlsn6";
 
 export const SOCIAL_LINKS = {
   instagram: "https://www.instagram.com/grupobymoficial",
