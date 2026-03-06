@@ -55,6 +55,9 @@ export default function Footer() {
               {LOCATIONS.map((loc) => (
                 <li key={loc.city}>
                   <p className="font-semibold text-white">{loc.city}</p>
+                  {"address" in loc && loc.address && (
+                    <p className="text-xs text-gray-400">{loc.address}</p>
+                  )}
                   <a
                     href={`https://wa.me/${loc.whatsapp}`}
                     target="_blank"
