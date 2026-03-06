@@ -1,6 +1,6 @@
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import Card from "@/components/ui/Card";
-import { TEAM_MEMBERS } from "@/lib/constants";
+import { TEAM_MEMBERS, SITE_URL } from "@/lib/constants";
 
 const roleIcons: Record<string, JSX.Element> = {
   "Cirujano Bariatrico": (
@@ -27,8 +27,28 @@ const roleIcons: Record<string, JSX.Element> = {
 };
 
 export default function Team() {
+  const teamJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "MedicalOrganization",
+    name: "GrupoByM",
+    url: SITE_URL,
+    member: TEAM_MEMBERS.map((m) => ({
+      "@type": m.role === "Cirujano Bariatrico" ? "Physician" : "Person",
+      name: m.name,
+      jobTitle: m.role,
+      description: m.description,
+      ...(m.role === "Cirujano Bariatrico" && {
+        medicalSpecialty: "Bariatric Surgery",
+      }),
+    })),
+  };
+
   return (
     <SectionWrapper id="equipo" bg="white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(teamJsonLd) }}
+      />
       <div className="text-center">
         <p className="text-sm font-semibold uppercase tracking-wider text-primary-400">
           Abordaje integral

@@ -24,7 +24,7 @@ export default function BlogPreview() {
       </div>
 
       <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {posts.map((post) => (
+        {posts.slice(0, 3).map((post) => (
           <Link key={post.slug} href={`/blog/${post.slug}`}>
             <Card className="h-full group cursor-pointer border border-transparent hover:border-primary-200">
               <p className="text-xs text-secondary-400 mb-2">
@@ -50,6 +50,20 @@ export default function BlogPreview() {
           </Link>
         ))}
       </div>
+
+      {posts.length > 3 && (
+        <div className="mt-10 text-center">
+          <Link
+            href="/blog"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-primary-400 hover:text-primary-500 transition-colors"
+          >
+            Ver todos los articulos
+            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </Link>
+        </div>
+      )}
     </SectionWrapper>
   );
 }

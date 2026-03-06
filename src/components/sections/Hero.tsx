@@ -3,7 +3,10 @@ import { WHATSAPP_URL } from "@/lib/constants";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-primary-50 via-white to-primary-50 pt-24 pb-16 md:pt-32 md:pb-24">
+    <section
+      className="relative overflow-hidden bg-gradient-to-br from-primary-50 via-white to-primary-50 pt-24 pb-16 md:pt-32 md:pb-24"
+      aria-label="Presentacion principal"
+    >
       {/* Decorative shapes */}
       <div className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 h-96 w-96 rounded-full bg-primary-100/50 blur-3xl" />
       <div className="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 h-80 w-80 rounded-full bg-primary-100/30 blur-3xl" />

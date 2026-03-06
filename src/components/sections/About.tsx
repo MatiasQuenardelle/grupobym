@@ -1,10 +1,42 @@
 import Image from "next/image";
 import SectionWrapper from "@/components/ui/SectionWrapper";
-import { DOCTOR_NAME } from "@/lib/constants";
+import { DOCTOR_NAME, SITE_URL } from "@/lib/constants";
 
 export default function About() {
+  const physicianJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    name: DOCTOR_NAME,
+    image: `${SITE_URL}/images/pablo-rodriguez.png`,
+    url: SITE_URL,
+    medicalSpecialty: [
+      "Bariatric Surgery",
+      "Laparoscopic Surgery",
+      "General Surgery",
+    ],
+    description:
+      "Cirujano general y laparoscopista, especialista en cirugia bariatrica y esofago-gastroduodenal.",
+    worksFor: {
+      "@type": "MedicalBusiness",
+      name: "GrupoByM",
+      url: SITE_URL,
+    },
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Carlos Pellegrini 677",
+      addressLocality: "Resistencia",
+      addressRegion: "Chaco",
+      postalCode: "H3500",
+      addressCountry: "AR",
+    },
+  };
+
   return (
     <SectionWrapper id="sobre" bg="white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianJsonLd) }}
+      />
       <div className="grid items-center gap-12 lg:grid-cols-2">
         {/* Doctor photo */}
         <div className="relative mx-auto w-full max-w-md">

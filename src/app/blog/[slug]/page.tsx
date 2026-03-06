@@ -1,10 +1,17 @@
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import { getContentBySlug, getAllSlugs } from "@/lib/mdx";
+import {
+  getContentBySlug,
+  getAllSlugs,
+  getRelatedContent,
+  estimateReadingTime,
+} from "@/lib/mdx";
 import { generatePageMetadata } from "@/lib/metadata";
 import SectionWrapper from "@/components/ui/SectionWrapper";
+import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
-import { WHATSAPP_URL } from "@/lib/constants";
+import { WHATSAPP_URL, SITE_URL, DOCTOR_NAME } from "@/lib/constants";
 
 interface Props {
   params: { slug: string };
@@ -22,6 +29,7 @@ export async function generateMetadata({ params }: Props) {
     title: content.meta.title,
     description: content.meta.description,
     path: `/blog/${params.slug}`,
+    type: "article",
   });
 }
 
@@ -29,16 +37,58 @@ export default function BlogPage({ params }: Props) {
   const content = getContentBySlug("blog", params.slug);
   if (!content) notFound();
 
+  const readingTime = estimateReadingTime(content.content);
+  const relatedPosts = getRelatedContent("blog", params.slug, 3);
+
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "MedicalWebPage",
     headline: content.meta.title,
     description: content.meta.description,
     datePublished: content.meta.date,
+    dateModified: content.meta.lastModified || content.meta.date,
+    url: `${SITE_URL}/blog/${params.slug}`,
+    inLanguage: "es-AR",
     author: {
+      "@type": "Physician",
+      name: DOCTOR_NAME,
+      url: `${SITE_URL}/equipo/dr-pablo-rodriguez`,
+      medicalSpecialty: "Bariatric Surgery",
+      worksFor: {
+        "@type": "MedicalBusiness",
+        name: "GrupoByM",
+        url: SITE_URL,
+      },
+    },
+    publisher: {
       "@type": "Organization",
       name: "GrupoByM",
+      url: SITE_URL,
     },
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Inicio",
+        item: SITE_URL,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: `${SITE_URL}/blog`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: content.meta.title,
+      },
+    ],
   };
 
   return (
@@ -47,12 +97,16 @@ export default function BlogPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
 
       <SectionWrapper className="pt-28 md:pt-36">
-        <nav className="mb-6 text-sm text-secondary-400">
+        <nav className="mb-6 text-sm text-secondary-400" aria-label="Breadcrumb">
           <a href="/" className="hover:text-primary-400">Inicio</a>
           <span className="mx-2">/</span>
-          <span className="text-secondary-400">Blog</span>
+          <a href="/blog" className="hover:text-primary-400">Blog</a>
           <span className="mx-2">/</span>
           <span className="text-secondary-600">{content.meta.title}</span>
         </nav>
@@ -61,13 +115,41 @@ export default function BlogPage({ params }: Props) {
           <h1 className="text-3xl font-extrabold text-secondary-700 sm:text-4xl lg:text-5xl">
             {content.meta.title}
           </h1>
-          <p className="mt-2 text-sm text-secondary-400">
-            Publicado el {new Date(content.meta.date).toLocaleDateString("es-AR", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })}
-          </p>
+
+          <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-secondary-400">
+            <span>
+              Publicado el{" "}
+              {new Date(content.meta.date).toLocaleDateString("es-AR", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+            </span>
+            {content.meta.lastModified && content.meta.lastModified !== content.meta.date && (
+              <span>
+                Actualizado el{" "}
+                {new Date(content.meta.lastModified).toLocaleDateString("es-AR", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </span>
+            )}
+            <span>{readingTime} min de lectura</span>
+          </div>
+
+          {content.meta.author && (
+            <div className="mt-3 text-sm text-secondary-500">
+              Por{" "}
+              <Link
+                href="/equipo/dr-pablo-rodriguez"
+                className="font-semibold text-primary-400 hover:text-primary-500"
+              >
+                {DOCTOR_NAME}
+              </Link>
+              {" "}— Cirujano Bariatrico
+            </div>
+          )}
 
           <div className="prose mt-10">
             <MDXRemote source={content.content} />
@@ -89,6 +171,35 @@ export default function BlogPage({ params }: Props) {
               </Button>
             </div>
           </div>
+
+          {relatedPosts.length > 0 && (
+            <div className="mt-16">
+              <h2 className="text-2xl font-bold text-secondary-700">
+                Articulos relacionados
+              </h2>
+              <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {relatedPosts.map((post) => (
+                  <Link key={post.slug} href={`/blog/${post.slug}`}>
+                    <Card className="h-full group cursor-pointer border border-transparent hover:border-primary-200">
+                      <p className="text-xs text-secondary-400 mb-2">
+                        {new Date(post.date).toLocaleDateString("es-AR", {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        })}
+                      </p>
+                      <h3 className="text-base font-bold text-secondary-700 group-hover:text-primary-400 transition-colors">
+                        {post.title}
+                      </h3>
+                      <p className="mt-1 text-sm text-secondary-500 leading-relaxed line-clamp-2">
+                        {post.description}
+                      </p>
+                    </Card>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
         </article>
       </SectionWrapper>
     </>

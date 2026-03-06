@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import SectionWrapper from "@/components/ui/SectionWrapper";
-import { REVIEWS, SHORT_REVIEWS, STATS, GOOGLE_MAPS_URL } from "@/lib/constants";
+import { REVIEWS, SHORT_REVIEWS, STATS, GOOGLE_MAPS_URL, SITE_URL } from "@/lib/constants";
 
 const avatarColors = [
   "bg-primary-400",
@@ -43,8 +43,30 @@ export default function GoogleReviews() {
   const [expanded, setExpanded] = useState(false);
   const review = REVIEWS[active];
 
+  const reviewJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    name: "GrupoByM",
+    url: SITE_URL,
+    review: REVIEWS.map((r) => ({
+      "@type": "Review",
+      author: { "@type": "Person", name: r.name },
+      datePublished: r.date,
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: String(r.rating),
+        bestRating: "5",
+      },
+      reviewBody: r.text,
+    })),
+  };
+
   return (
     <SectionWrapper id="resenas" bg="gray">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewJsonLd) }}
+      />
       {/* Header */}
       <div className="text-center">
         <a
@@ -100,7 +122,9 @@ export default function GoogleReviews() {
                       src={r.beforeImage as string}
                       alt={`${review.name} - Antes`}
                       fill
-                      className="object-cover rounded-lg"
+                      className="object-cover object-top rounded-lg"
+                      sizes="(max-width: 768px) 50vw, 300px"
+                      loading="lazy"
                     />
                     <span className="absolute bottom-2 left-2 rounded-full bg-black/70 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
                       Antes
@@ -111,7 +135,9 @@ export default function GoogleReviews() {
                       src={r.afterImage as string}
                       alt={`${review.name} - Despues`}
                       fill
-                      className="object-cover rounded-lg"
+                      className="object-cover object-top rounded-lg"
+                      sizes="(max-width: 768px) 50vw, 300px"
+                      loading="lazy"
                     />
                     <span className="absolute bottom-2 left-2 rounded-full bg-primary-400 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
                       Despues
@@ -127,7 +153,9 @@ export default function GoogleReviews() {
                     src={r.image as string}
                     alt={`${review.name} - Antes y Despues`}
                     fill
-                    className="object-cover"
+                    className="object-cover object-top"
+                    sizes="(max-width: 768px) 100vw, 600px"
+                    loading="lazy"
                   />
                 </div>
               );

@@ -4,7 +4,12 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
-import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from "@/lib/constants";
+import {
+  SITE_NAME,
+  SITE_URL,
+  SITE_DESCRIPTION,
+  DOCTOR_NAME,
+} from "@/lib/constants";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -15,7 +20,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} | Cirugia Bariatrica en Argentina`,
+    default: `GrupoByM | Cirugia Bariatrica en Argentina - ${DOCTOR_NAME}`,
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
@@ -33,12 +38,16 @@ export const metadata: Metadata = {
     "obesidad tratamiento",
   ],
   authors: [{ name: "GrupoByM" }],
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
     type: "website",
     locale: "es_AR",
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: `${SITE_NAME} | Cirugia Bariatrica en Argentina`,
+    title: `GrupoByM | Cirugia Bariatrica en Argentina - ${DOCTOR_NAME}`,
     description: SITE_DESCRIPTION,
     images: [
       {
@@ -51,7 +60,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_NAME} | Cirugia Bariatrica en Argentina`,
+    title: `GrupoByM | Cirugia Bariatrica en Argentina - ${DOCTOR_NAME}`,
     description: SITE_DESCRIPTION,
     images: ["/og-image.jpg"],
   },
@@ -72,6 +81,12 @@ export const metadata: Metadata = {
       "es-AR": SITE_URL,
     },
   },
+  other: {
+    "geo.region": "AR-H",
+    "geo.placename": "Resistencia, Chaco",
+    "geo.position": "-27.4474037;-58.9791898",
+    ICBM: "-27.4474037, -58.9791898",
+  },
 };
 
 export default function RootLayout({
@@ -79,49 +94,86 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
-    name: "GrupoByM",
-    description: SITE_DESCRIPTION,
-    url: SITE_URL,
-    medicalSpecialty: "Bariatric Surgery",
-    availableService: [
-      {
-        "@type": "MedicalProcedure",
-        name: "Bypass Gastrico",
-        procedureType: "Surgical",
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      name: "GrupoByM",
+      description: SITE_DESCRIPTION,
+      url: SITE_URL,
+      telephone: "+5493644305110",
+      email: "contacto@grupobym.com.ar",
+      image: `${SITE_URL}/og-image.jpg`,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Carlos Pellegrini 677",
+        addressLocality: "Resistencia",
+        addressRegion: "Chaco",
+        postalCode: "H3500",
+        addressCountry: "AR",
       },
-      {
-        "@type": "MedicalProcedure",
-        name: "Manga Gastrica",
-        procedureType: "Surgical",
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: -27.4474037,
+        longitude: -58.9791898,
       },
-      {
-        "@type": "MedicalProcedure",
-        name: "Cirugia Metabolica",
-        procedureType: "Surgical",
+      sameAs: [
+        "https://www.instagram.com/grupobymoficial",
+        "https://www.facebook.com/grupobym",
+        "https://www.youtube.com/@grupobym",
+      ],
+      medicalSpecialty: "Bariatric Surgery",
+      availableService: [
+        {
+          "@type": "MedicalProcedure",
+          name: "Bypass Gastrico",
+          procedureType: "Surgical",
+        },
+        {
+          "@type": "MedicalProcedure",
+          name: "Manga Gastrica",
+          procedureType: "Surgical",
+        },
+        {
+          "@type": "MedicalProcedure",
+          name: "Cirugia Metabolica",
+          procedureType: "Surgical",
+        },
+      ],
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "5.0",
+        reviewCount: "50",
+        bestRating: "5",
       },
-    ],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5.0",
-      reviewCount: "50",
-      bestRating: "5",
     },
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "GrupoByM",
+      url: SITE_URL,
+    },
+  ];
 
   return (
-    <html lang="es" className={inter.variable}>
+    <html lang="es-AR" className={inter.variable}>
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body className="font-sans antialiased">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-lg focus:bg-primary-400 focus:px-4 focus:py-2 focus:text-white focus:outline-none"
+        >
+          Saltar al contenido principal
+        </a>
         <Header />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <Footer />
         <WhatsAppButton />
       </body>

@@ -10,7 +10,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-secondary-800 text-white">
+    <footer className="bg-secondary-800 text-white" role="contentinfo">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
@@ -32,7 +32,7 @@ export default function Footer() {
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-400">
               Navegacion
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2" role="list">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
                   <Link

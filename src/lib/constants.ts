@@ -54,10 +54,10 @@ export const STATS = {
 
 export const NAV_LINKS = [
   { label: "Inicio", href: "/" },
-  { label: "Procedimientos", href: "/#procedimientos" },
+  { label: "Procedimientos", href: "/procedimientos" },
   { label: "Resultados", href: "/#resultados" },
   { label: "Equipo", href: "/#equipo" },
-  { label: "Blog", href: "/#blog" },
+  { label: "Blog", href: "/blog" },
   { label: "FAQ", href: "/#faq" },
   { label: "Contacto", href: "/#contacto" },
 ];
@@ -99,7 +99,8 @@ export const REVIEWS = [
     rating: 5,
     text: "Quiero agradecerle de todo corazon por la cirugia bariatrica que me realizo hace un ano y cinco meses. Esa intervencion no solo cambio mi cuerpo, sino tambien mi vida entera. Antes de la cirugia, pasaba por momentos dificiles con mi salud y mi bienestar, pero hoy me siento una persona nueva. Tengo mas energia, puedo hacer actividades que antes no podia y mi calidad de vida ha mejorado de forma increible. Todo esto es gracias a su habilidad como cirujano, a su cuidado y a la confianza que me transmitio en todo momento. Tambien quiero agradecerle por su trato humano, por escuchar mis dudas y por estar ahi para guiarme en este proceso. Saber que contaba con un profesional tan comprometido y amable me dio mucha tranquilidad durante todo el camino. Hoy, un ano y cinco meses despues, quiero que sepa que su trabajo ha tenido un impacto profundo en mi vida y que siempre lo llevare en mi corazon como alguien que me dio una nueva oportunidad. Muchas gracias por todo a ud y al increible grupo ByM, nutricionista Fernanda Farias y psicologa Ivana Quiroz.",
     date: "Hace 2 meses",
-    image: "/images/review-fannyines.jpg",
+    beforeImage: "/images/fannyines before.png",
+    afterImage: "/images/fannyines after.png",
   },
   {
     name: "Alicia",
@@ -121,7 +122,8 @@ export const REVIEWS = [
     rating: 5,
     text: "No tengo mas que palabras de agradecimiento para todo el Grupo ByM. Mi hijo volvio a nacer gracias a ustedes. Desde el minuto 1, nos sentimos contenidos y seguros con la decision. Hoy 7 meses despues puedo confirmar que seguimos igual de contenidos y seguros. Muchas gracias Dr Pablo por haber sido el faro que guio el barco a la deriva de mi hijo, hacia un puerto seguro. Gracias a todos los que forman parte de este maravilloso equipo de profesionales.",
     date: "Hace 2 meses",
-    image: "/images/review-talia.png",
+    beforeImage: "/images/Talia before.png",
+    afterImage: "/images/Talia after.png",
   },
 ];
 
@@ -194,6 +196,16 @@ export const FAQ_ITEMS = [
     answer:
       "El costo varia segun el procedimiento y la cobertura de obra social o prepaga. Muchas obras sociales cubren la cirugia bariatrica. Contactenos para una evaluacion personalizada.",
   },
+];
+
+export const BLOG_CATEGORIES = [
+  { slug: "procedimientos", label: "Procedimientos" },
+  { slug: "recuperacion-postoperatoria", label: "Recuperacion Post-Operatoria" },
+  { slug: "preparacion", label: "Preparacion Pre-Operatoria" },
+  { slug: "nutricion", label: "Nutricion" },
+  { slug: "costos-y-cobertura", label: "Costos y Cobertura" },
+  { slug: "historias-de-pacientes", label: "Historias de Pacientes" },
+  { slug: "pacientes-internacionales", label: "Pacientes Internacionales" },
 ];
 
 export const TEAM_MEMBERS = [

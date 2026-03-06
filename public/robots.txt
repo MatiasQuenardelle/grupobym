@@ -1,9 +1,5 @@
-# *
 User-agent: *
 Allow: /
 
-# Host
 Host: https://grupobym.com.ar
-
-# Sitemaps
 Sitemap: https://grupobym.com.ar/sitemap.xml

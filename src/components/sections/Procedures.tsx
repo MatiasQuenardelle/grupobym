@@ -1,7 +1,7 @@
 import Link from "next/link";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import Card from "@/components/ui/Card";
-import { PROCEDURES } from "@/lib/constants";
+import { PROCEDURES, SITE_URL } from "@/lib/constants";
 
 const iconMap: Record<string, JSX.Element> = {
   bypass: (
@@ -27,8 +27,24 @@ const iconMap: Record<string, JSX.Element> = {
 };
 
 export default function Procedures() {
+  const itemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Procedimientos de Cirugia Bariatrica",
+    itemListElement: PROCEDURES.map((proc, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: proc.title,
+      url: `${SITE_URL}/procedimientos/${proc.slug}`,
+    })),
+  };
+
   return (
     <SectionWrapper id="procedimientos" bg="gray">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
+      />
       <div className="text-center">
         <p className="text-sm font-semibold uppercase tracking-wider text-primary-400">
           Nuestros servicios

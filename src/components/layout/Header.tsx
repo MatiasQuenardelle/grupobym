@@ -8,8 +8,8 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 z-40 w-full bg-white/95 backdrop-blur-sm shadow-sm">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+    <header className="fixed top-0 z-40 w-full bg-white/95 backdrop-blur-sm shadow-sm" role="banner">
+      <nav aria-label="Navegacion principal" className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2">
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-400 text-white font-bold text-sm">
             ByM

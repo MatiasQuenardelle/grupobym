@@ -6,11 +6,13 @@ export function generatePageMetadata({
   description,
   path = "",
   image = "/og-image.jpg",
+  type = "website",
 }: {
   title: string;
   description?: string;
   path?: string;
   image?: string;
+  type?: "website" | "article";
 }): Metadata {
   const fullTitle = `${title} | ${SITE_NAME}`;
   const desc = description || SITE_DESCRIPTION;
@@ -21,6 +23,9 @@ export function generatePageMetadata({
     description: desc,
     alternates: {
       canonical: url,
+      languages: {
+        "es-AR": url,
+      },
     },
     openGraph: {
       title: fullTitle,
@@ -28,7 +33,7 @@ export function generatePageMetadata({
       url,
       siteName: SITE_NAME,
       locale: "es_AR",
-      type: "website",
+      type,
       images: [
         {
           url: `${SITE_URL}${image}`,

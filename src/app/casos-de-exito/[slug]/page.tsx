@@ -4,7 +4,7 @@ import { getContentBySlug, getAllSlugs } from "@/lib/mdx";
 import { generatePageMetadata } from "@/lib/metadata";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import Button from "@/components/ui/Button";
-import { WHATSAPP_URL } from "@/lib/constants";
+import { WHATSAPP_URL, SITE_URL } from "@/lib/constants";
 
 interface Props {
   params: { slug: string };
@@ -22,6 +22,7 @@ export async function generateMetadata({ params }: Props) {
     title: content.meta.title,
     description: content.meta.description,
     path: `/casos-de-exito/${params.slug}`,
+    type: "article",
   });
 }
 
@@ -35,10 +36,43 @@ export default function CasoDeExitoPage({ params }: Props) {
     headline: content.meta.title,
     description: content.meta.description,
     datePublished: content.meta.date,
+    dateModified: content.meta.date,
+    url: `${SITE_URL}/casos-de-exito/${params.slug}`,
+    inLanguage: "es-AR",
     author: {
       "@type": "Organization",
       name: "GrupoByM",
+      url: SITE_URL,
     },
+    publisher: {
+      "@type": "Organization",
+      name: "GrupoByM",
+      url: SITE_URL,
+    },
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Inicio",
+        item: SITE_URL,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Casos de Exito",
+        item: `${SITE_URL}/casos-de-exito`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: content.meta.title,
+      },
+    ],
   };
 
   return (
@@ -47,12 +81,16 @@ export default function CasoDeExitoPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
 
       <SectionWrapper className="pt-28 md:pt-36">
-        <nav className="mb-6 text-sm text-secondary-400">
+        <nav className="mb-6 text-sm text-secondary-400" aria-label="Breadcrumb">
           <a href="/" className="hover:text-primary-400">Inicio</a>
           <span className="mx-2">/</span>
-          <a href="/#casos-de-exito" className="hover:text-primary-400">Casos de Exito</a>
+          <a href="/casos-de-exito" className="hover:text-primary-400">Casos de Exito</a>
           <span className="mx-2">/</span>
           <span className="text-secondary-600">{content.meta.title}</span>
         </nav>
