@@ -122,7 +122,7 @@ export default function GoogleReviews() {
                       src={r.beforeImage as string}
                       alt={`${review.name} - Antes`}
                       fill
-                      className="object-cover object-top rounded-lg"
+                      className="object-cover rounded-lg" style={{ objectPosition: "center 25%" }}
                       sizes="(max-width: 768px) 50vw, 300px"
                       loading="lazy"
                     />
@@ -135,7 +135,7 @@ export default function GoogleReviews() {
                       src={r.afterImage as string}
                       alt={`${review.name} - Despues`}
                       fill
-                      className="object-cover object-top rounded-lg"
+                      className="object-cover rounded-lg" style={{ objectPosition: "center 25%" }}
                       sizes="(max-width: 768px) 50vw, 300px"
                       loading="lazy"
                     />
