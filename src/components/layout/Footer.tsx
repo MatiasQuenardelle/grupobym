@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   PRACTICE_NAME,
   EMAIL,
@@ -16,9 +17,13 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-400 text-white font-bold text-sm">
-                ByM
-              </div>
+              <Image
+                src="/images/logo.png"
+                alt="GrupoByM"
+                width={40}
+                height={40}
+                className="h-10 w-10"
+              />
               <span className="text-lg font-bold">{PRACTICE_NAME}</span>
             </div>
             <p className="text-sm text-gray-300 leading-relaxed">
