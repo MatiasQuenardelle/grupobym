@@ -40,6 +40,7 @@ function GoogleIcon({ className = "h-5 w-5" }: { className?: string }) {
 
 export default function GoogleReviews() {
   const [active, setActive] = useState(0);
+  const [expanded, setExpanded] = useState(false);
   const review = REVIEWS[active];
 
   return (
@@ -135,9 +136,23 @@ export default function GoogleReviews() {
           })()}
 
           {/* Review text */}
-          <p className="text-sm sm:text-base leading-relaxed text-secondary-600">
-            &ldquo;{review.text}&rdquo;
-          </p>
+          <div className="text-sm sm:text-base leading-relaxed text-secondary-600">
+            <p className={expanded ? "" : "line-clamp-4"}>
+              &ldquo;{review.text}&rdquo;
+            </p>
+            {review.text.length > 200 && (
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  setExpanded(!expanded);
+                }}
+                className="mt-2 text-sm font-medium text-primary-400 hover:text-primary-500 transition-colors"
+              >
+                {expanded ? "Ver menos" : "Leer mas..."}
+              </button>
+            )}
+          </div>
 
           {/* Author */}
           <div className="mt-8 flex items-center justify-between">
@@ -167,9 +182,10 @@ export default function GoogleReviews() {
         {/* Carousel nav */}
         <div className="mt-6 flex items-center justify-center gap-4">
           <button
-            onClick={() =>
-              setActive(active === 0 ? REVIEWS.length - 1 : active - 1)
-            }
+            onClick={() => {
+              setActive(active === 0 ? REVIEWS.length - 1 : active - 1);
+              setExpanded(false);
+            }}
             className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white text-secondary-500 transition-colors hover:bg-primary-50 hover:text-primary-400"
             aria-label="Resena anterior"
           >
@@ -182,7 +198,7 @@ export default function GoogleReviews() {
             {REVIEWS.map((_, i) => (
               <button
                 key={i}
-                onClick={() => setActive(i)}
+                onClick={() => { setActive(i); setExpanded(false); }}
                 className={`h-2.5 rounded-full transition-all ${
                   i === active
                     ? "w-8 bg-primary-400"
@@ -194,9 +210,10 @@ export default function GoogleReviews() {
           </div>
 
           <button
-            onClick={() =>
-              setActive(active === REVIEWS.length - 1 ? 0 : active + 1)
-            }
+            onClick={() => {
+              setActive(active === REVIEWS.length - 1 ? 0 : active + 1);
+              setExpanded(false);
+            }}
             className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white text-secondary-500 transition-colors hover:bg-primary-50 hover:text-primary-400"
             aria-label="Siguiente resena"
           >
