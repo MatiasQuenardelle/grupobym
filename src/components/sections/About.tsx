@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import { DOCTOR_NAME } from "@/lib/constants";
 
@@ -5,17 +6,17 @@ export default function About() {
   return (
     <SectionWrapper id="sobre" bg="white">
       <div className="grid items-center gap-12 lg:grid-cols-2">
-        {/* Image placeholder */}
+        {/* Doctor photo */}
         <div className="relative mx-auto w-full max-w-md">
-          <div className="aspect-[3/4] rounded-2xl bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center">
-            <div className="text-center p-8">
-              <div className="mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-primary-400 text-white">
-                <svg className="h-12 w-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-                </svg>
-              </div>
-              <p className="text-sm text-primary-600 font-medium">Foto del {DOCTOR_NAME}</p>
-            </div>
+          <div className="relative aspect-[3/4] overflow-hidden rounded-2xl">
+            <Image
+              src="/images/dr-pablo-rodriguez.png"
+              alt={DOCTOR_NAME}
+              fill
+              className="object-cover object-top"
+              sizes="(max-width: 768px) 100vw, 400px"
+              priority
+            />
           </div>
           {/* Decorative accent */}
           <div className="absolute -bottom-4 -right-4 h-full w-full rounded-2xl border-2 border-primary-200 -z-10" />
@@ -43,7 +44,9 @@ export default function About() {
             <p>
               Formado en las instituciones mas prestigiosas del pais, con
               participacion activa en congresos nacionales e internacionales
-              de cirugia bariatrica.
+              de cirugia bariatrica. Representante de SACO en el Congreso
+              Internacional de Cirugia para la Obesidad y Enfermedades
+              Metabolicas.
             </p>
           </div>
 
