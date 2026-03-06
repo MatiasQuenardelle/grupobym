@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import { REVIEWS, SHORT_REVIEWS, STATS, GOOGLE_MAPS_URL } from "@/lib/constants";
 
@@ -87,17 +88,53 @@ export default function GoogleReviews() {
           rel="noopener noreferrer"
           className="group block rounded-2xl border border-gray-200/70 bg-white p-8 sm:p-10 shadow-sm transition-all duration-300 hover:border-primary-200 hover:shadow-lg"
         >
-          {/* Quote icon */}
-          <svg
-            className="h-10 w-10 text-primary-100 mb-6"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10H0z" />
-          </svg>
+          {/* Before/After images */}
+          {"beforeImage" in review && review.beforeImage && "afterImage" in review && review.afterImage ? (
+            <div className="mb-6 flex gap-3 rounded-xl overflow-hidden">
+              <div className="relative flex-1 aspect-[3/4]">
+                <Image
+                  src={review.beforeImage}
+                  alt={`${review.name} - Antes`}
+                  fill
+                  className="object-cover rounded-lg"
+                />
+                <span className="absolute bottom-2 left-2 rounded-full bg-black/70 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
+                  Antes
+                </span>
+              </div>
+              <div className="relative flex-1 aspect-[3/4]">
+                <Image
+                  src={review.afterImage}
+                  alt={`${review.name} - Despues`}
+                  fill
+                  className="object-cover rounded-lg"
+                />
+                <span className="absolute bottom-2 left-2 rounded-full bg-primary-400 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
+                  Despues
+                </span>
+              </div>
+            </div>
+          ) : "image" in review && review.image ? (
+            <div className="relative mb-6 w-full aspect-[16/9] rounded-xl overflow-hidden">
+              <Image
+                src={review.image}
+                alt={`${review.name} - Antes y Despues`}
+                fill
+                className="object-cover"
+              />
+            </div>
+          ) : (
+            <svg
+              className="h-10 w-10 text-primary-100 mb-6"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10H0z" />
+            </svg>
+          )}
 
           {/* Review text */}
-          <p className="text-lg sm:text-xl leading-relaxed text-secondary-600">
+          <p className="text-sm sm:text-base leading-relaxed text-secondary-600">
             &ldquo;{review.text}&rdquo;
           </p>
 
@@ -170,7 +207,7 @@ export default function GoogleReviews() {
       </div>
 
       {/* Short reviews grid */}
-      <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {SHORT_REVIEWS.map((r, i) => (
           <a
             key={r.name}
