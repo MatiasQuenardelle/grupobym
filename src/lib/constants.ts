@@ -78,11 +78,18 @@ export const PROCEDURES = [
     icon: "manga",
   },
   {
-    title: "Cirugia Metabolica",
+    title: "Cirugia Bariatrica y Metabolica",
     slug: "cirugia-metabolica",
     description:
       "Tratamiento quirurgico de la diabetes tipo 2 y sindrome metabolico. Mejora significativa de la calidad de vida.",
     icon: "metabolica",
+  },
+  {
+    title: "Cirugia de Revision y Conversion",
+    slug: "cirugia-revision-conversion",
+    description:
+      "Reintervencion quirurgica para corregir o convertir una cirugia bariatrica previa que no logro los resultados esperados.",
+    icon: "revision",
   },
   {
     title: "Endoscopia",
