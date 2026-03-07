@@ -65,7 +65,7 @@ export default function Team() {
 
       <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {TEAM_MEMBERS.map((member) => (
-          <Card key={member.name} className="text-center">
+          <Card key={member.name} className="text-center border-t-2 border-t-primary-300 sm:border-t-0">
             <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary-50 text-primary-400">
               {roleIcons[member.role] || (
                 <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>

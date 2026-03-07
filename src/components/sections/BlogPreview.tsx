@@ -26,7 +26,7 @@ export default function BlogPreview() {
       <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {posts.slice(0, 3).map((post) => (
           <Link key={post.slug} href={`/blog/${post.slug}`}>
-            <Card className="h-full group cursor-pointer border border-transparent hover:border-primary-200">
+            <Card className="h-full group cursor-pointer border border-transparent hover:border-primary-200 border-l-2 border-l-primary-300 sm:border-l-0">
               <p className="text-xs text-secondary-400 mb-2">
                 {new Date(post.date).toLocaleDateString("es-AR", {
                   year: "numeric",

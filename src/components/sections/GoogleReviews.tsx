@@ -262,7 +262,7 @@ export default function GoogleReviews() {
             href={GOOGLE_MAPS_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex flex-col rounded-xl border border-gray-200/70 bg-white p-4 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-primary-200 hover:shadow-md"
+            className="group flex flex-col rounded-xl border border-gray-200/70 bg-white p-4 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-primary-200 hover:shadow-md border-l-2 border-l-primary-300 sm:border-l sm:border-l-gray-200/70"
           >
             <div className="mb-2 flex items-center gap-2">
               <div

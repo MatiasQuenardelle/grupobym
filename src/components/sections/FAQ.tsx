@@ -16,10 +16,10 @@ function FAQItem({
   onToggle: () => void;
 }) {
   return (
-    <div className="border-b border-gray-200">
+    <div className={`rounded-xl mb-3 sm:rounded-none sm:mb-0 sm:border-b sm:border-gray-200 ${isOpen ? "bg-white shadow-sm sm:bg-transparent sm:shadow-none" : "bg-white/60 sm:bg-transparent"}`}>
       <button
         onClick={onToggle}
-        className="flex w-full items-center justify-between py-5 text-left"
+        className="flex w-full items-center justify-between py-4 px-4 sm:px-0 sm:py-5 text-left"
         aria-expanded={isOpen}
       >
         <span className="text-base font-semibold text-secondary-700 pr-4">
@@ -38,7 +38,7 @@ function FAQItem({
         </svg>
       </button>
       {isOpen && (
-        <div className="pb-5">
+        <div className="pb-4 px-4 sm:px-0 sm:pb-5">
           <p className="text-secondary-500 leading-relaxed">{answer}</p>
         </div>
       )}

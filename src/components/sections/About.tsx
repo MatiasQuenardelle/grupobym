@@ -83,14 +83,14 @@ export default function About() {
           </div>
 
           {/* Credentials */}
-          <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
             {[
               "Cirujano General",
               "Especialista en Cirugia Laparoscopica",
               "Especialista en Cirugia Bariatrica",
               "Especialista en Esofago-Gastroduodenal",
             ].map((credential) => (
-              <div key={credential} className="flex items-start gap-2">
+              <div key={credential} className="flex items-start gap-2 rounded-lg bg-primary-50 px-3 py-2.5 sm:bg-transparent sm:px-0 sm:py-0 sm:rounded-none">
                 <svg
                   className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary-400"
                   fill="currentColor"

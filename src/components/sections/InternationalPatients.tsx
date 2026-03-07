@@ -40,9 +40,9 @@ export default function InternationalPatients() {
             simple y segura.
           </p>
 
-          <div className="mt-8 space-y-5">
+          <div className="mt-8 space-y-3 sm:space-y-5">
             {benefits.map((b) => (
-              <div key={b.title} className="flex items-start gap-3">
+              <div key={b.title} className="flex items-start gap-3 rounded-xl bg-white/60 p-3 sm:bg-transparent sm:p-0 sm:rounded-none">
                 <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-primary-400 text-white">
                   <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />

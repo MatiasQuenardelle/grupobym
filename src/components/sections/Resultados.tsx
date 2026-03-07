@@ -83,9 +83,9 @@ export default function Resultados() {
         </p>
       </div>
 
-      <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-12 grid gap-4 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
         {benefits.map((b) => (
-          <div key={b.title} className="flex items-start gap-4">
+          <div key={b.title} className="flex items-start gap-4 rounded-2xl bg-gray-50 p-4 sm:bg-transparent sm:p-0 sm:rounded-none">
             <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl bg-primary-50 text-primary-400">
               {b.icon}
             </div>

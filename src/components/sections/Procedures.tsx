@@ -61,8 +61,8 @@ export default function Procedures() {
       <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {PROCEDURES.map((proc) => (
           <Link key={proc.slug} href={`/procedimientos/${proc.slug}`}>
-            <Card className="h-full group cursor-pointer border border-transparent hover:border-primary-200">
-              <div className="mb-4 text-primary-400 transition-transform group-hover:scale-110">
+            <Card className="h-full group cursor-pointer border-t-2 border-t-primary-300 border border-transparent hover:border-primary-200 sm:border-t-0">
+              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-primary-50 text-primary-400 transition-transform group-hover:scale-110 sm:h-auto sm:w-auto sm:bg-transparent sm:rounded-none">
                 {iconMap[proc.icon]}
               </div>
               <h3 className="text-lg font-bold text-secondary-700 group-hover:text-primary-400 transition-colors">

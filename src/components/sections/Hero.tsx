@@ -4,12 +4,13 @@ import { WHATSAPP_URL } from "@/lib/constants";
 export default function Hero() {
   return (
     <section
-      className="relative overflow-hidden bg-gradient-to-br from-primary-50 via-white to-primary-50 pt-24 pb-16 md:pt-32 md:pb-24"
+      className="relative overflow-hidden bg-gradient-to-br from-primary-100 via-primary-50 to-white pt-24 pb-16 md:from-primary-50 md:via-white md:to-primary-50 md:pt-32 md:pb-24"
       aria-label="Presentacion principal"
     >
       {/* Decorative shapes */}
       <div className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 h-96 w-96 rounded-full bg-primary-100/50 blur-3xl" />
       <div className="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 h-80 w-80 rounded-full bg-primary-100/30 blur-3xl" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-64 w-64 rounded-full bg-primary-200/20 blur-3xl md:hidden" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
@@ -54,16 +55,16 @@ export default function Hero() {
           </div>
 
           {/* Trust badges */}
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-6 md:gap-10">
-            <span className="text-sm font-semibold text-secondary-600">
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-3 md:gap-10">
+            <span className="rounded-full bg-white/80 px-4 py-2 text-sm font-semibold text-secondary-600 shadow-sm backdrop-blur-sm md:bg-transparent md:px-0 md:py-0 md:shadow-none">
               250+ cirugias realizadas
             </span>
             <div className="h-6 w-px bg-gray-300 hidden sm:block" />
-            <span className="text-sm font-semibold text-secondary-600">
+            <span className="rounded-full bg-white/80 px-4 py-2 text-sm font-semibold text-secondary-600 shadow-sm backdrop-blur-sm md:bg-transparent md:px-0 md:py-0 md:shadow-none">
               3+ anos de experiencia
             </span>
             <div className="h-6 w-px bg-gray-300 hidden sm:block" />
-            <div className="flex items-center gap-1.5">
+            <div className="flex items-center gap-1.5 rounded-full bg-white/80 px-4 py-2 shadow-sm backdrop-blur-sm md:bg-transparent md:px-0 md:py-0 md:shadow-none">
               <div className="flex text-accent-400">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">

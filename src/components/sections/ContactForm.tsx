@@ -54,7 +54,7 @@ export default function ContactForm() {
 
       <div className="mt-12 grid gap-12 lg:grid-cols-2">
         {/* Form */}
-        <div>
+        <div className="rounded-2xl bg-gray-50 p-5 sm:bg-transparent sm:p-0 sm:rounded-none">
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-5" noValidate>
             <div>
               <label htmlFor="nombre" className="block text-sm font-medium text-secondary-700 mb-1">
