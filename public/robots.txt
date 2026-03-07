@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /_next/
+Disallow: /api/
 
 Host: https://grupobym.com.ar
 Sitemap: https://grupobym.com.ar/sitemap.xml

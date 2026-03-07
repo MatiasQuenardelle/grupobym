@@ -1,15 +1,21 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { WHATSAPP_URL } from "@/lib/constants";
+
+export const metadata: Metadata = {
+  title: "Página no encontrada",
+  robots: { index: false, follow: false },
+};
 
 export default function NotFound() {
   return (
     <div className="flex min-h-[60vh] flex-col items-center justify-center px-4 py-24 text-center">
       <h1 className="text-6xl font-extrabold text-primary-400">404</h1>
       <h2 className="mt-4 text-2xl font-bold text-secondary-700">
-        Pagina no encontrada
+        Página no encontrada
       </h2>
       <p className="mt-3 max-w-md text-secondary-500">
-        La pagina que buscas no existe o fue movida. Podes volver al inicio o
+        La página que buscás no existe o fue movida. Podés volver al inicio o
         contactarnos por WhatsApp.
       </p>
       <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row">

@@ -5,7 +5,7 @@ export function generatePageMetadata({
   title,
   description,
   path = "",
-  image = "/og-image.jpg",
+  image = "/opengraph-image",
   type = "website",
 }: {
   title: string;

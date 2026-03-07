@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
         alt: SITE_NAME,
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `GrupoByM | Cirugía Bariátrica en Argentina - ${DOCTOR_NAME}`,
     description: SITE_DESCRIPTION,
-    images: ["/og-image.jpg"],
+    images: ["/opengraph-image"],
   },
   robots: {
     index: true,
@@ -105,7 +105,7 @@ export default function RootLayout({
       url: SITE_URL,
       telephone: "+5493644305110",
       email: "contacto@grupobym.com.ar",
-      image: `${SITE_URL}/og-image.jpg`,
+      image: `${SITE_URL}/opengraph-image`,
       address: {
         "@type": "PostalAddress",
         streetAddress: "Carlos Pellegrini 677",
@@ -154,6 +154,11 @@ export default function RootLayout({
       "@type": "WebSite",
       name: "GrupoByM",
       url: SITE_URL,
+      potentialAction: {
+        "@type": "SearchAction",
+        target: `${SITE_URL}/blog?q={search_term_string}`,
+        "query-input": "required name=search_term_string",
+      },
     },
   ];
 
@@ -161,8 +166,6 @@ export default function RootLayout({
     <html lang="es-AR" className={inter.variable}>
       <head>
         <GoogleAnalytics />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
