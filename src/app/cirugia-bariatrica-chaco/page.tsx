@@ -14,17 +14,17 @@ import {
 } from "@/lib/constants";
 
 export const metadata = generatePageMetadata({
-  title: "Cirugia Bariatrica en Chaco - Resistencia y Saenz Pena",
+  title: "Cirugía Bariátrica en Chaco - Resistencia y Saenz Pena",
   description:
-    "Cirugia bariatrica en Resistencia y Saenz Pena, Chaco. Bypass gastrico, manga gastrica y cirugia metabolica con el Dr. Pablo Rodriguez. Atendemos pacientes de Corrientes, Formosa y Misiones.",
+    "Cirugía bariátrica en Resistencia y Saenz Pena, Chaco. Bypass gástrico, manga gástrica y cirugía metabólica con el Dr. Pablo Rodríguez. Atendemos pacientes de Corrientes, Formosa y Misiones.",
   path: "/cirugia-bariatrica-chaco",
 });
 
-export default function CirugiaBariatricaChacoPage() {
+export default function CirugiaBariátricaChacoPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
-    name: "GrupoByM - Cirugia Bariatrica en Chaco",
+    name: "GrupoByM - Cirugía Bariátrica en Chaco",
     description: metadata.description,
     url: `${SITE_URL}/cirugia-bariatrica-chaco`,
     telephone: "+5493644305110",
@@ -75,7 +75,7 @@ export default function CirugiaBariatricaChacoPage() {
       {
         "@type": "ListItem",
         position: 2,
-        name: "Cirugia Bariatrica en Chaco",
+        name: "Cirugía Bariátrica en Chaco",
       },
     ],
   };
@@ -95,13 +95,13 @@ export default function CirugiaBariatricaChacoPage() {
         <nav className="mb-6 text-sm text-secondary-400" aria-label="Breadcrumb">
           <a href="/" className="hover:text-primary-400">Inicio</a>
           <span className="mx-2">/</span>
-          <span className="text-secondary-600">Cirugia Bariatrica en Chaco</span>
+          <span className="text-secondary-600">Cirugía Bariátrica en Chaco</span>
         </nav>
 
         <div className="mx-auto max-w-4xl">
           <div className="text-center">
             <h1 className="text-3xl font-extrabold text-secondary-700 sm:text-4xl lg:text-5xl">
-              Cirugia Bariatrica en Chaco
+              Cirugía Bariátrica en Chaco
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-secondary-500">
               Equipo interdisciplinario liderado por el{" "}
@@ -114,10 +114,10 @@ export default function CirugiaBariatricaChacoPage() {
 
           <div className="mt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-4">
             {[
-              { value: STATS.surgeries, label: "Cirugias realizadas" },
-              { value: STATS.reviews, label: "Resenas 5 estrellas" },
+              { value: STATS.surgeries, label: "Cirugías realizadas" },
+              { value: STATS.reviews, label: "Reseñas 5 estrellas" },
               { value: STATS.yearsExperience, label: "Anos de experiencia" },
-              { value: STATS.countries, label: "Paises de origen" },
+              { value: STATS.countries, label: "Países de origen" },
             ].map((stat) => (
               <div key={stat.label} className="rounded-2xl bg-primary-50 p-6 text-center">
                 <p className="text-3xl font-extrabold text-primary-400">{stat.value}</p>
@@ -212,11 +212,11 @@ export default function CirugiaBariatricaChacoPage() {
             </h2>
             <div className="mt-6 space-y-4">
               {[
-                { title: "Equipo interdisciplinario completo", desc: "Cirujano, nutricionistas, psicologa y profesor de educacion fisica. Acompanamiento integral en cada etapa." },
-                { title: "Via laparoscopica", desc: "Todas las cirugias se realizan por via minimamente invasiva: menor dolor, recuperacion mas rapida, menor riesgo de complicaciones." },
-                { title: "Resultados comprobados", desc: `Mas de ${STATS.surgeries} cirugias realizadas con ${STATS.reviews} resenas 5 estrellas en Google. Resultados que hablan por si solos.` },
-                { title: "Seguimiento a largo plazo", desc: "El acompanamiento post-operatorio es clave para mantener los resultados. Te acompanamos durante todo el proceso." },
-                { title: "Cobertura de obra social", desc: "Trabajamos con la mayoria de las obras sociales y prepagas. Te ayudamos con todo el tramite de autorizacion." },
+                { title: "Equipo interdisciplinario completo", desc: "Cirujano, nutricionistas, psicologa y profesor de educacion fisica. Acompañamiento integral en cada etapa." },
+                { title: "Via laparoscópica", desc: "Todas las cirugías se realizan por via mínimamente invasiva: menor dolor, recuperación más rápida, menor riesgo de complicaciones." },
+                { title: "Resultados comprobados", desc: `Más de ${STATS.surgeries} cirugías realizadas con ${STATS.reviews} reseñas 5 estrellas en Google. Resultados que hablan por si solos.` },
+                { title: "Seguimiento a largo plazo", desc: "El acompañamiento post-operatorio es clave para mantener los resultados. Te acompañamos durante todo el proceso." },
+                { title: "Cobertura de obra social", desc: "Trabajamos con la mayoría de las obras sociales y prepagas. Te ayudamos con todo el trámite de autorización." },
               ].map((item) => (
                 <div key={item.title} className="flex items-start gap-3">
                   <svg className="mt-1 h-5 w-5 flex-shrink-0 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
@@ -233,13 +233,13 @@ export default function CirugiaBariatricaChacoPage() {
 
           <div className="mt-16">
             <h2 className="text-2xl font-bold text-secondary-700">
-              Informacion util
+              Información util
             </h2>
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               <Link href="/blog/cuanto-cuesta-cirugia-bariatrica-argentina">
                 <Card className="group cursor-pointer border border-transparent hover:border-primary-200">
                   <h3 className="font-bold text-secondary-700 group-hover:text-primary-400 transition-colors">
-                    Cuanto cuesta la cirugia bariatrica
+                    Cuánto cuesta la cirugía bariátrica
                   </h3>
                   <p className="mt-1 text-sm text-secondary-500">Precios, obra social y financiamiento</p>
                 </Card>
@@ -249,7 +249,7 @@ export default function CirugiaBariatricaChacoPage() {
                   <h3 className="font-bold text-secondary-700 group-hover:text-primary-400 transition-colors">
                     Soy candidato/a?
                   </h3>
-                  <p className="mt-1 text-sm text-secondary-500">Guia de autoevaluacion para cirugia bariatrica</p>
+                  <p className="mt-1 text-sm text-secondary-500">Guia de autoevaluación para cirugía bariátrica</p>
                 </Card>
               </Link>
               <Link href="/blog/cirugia-bariatrica-obra-social">
@@ -257,7 +257,7 @@ export default function CirugiaBariatricaChacoPage() {
                   <h3 className="font-bold text-secondary-700 group-hover:text-primary-400 transition-colors">
                     Cobertura por obra social
                   </h3>
-                  <p className="mt-1 text-sm text-secondary-500">Que cubre y como tramitar</p>
+                  <p className="mt-1 text-sm text-secondary-500">Qué cubre y como tramitar</p>
                 </Card>
               </Link>
               <Link href="/casos-de-exito">
@@ -265,7 +265,7 @@ export default function CirugiaBariatricaChacoPage() {
                   <h3 className="font-bold text-secondary-700 group-hover:text-primary-400 transition-colors">
                     Casos de exito
                   </h3>
-                  <p className="mt-1 text-sm text-secondary-500">Historias reales de transformacion</p>
+                  <p className="mt-1 text-sm text-secondary-500">Historias reales de transformación</p>
                 </Card>
               </Link>
             </div>
@@ -287,7 +287,7 @@ export default function CirugiaBariatricaChacoPage() {
                 rel="noopener noreferrer"
                 variant="whatsapp"
               >
-                Consultar por WhatsApp
+                Consulta Gratuita por WhatsApp
               </Button>
               <a
                 href={GOOGLE_MAPS_URL}

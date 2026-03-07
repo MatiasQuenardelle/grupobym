@@ -129,7 +129,7 @@ export default function CasoDeExitoPage({ params }: Props) {
                 rel="noopener noreferrer"
                 variant="whatsapp"
               >
-                Consultar por WhatsApp
+                Consulta Gratuita por WhatsApp
               </Button>
             </div>
           </div>

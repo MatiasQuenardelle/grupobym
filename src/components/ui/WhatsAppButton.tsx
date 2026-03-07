@@ -1,6 +1,7 @@
 "use client";
 
 import { WHATSAPP_URL } from "@/lib/constants";
+import { trackWhatsAppClick } from "@/lib/tracking";
 
 export default function WhatsAppButton() {
   return (
@@ -9,7 +10,8 @@ export default function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contactar por WhatsApp"
-      className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] shadow-lg transition-transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2"
+      onClick={() => trackWhatsAppClick("floating_button")}
+      className="fixed bottom-20 right-6 z-50 hidden h-14 w-14 items-center justify-center rounded-full bg-[#25D366] shadow-lg transition-transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 lg:flex lg:bottom-6"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

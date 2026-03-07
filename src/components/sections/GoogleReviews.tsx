@@ -62,7 +62,7 @@ export default function GoogleReviews() {
   };
 
   return (
-    <SectionWrapper id="resenas" bg="gray">
+    <SectionWrapper id="reseñas" bg="gray">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewJsonLd) }}
@@ -83,7 +83,7 @@ export default function GoogleReviews() {
         </h2>
         <p className="mx-auto mt-3 max-w-lg text-secondary-500">
           Historias reales de personas que confiaron en nuestro equipo.
-          Todas las resenas son verificadas en Google.
+          Todas las reseñas son verificadas en Google.
         </p>
 
         {/* Rating badge linking to Google */}
@@ -134,7 +134,7 @@ export default function GoogleReviews() {
                   <div className="relative flex-1 aspect-[3/4]">
                     <Image
                       src={r.afterImage as string}
-                      alt={`${review.name} - Despues`}
+                      alt={`${review.name} - Después`}
                       fill
                       className={`object-cover rounded-lg ${active === 0 ? "" : "object-top"}`}
                       style={active === 0 ? { objectPosition: "center 25%" } : undefined}
@@ -142,7 +142,7 @@ export default function GoogleReviews() {
                       loading="lazy"
                     />
                     <span className="absolute bottom-2 left-2 rounded-full bg-primary-400 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
-                      Despues
+                      Después
                     </span>
                   </div>
                 </div>
@@ -153,7 +153,7 @@ export default function GoogleReviews() {
                 <div className="relative mb-6 w-full aspect-[16/9] rounded-xl overflow-hidden">
                   <Image
                     src={r.image as string}
-                    alt={`${review.name} - Antes y Despues`}
+                    alt={`${review.name} - Antes y Después`}
                     fill
                     className="object-cover object-top"
                     sizes="(max-width: 768px) 100vw, 600px"
@@ -179,7 +179,7 @@ export default function GoogleReviews() {
                 }}
                 className="mt-2 text-sm font-medium text-primary-400 hover:text-primary-500 transition-colors"
               >
-                {expanded ? "Ver menos" : "Leer mas..."}
+                {expanded ? "Ver menos" : "Leermás..."}
               </button>
             )}
           </div>
@@ -293,7 +293,7 @@ export default function GoogleReviews() {
           className="group inline-flex items-center gap-3 rounded-full border border-gray-200 bg-white px-7 py-3.5 text-sm font-semibold text-secondary-600 shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary-200 hover:text-primary-400 hover:shadow-md"
         >
           <GoogleIcon className="h-4 w-4" />
-          Ver las {STATS.reviews} resenas en Google
+          Ver las {STATS.reviews} reseñas en Google
           <svg
             className="h-4 w-4 transition-transform group-hover:translate-x-1"
             fill="none"

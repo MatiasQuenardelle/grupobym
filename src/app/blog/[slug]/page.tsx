@@ -150,7 +150,7 @@ export default function BlogPage({ params }: Props) {
               >
                 {DOCTOR_NAME}
               </Link>
-              {" "}— Cirujano Bariatrico
+              {" "}— Cirujano Bariátrico
             </div>
           )}
 
@@ -182,7 +182,7 @@ export default function BlogPage({ params }: Props) {
                 rel="noopener noreferrer"
                 variant="whatsapp"
               >
-                Consultar por WhatsApp
+                Consulta Gratuita por WhatsApp
               </Button>
             </div>
           </div>
@@ -190,7 +190,7 @@ export default function BlogPage({ params }: Props) {
           {relatedPosts.length > 0 && (
             <div className="mt-16">
               <h2 className="text-2xl font-bold text-secondary-700">
-                Articulos relacionados
+                Artículos relacionados
               </h2>
               <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {relatedPosts.map((post) => (

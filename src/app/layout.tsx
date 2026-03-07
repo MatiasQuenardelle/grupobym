@@ -4,6 +4,8 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
+import StickyMobileCTA from "@/components/sections/StickyMobileCTA";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import {
   SITE_NAME,
   SITE_URL,
@@ -20,20 +22,20 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `GrupoByM | Cirugia Bariatrica en Argentina - ${DOCTOR_NAME}`,
+    default: `GrupoByM | Cirugía Bariátrica en Argentina - ${DOCTOR_NAME}`,
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
   keywords: [
-    "cirugia bariatrica",
-    "cirugia bariatrica argentina",
-    "bypass gastrico",
-    "manga gastrica",
-    "cirugia metabolica",
-    "cirugia bariatrica precio",
-    "mejor cirujano bariatrico argentina",
-    "cirugia bariatrica paraguay",
-    "cirugia bariatrica desde brasil",
+    "cirugía bariátrica",
+    "cirugía bariátrica argentina",
+    "bypass gástrico",
+    "manga gástrica",
+    "cirugía metabólica",
+    "cirugía bariátrica precio",
+    "mejor cirujano bariátrico argentina",
+    "cirugía bariátrica paraguay",
+    "cirugía bariátrica desde brasil",
     "endoscopia",
     "obesidad tratamiento",
   ],
@@ -47,7 +49,7 @@ export const metadata: Metadata = {
     locale: "es_AR",
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: `GrupoByM | Cirugia Bariatrica en Argentina - ${DOCTOR_NAME}`,
+    title: `GrupoByM | Cirugía Bariátrica en Argentina - ${DOCTOR_NAME}`,
     description: SITE_DESCRIPTION,
     images: [
       {
@@ -60,7 +62,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `GrupoByM | Cirugia Bariatrica en Argentina - ${DOCTOR_NAME}`,
+    title: `GrupoByM | Cirugía Bariátrica en Argentina - ${DOCTOR_NAME}`,
     description: SITE_DESCRIPTION,
     images: ["/og-image.jpg"],
   },
@@ -126,17 +128,17 @@ export default function RootLayout({
       availableService: [
         {
           "@type": "MedicalProcedure",
-          name: "Bypass Gastrico",
+          name: "Bypass Gástrico",
           procedureType: "Surgical",
         },
         {
           "@type": "MedicalProcedure",
-          name: "Manga Gastrica",
+          name: "Manga Gástrica",
           procedureType: "Surgical",
         },
         {
           "@type": "MedicalProcedure",
-          name: "Cirugia Metabolica",
+          name: "Cirugía Metabólica",
           procedureType: "Surgical",
         },
       ],
@@ -158,6 +160,7 @@ export default function RootLayout({
   return (
     <html lang="es-AR" className={inter.variable}>
       <head>
+        <GoogleAnalytics />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <script
@@ -176,6 +179,7 @@ export default function RootLayout({
         <main id="main-content">{children}</main>
         <Footer />
         <WhatsAppButton />
+        <StickyMobileCTA />
       </body>
     </html>
   );

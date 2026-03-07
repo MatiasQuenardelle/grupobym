@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EBF8FF"/>
+      <stop offset="100%" style="stop-color:#D1EEFC"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3AADE0"/>
+      <stop offset="100%" style="stop-color:#186590"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="870" cy="300" r="210" fill="url(#accent)" opacity="0.07"/>
+  <circle cx="930" cy="260" r="145" fill="url(#accent)" opacity="0.05"/>
+  <!-- Refresh/revision arrows -->
+  <g transform="translate(480, 160)" opacity="0.3">
+    <path d="M100 20 A80 80 0 1 1 30 60" fill="none" stroke="#3AADE0" stroke-width="5" stroke-linecap="round"/>
+    <polygon points="25,50 35,68 15,65" fill="#3AADE0"/>
+    <path d="M60 180 A80 80 0 1 1 130 140" fill="none" stroke="#186590" stroke-width="5" stroke-linecap="round"/>
+    <polygon points="135,150 125,132 145,135" fill="#186590"/>
+    <!-- Center plus -->
+    <rect x="72" y="85" width="16" height="30" rx="3" fill="#3AADE0" opacity="0.3"/>
+    <rect x="65" y="92" width="30" height="16" rx="3" fill="#3AADE0" opacity="0.3"/>
+  </g>
+  <!-- Decorative dots -->
+  <g fill="#3AADE0" opacity="0.12">
+    <circle cx="100" cy="100" r="4"/><circle cx="120" cy="100" r="4"/><circle cx="140" cy="100" r="4"/>
+    <circle cx="100" cy="120" r="4"/><circle cx="120" cy="120" r="4"/><circle cx="140" cy="120" r="4"/>
+    <circle cx="100" cy="140" r="4"/><circle cx="120" cy="140" r="4"/><circle cx="140" cy="140" r="4"/>
+    <circle cx="1060" cy="490" r="4"/><circle cx="1080" cy="490" r="4"/><circle cx="1100" cy="490" r="4"/>
+    <circle cx="1060" cy="510" r="4"/><circle cx="1080" cy="510" r="4"/><circle cx="1100" cy="510" r="4"/>
+    <circle cx="1060" cy="530" r="4"/><circle cx="1080" cy="530" r="4"/><circle cx="1100" cy="530" r="4"/>
+  </g>
+  <!-- Shield -->
+  <g transform="translate(190, 370)" opacity="0.12">
+    <path d="M40 5 L70 20 L70 50 C70 70, 55 80, 40 85 C25 80, 10 70, 10 50 L10 20 Z" fill="#3AADE0"/>
+  </g>
+  <!-- Stethoscope -->
+  <g transform="translate(800, 380)" opacity="0.15">
+    <path d="M30 20 L30 60 C30 80, 50 90, 60 80 C70 70, 60 55, 50 60" fill="none" stroke="#186590" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="30" cy="15" r="6" fill="none" stroke="#186590" stroke-width="3"/>
+    <circle cx="60" cy="80" r="4" fill="#186590"/>
+  </g>
+</svg>

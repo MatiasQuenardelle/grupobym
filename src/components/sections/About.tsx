@@ -15,7 +15,7 @@ export default function About() {
       "General Surgery",
     ],
     description:
-      "Cirujano general y laparoscopista, especialista en cirugia bariatrica y esofago-gastroduodenal.",
+      "Cirujano general y laparoscopista, especialista en cirugía bariátrica y esófago-gastroduodenal.",
     worksFor: {
       "@type": "MedicalBusiness",
       name: "GrupoByM",
@@ -42,12 +42,11 @@ export default function About() {
         <div className="relative mx-auto w-full max-w-md">
           <div className="relative aspect-[3/4] overflow-hidden rounded-2xl">
             <Image
-              src="/images/pablo-rodriguez.png"
+              src="/images/hero2.png"
               alt={DOCTOR_NAME}
               fill
               className="object-cover object-top"
               sizes="(max-width: 768px) 100vw, 400px"
-              priority
             />
           </div>
           {/* Decorative accent */}
@@ -63,22 +62,22 @@ export default function About() {
             {DOCTOR_NAME}
           </h2>
           <p className="mt-2 text-lg font-medium text-accent-400">
-            Cirujano General | Laparoscopista | Bariatrico | Esofago-Gastroduodenal
+            Cirujano General | Laparoscopista | Bariátrico | Esófago-Gastroduodenal
           </p>
 
           <div className="mt-6 space-y-4 text-secondary-600 leading-relaxed">
             <p>
               Cirujano general y laparoscopista, especialista en cirugia
-              bariatrica y esofago-gastroduodenal, el {DOCTOR_NAME} lidera un
+              bariátrica y esófago-gastroduodenal, el {DOCTOR_NAME} lidera un
               equipo interdisciplinario dedicado a transformar la calidad de
               vida de cada paciente.
             </p>
             <p>
-              Formado en las instituciones mas prestigiosas del pais, con
-              participacion activa en congresos nacionales e internacionales
-              de cirugia bariatrica. Representante de SACO en el Congreso
-              Internacional de Cirugia para la Obesidad y Enfermedades
-              Metabolicas.
+              Formado en las instituciones más prestigiosas del país, con
+              participación activa en congresos nacionales e internacionales
+              de cirugía bariátrica. Representante de SACO en el Congreso
+              Internacional de Cirugía para la Obesidad y Enfermedades
+              Metabólicas.
             </p>
           </div>
 
@@ -86,9 +85,9 @@ export default function About() {
           <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
             {[
               "Cirujano General",
-              "Especialista en Cirugia Laparoscopica",
-              "Especialista en Cirugia Bariatrica",
-              "Especialista en Esofago-Gastroduodenal",
+              "Especialista en Cirugía Laparoscópica",
+              "Especialista en Cirugía Bariátrica",
+              "Especialista en Esófago-Gastroduodenal",
             ].map((credential) => (
               <div key={credential} className="flex items-start gap-2 rounded-lg bg-primary-50 px-3 py-2.5 sm:bg-transparent sm:px-0 sm:py-0 sm:rounded-none">
                 <svg

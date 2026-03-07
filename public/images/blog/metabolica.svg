@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EBF8FF"/>
+      <stop offset="100%" style="stop-color:#D1EEFC"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3AADE0"/>
+      <stop offset="100%" style="stop-color:#186590"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="860" cy="310" r="200" fill="url(#accent)" opacity="0.07"/>
+  <circle cx="920" cy="270" r="140" fill="url(#accent)" opacity="0.05"/>
+  <!-- Lightning bolt (metabolism) -->
+  <g transform="translate(500, 130)" opacity="0.3">
+    <path d="M70 0 L30 100 L60 100 L40 180 L110 70 L75 70 L100 0 Z" fill="#3AADE0" opacity="0.2" stroke="#3AADE0" stroke-width="3" stroke-linejoin="round"/>
+  </g>
+  <!-- Blood glucose chart going down -->
+  <g transform="translate(700, 200)" opacity="0.2">
+    <rect x="0" y="0" width="160" height="120" rx="8" fill="none" stroke="#186590" stroke-width="2"/>
+    <path d="M20 30 L50 35 L80 60 L110 80 L140 95" fill="none" stroke="#3AADE0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Arrow down -->
+    <polygon points="140,90 145,100 135,100" fill="#3AADE0" opacity="0.6"/>
+    <!-- Grid lines -->
+    <line x1="20" y1="50" x2="140" y2="50" stroke="#186590" stroke-width="0.5" opacity="0.3"/>
+    <line x1="20" y1="80" x2="140" y2="80" stroke="#186590" stroke-width="0.5" opacity="0.3"/>
+  </g>
+  <!-- Insulin/syringe symbol -->
+  <g transform="translate(200, 250)" opacity="0.15">
+    <rect x="20" y="10" width="12" height="70" rx="3" fill="#186590"/>
+    <rect x="15" y="8" width="22" height="8" rx="2" fill="#186590"/>
+    <line x1="26" y1="80" x2="26" y2="95" stroke="#186590" stroke-width="2" stroke-linecap="round"/>
+    <rect x="18" y="30" width="16" height="2" fill="#EBF8FF" opacity="0.5"/>
+    <rect x="18" y="40" width="16" height="2" fill="#EBF8FF" opacity="0.5"/>
+    <rect x="18" y="50" width="16" height="2" fill="#EBF8FF" opacity="0.5"/>
+  </g>
+  <!-- Decorative dots -->
+  <g fill="#3AADE0" opacity="0.12">
+    <circle cx="100" cy="100" r="4"/><circle cx="120" cy="100" r="4"/><circle cx="140" cy="100" r="4"/>
+    <circle cx="100" cy="120" r="4"/><circle cx="120" cy="120" r="4"/><circle cx="140" cy="120" r="4"/>
+    <circle cx="100" cy="140" r="4"/><circle cx="120" cy="140" r="4"/><circle cx="140" cy="140" r="4"/>
+    <circle cx="1060" cy="490" r="4"/><circle cx="1080" cy="490" r="4"/><circle cx="1100" cy="490" r="4"/>
+    <circle cx="1060" cy="510" r="4"/><circle cx="1080" cy="510" r="4"/><circle cx="1100" cy="510" r="4"/>
+    <circle cx="1060" cy="530" r="4"/><circle cx="1080" cy="530" r="4"/><circle cx="1100" cy="530" r="4"/>
+  </g>
+  <!-- Medical cross -->
+  <g transform="translate(180, 420)" opacity="0.12">
+    <rect x="25" y="0" width="30" height="80" rx="5" fill="#3AADE0"/>
+    <rect x="0" y="25" width="80" height="30" rx="5" fill="#3AADE0"/>
+  </g>
+</svg>

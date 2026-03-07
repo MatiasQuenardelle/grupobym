@@ -6,9 +6,9 @@ import Button from "@/components/ui/Button";
 import { SITE_URL, WHATSAPP_URL, PROCEDURES } from "@/lib/constants";
 
 export const metadata = generatePageMetadata({
-  title: "Procedimientos de Cirugia Bariatrica",
+  title: "Procedimientos de Cirugía Bariátrica",
   description:
-    "Conoce todos los procedimientos de cirugia bariatrica que realizamos: bypass gastrico, manga gastrica, cirugia metabolica y endoscopia. Tecnicas minimamente invasivas con resultados comprobados.",
+    "Conoce todos los procedimientos de cirugía bariátrica que realizamos: bypass gástrico, manga gástrica, cirugía metabólica y endoscopia. Tecnicas mínimamente invasivas con resultados comprobados.",
   path: "/procedimientos",
 });
 
@@ -23,7 +23,7 @@ const iconMap: Record<string, JSX.Element> = {
       <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 0 1-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 0 1 4.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0 1 12 15a9.065 9.065 0 0 0-6.23.693L5 14.5m14.8.8 1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0 1 12 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
     </svg>
   ),
-  metabolica: (
+  metabólica: (
     <svg className="h-10 w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
       <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
     </svg>
@@ -41,22 +41,22 @@ const procedureDetails: Record<
 > = {
   "bypass-gastrico": {
     benefits: [
-      "60-80% perdida de exceso de peso",
+      "60-80% pérdida de exceso de peso",
       "80% remision de diabetes tipo 2",
       "Resultados a largo plazo",
     ],
     duration: "1.5-2 horas",
-    recovery: "48-72 hs internacion",
+    recovery: "48-72 hs internación",
     highlight: "Gold standard",
   },
   "manga-gastrica": {
     benefits: [
-      "50-70% perdida de exceso de peso",
-      "Procedimiento mas simple",
-      "Menor riesgo de deficiencias nutricionales",
+      "50-70% pérdida de exceso de peso",
+      "Procedimiento más simple",
+      "Menor riesgo de deficiencias nutriciónales",
     ],
     duration: "~1 hora",
-    recovery: "48 hs internacion",
+    recovery: "48 hs internación",
     highlight: "Mas realizado",
   },
   "cirugia-metabolica": {
@@ -66,27 +66,27 @@ const procedureDetails: Record<
       "Reduccion del riesgo cardiovascular",
     ],
     duration: "1.5-2 horas",
-    recovery: "48-72 hs internacion",
-    highlight: "Control metabolico",
+    recovery: "48-72 hs internación",
+    highlight: "Control metabólico",
   },
   endoscopia: {
     benefits: [
-      "Diagnostico preciso",
+      "Diagnóstico preciso",
       "Procedimiento ambulatorio",
       "Alta definicion y magnificacion",
     ],
     duration: "15-30 minutos",
     recovery: "Ambulatorio",
-    highlight: "Sin internacion",
+    highlight: "Sin internación",
   },
 };
 
 const comparisonData = [
-  { label: "Perdida de exceso de peso", bypass: "60-80%", manga: "50-70%", metabolica: "Variable", endoscopia: "-" },
-  { label: "Duracion de la cirugia", bypass: "1.5-2 hs", manga: "~1 hora", metabolica: "1.5-2 hs", endoscopia: "15-30 min" },
-  { label: "Internacion", bypass: "48-72 hs", manga: "48 hs", metabolica: "48-72 hs", endoscopia: "Ambulatorio" },
-  { label: "Remision diabetes tipo 2", bypass: "Hasta 80%", manga: "Hasta 60%", metabolica: "Hasta 80%", endoscopia: "-" },
-  { label: "Tipo de procedimiento", bypass: "Laparoscopico", manga: "Laparoscopico", metabolica: "Laparoscopico", endoscopia: "Endoscopico" },
+  { label: "Perdida de exceso de peso", bypass: "60-80%", manga: "50-70%", metabólica: "Variable", endoscopia: "-" },
+  { label: "Duracion de la cirugía", bypass: "1.5-2 hs", manga: "~1 hora", metabólica: "1.5-2 hs", endoscopia: "15-30 min" },
+  { label: "Internacion", bypass: "48-72 hs", manga: "48 hs", metabólica: "48-72 hs", endoscopia: "Ambulatorio" },
+  { label: "Remision diabetes tipo 2", bypass: "Hasta 80%", manga: "Hasta 60%", metabólica: "Hasta 80%", endoscopia: "-" },
+  { label: "Tipo de procedimiento", bypass: "Laparoscopico", manga: "Laparoscopico", metabólica: "Laparoscopico", endoscopia: "Endoscopico" },
 ];
 
 const steps = [
@@ -97,13 +97,13 @@ const steps = [
   },
   {
     number: "02",
-    title: "Estudios pre-quirurgicos",
+    title: "Estudios pre-quirúrgicos",
     description: "Realizamos todos los estudios necesarios, incluyendo endoscopia y analisis de laboratorio.",
   },
   {
     number: "03",
     title: "Cirugia",
-    description: "Procedimiento minimamente invasivo por via laparoscopica con tecnologia de ultima generacion.",
+    description: "Procedimiento mínimamente invasivo por via laparoscópica con tecnologia de última generación.",
   },
   {
     number: "04",
@@ -116,7 +116,7 @@ export default function ProcedimientosListingPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: "Procedimientos de Cirugia Bariatrica - GrupoByM",
+    name: "Procedimientos de Cirugía Bariátrica - GrupoByM",
     description: metadata.description,
     url: `${SITE_URL}/procedimientos`,
     isPartOf: {
@@ -174,13 +174,13 @@ export default function ProcedimientosListingPage() {
 
         <div className="text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-primary-400">
-            Tecnicas minimamente invasivas
+            Tecnicas mínimamente invasivas
           </p>
           <h1 className="mt-2 text-3xl font-extrabold text-secondary-700 sm:text-4xl lg:text-5xl">
             Nuestros procedimientos
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-secondary-500">
-            Realizamos cirugia bariatrica y metabolica por via laparoscopica.
+            Realizamos cirugía bariátrica y metabólica por via laparoscópica.
             Cada procedimiento se adapta a las necesidades individuales de cada paciente.
           </p>
         </div>
@@ -284,9 +284,9 @@ export default function ProcedimientosListingPage() {
             <thead>
               <tr className="border-b border-gray-100">
                 <th className="px-6 py-4 text-left font-semibold text-secondary-500"></th>
-                <th className="px-4 py-4 text-center font-bold text-secondary-700">Bypass Gastrico</th>
-                <th className="px-4 py-4 text-center font-bold text-secondary-700">Manga Gastrica</th>
-                <th className="px-4 py-4 text-center font-bold text-secondary-700">Cirugia Metabolica</th>
+                <th className="px-4 py-4 text-center font-bold text-secondary-700">Bypass Gástrico</th>
+                <th className="px-4 py-4 text-center font-bold text-secondary-700">Manga Gástrica</th>
+                <th className="px-4 py-4 text-center font-bold text-secondary-700">Cirugía Metabólica</th>
                 <th className="px-4 py-4 text-center font-bold text-secondary-700">Endoscopia</th>
               </tr>
             </thead>
@@ -296,7 +296,7 @@ export default function ProcedimientosListingPage() {
                   <td className="px-6 py-3 font-medium text-secondary-600">{row.label}</td>
                   <td className="px-4 py-3 text-center text-secondary-500">{row.bypass}</td>
                   <td className="px-4 py-3 text-center text-secondary-500">{row.manga}</td>
-                  <td className="px-4 py-3 text-center text-secondary-500">{row.metabolica}</td>
+                  <td className="px-4 py-3 text-center text-secondary-500">{row.metabólica}</td>
                   <td className="px-4 py-3 text-center text-secondary-500">{row.endoscopia}</td>
                 </tr>
               ))}
@@ -304,7 +304,7 @@ export default function ProcedimientosListingPage() {
           </table>
         </div>
         <p className="mt-4 text-center text-xs text-secondary-400">
-          La eleccion del procedimiento se define de forma individualizada en la consulta con el equipo.
+          La elección del procedimiento se define de forma individualizada en la consulta con el equipo.
         </p>
       </SectionWrapper>
 
@@ -315,7 +315,7 @@ export default function ProcedimientosListingPage() {
             Tu camino
           </p>
           <h2 className="mt-2 text-2xl font-extrabold text-secondary-700 sm:text-3xl">
-            Como es el proceso?
+            Cómo es el proceso?
           </h2>
         </div>
 
@@ -353,7 +353,7 @@ export default function ProcedimientosListingPage() {
               rel="noopener noreferrer"
               variant="whatsapp"
             >
-              Consultar por WhatsApp
+              Consulta Gratuita por WhatsApp
             </Button>
             <Button
               as="a"

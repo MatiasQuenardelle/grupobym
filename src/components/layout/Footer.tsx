@@ -27,8 +27,8 @@ export default function Footer() {
               <span className="text-lg font-bold">{PRACTICE_NAME}</span>
             </div>
             <p className="text-sm text-gray-300 leading-relaxed">
-              Detras de cada cuerpo hay una historia. Te acompanamos en tu
-              camino hacia una vida mas saludable.
+              Detras de cada cuerpo hay una historia. Te acompañamos en tu
+              camino hacia una vida más saludable.
             </p>
           </div>
 

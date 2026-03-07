@@ -13,8 +13,8 @@ import {
 } from "@/lib/constants";
 
 export const metadata = generatePageMetadata({
-  title: `${DOCTOR_NAME} - Cirujano Bariatrico`,
-  description: `${DOCTOR_NAME}, cirujano general y laparoscopista especializado en cirugia bariatrica y esofago-gastroduodenal. Mas de ${STATS.surgeries} cirugias realizadas en Resistencia, Chaco.`,
+  title: `${DOCTOR_NAME} - Cirujano Bariátrico`,
+  description: `${DOCTOR_NAME}, cirujano general y laparoscopista especializado en cirugía bariátrica y esófago-gastroduodenal. Más de ${STATS.surgeries} cirugías realizadas en Resistencia, Chaco.`,
   path: "/equipo/dr-pablo-rodriguez",
 });
 
@@ -28,7 +28,7 @@ export default function DoctorProfilePage() {
     url: `${SITE_URL}/equipo/dr-pablo-rodriguez`,
     image: `${SITE_URL}/images/dr-rodriguez.jpg`,
     description:
-      "Cirujano general y laparoscopista, especialista en cirugia bariatrica y esofago-gastroduodenal. Lider del equipo interdisciplinario de GrupoByM.",
+      "Cirujano general y laparoscopista, especialista en cirugía bariátrica y esófago-gastroduodenal. Lider del equipo interdisciplinario de GrupoByM.",
     medicalSpecialty: [
       "Bariatric Surgery",
       "General Surgery",
@@ -134,12 +134,12 @@ export default function DoctorProfilePage() {
                 {DOCTOR_NAME}
               </h1>
               <p className="mt-1 text-lg font-medium text-primary-400">
-                Cirujano Bariatrico — Lider del Equipo GrupoByM
+                Cirujano Bariátrico — Lider del Equipo GrupoByM
               </p>
               <p className="mt-4 text-secondary-500 leading-relaxed">
                 Cirujano general y laparoscopista, especializado en cirugia
-                bariatrica y esofago-gastroduodenal. Con mas de {STATS.surgeries}{" "}
-                cirugias realizadas, el Dr. Rodriguez lidera el equipo de
+                bariátrica y esófago-gastroduodenal. Con más de {STATS.surgeries}{" "}
+                cirugías realizadas, el Dr. Rodríguez lidera el equipo de
                 GrupoByM con un enfoque centrado en el paciente, la seguridad
                 y los resultados a largo plazo.
               </p>
@@ -153,10 +153,10 @@ export default function DoctorProfilePage() {
               </h2>
               <ul className="mt-4 space-y-2">
                 {[
-                  "Cirugia Bariatrica (Bypass Gastrico, Manga Gastrica)",
-                  "Cirugia Metabolica",
-                  "Cirugia General y Laparoscopica",
-                  "Cirugia Esofago-Gastroduodenal",
+                  "Cirugía Bariátrica (Bypass Gástrico, Manga Gástrica)",
+                  "Cirugía Metabólica",
+                  "Cirugia General y Laparoscópica",
+                  "Cirugia Esófago-Gastroduodenal",
                   "Endoscopia Digestiva Alta y Baja",
                 ].map((spec) => (
                   <li
@@ -193,10 +193,10 @@ export default function DoctorProfilePage() {
                   </div>
                   <div>
                     <p className="font-semibold text-secondary-700">
-                      Cirugias realizadas
+                      Cirugías realizadas
                     </p>
                     <p className="text-sm text-secondary-500">
-                      Bypass gastrico, manga gastrica, cirugia metabolica
+                      Bypass gástrico, manga gástrica, cirugía metabólica
                     </p>
                   </div>
                 </div>
@@ -219,7 +219,7 @@ export default function DoctorProfilePage() {
                   </div>
                   <div>
                     <p className="font-semibold text-secondary-700">
-                      Paises de origen de pacientes
+                      Países de origen de pacientes
                     </p>
                     <p className="text-sm text-secondary-500">
                       Argentina, Paraguay y Brasil
@@ -255,16 +255,16 @@ export default function DoctorProfilePage() {
               Enfoque del equipo interdisciplinario
             </h2>
             <p className="mt-4 text-secondary-500 leading-relaxed">
-              El Dr. Rodriguez lidera un equipo interdisciplinario compuesto por
+              El Dr. Rodríguez lidera un equipo interdisciplinario compuesto por
               nutricionistas, psicologa y profesor de educacion fisica. Este
-              abordaje integral es clave para el exito de la cirugia bariatrica,
+              abordaje integral es clave para el exito de la cirugía bariátrica,
               ya que garantiza un acompanamiento completo en todas las
-              dimensiones del proceso: fisica, nutricional, emocional y de
+              dimensiones del proceso: fisica, nutriciónal, emocional y de
               actividad fisica.
             </p>
             <p className="mt-3 text-secondary-500 leading-relaxed">
-              El equipo trabaja de forma coordinada antes, durante y despues de
-              la cirugia, con controles periodicos y seguimiento personalizado
+              El equipo trabaja de forma coordinada antes, durante y después de
+              la cirugía, con controles periódicos y seguimiento personalizado
               para cada paciente. Este modelo de trabajo en equipo es uno de los
               pilares que explica los excelentes resultados de GrupoByM.
             </p>
@@ -273,7 +273,7 @@ export default function DoctorProfilePage() {
           {recentPosts.length > 0 && (
             <div className="mt-12">
               <h2 className="text-xl font-bold text-secondary-700">
-                Articulos del {DOCTOR_NAME}
+                Artículos del {DOCTOR_NAME}
               </h2>
               <div className="mt-6 grid gap-4 sm:grid-cols-2">
                 {recentPosts.map((post) => (
@@ -312,7 +312,7 @@ export default function DoctorProfilePage() {
                 rel="noopener noreferrer"
                 variant="whatsapp"
               >
-                Consultar por WhatsApp
+                Consulta Gratuita por WhatsApp
               </Button>
             </div>
           </div>

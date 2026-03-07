@@ -1,6 +1,9 @@
+"use client";
+
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import Button from "@/components/ui/Button";
 import { WHATSAPP_URL } from "@/lib/constants";
+import { trackWhatsAppClick } from "@/lib/tracking";
 
 const benefits = [
   {
@@ -16,7 +19,7 @@ const benefits = [
   {
     title: "Menos riesgos cardiovasculares",
     description:
-      "Disminuyen significativamente los riesgos cardiovasculares y metabolicos.",
+      "Disminuyen significativamente los riesgos cardiovasculares y metabólicos.",
     icon: (
       <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
@@ -24,9 +27,9 @@ const benefits = [
     ),
   },
   {
-    title: "Energia, movilidad y bienestar",
+    title: "Energía, movilidad y bienestar",
     description:
-      "Volves a tener energia, movilidad y bienestar para tu dia a dia.",
+      "Volves a tener energía, movilidad y bienestar para tu dia a dia.",
     icon: (
       <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z" />
@@ -57,7 +60,7 @@ const benefits = [
   {
     title: "Vida activa y plena",
     description:
-      "Tu vida se expande: te sentis mas activo, agil y presente en cada momento.",
+      "Tu vida se expande: te sentis más activo, agil y presente en cada momento.",
     icon: (
       <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" />
@@ -77,8 +80,8 @@ export default function Resultados() {
           El verdadero exito se mide en calidad de vida
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-secondary-500">
-          Despues de la cirugia, nuestros pacientes experimentan cambios que
-          van mucho mas alla de la balanza. Los cambios reales empiezan cuando
+          Después de la cirugía, nuestros pacientes experimentan cambios que
+          van mucho más alla de la balanza. Los cambios reales empiezan cuando
           el cuerpo sana y la vida vuelve a sentirse propia.
         </p>
       </div>
@@ -102,11 +105,11 @@ export default function Resultados() {
       <div className="mt-12 rounded-2xl bg-primary-50 p-8 md:p-10 text-center">
         <p className="text-lg font-semibold text-secondary-700">
           Para que estos resultados se mantengan en el tiempo, los controles
-          bariatricos son clave.
+          bariátricos son clave.
         </p>
         <p className="mt-2 text-secondary-500">
-          Tu evolucion no termina en el quirofano: un seguimiento adecuado
-          garantiza que tu salud continue mejorando, que tu nutricion sea la
+          Tu evolución no termina en el quirofano: un seguimiento adecuado
+          garantiza que tu salud continue mejorando, que tu nutrición sea la
           correcta y que cada cambio sea sostenible a largo plazo.
         </p>
         <div className="mt-6">
@@ -116,8 +119,9 @@ export default function Resultados() {
             target="_blank"
             rel="noopener noreferrer"
             variant="whatsapp"
+            onClick={() => trackWhatsAppClick("resultados")}
           >
-            Consultar por WhatsApp
+            Consulta Gratuita por WhatsApp
           </Button>
         </div>
       </div>

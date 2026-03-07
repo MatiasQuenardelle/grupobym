@@ -6,17 +6,17 @@ import Button from "@/components/ui/Button";
 import { SITE_URL, WHATSAPP_URL } from "@/lib/constants";
 
 export const metadata = generatePageMetadata({
-  title: "Cirugia Bariatrica Precio Argentina 2026",
+  title: "Cirugía Bariátrica Precio Argentina 2026",
   description:
-    "Cuanto cuesta la cirugia bariatrica en Argentina. Precios de bypass gastrico y manga gastrica, cobertura de obra social, financiamiento y opciones de pago en GrupoByM.",
+    "Cuánto cuesta la cirugía bariátrica en Argentina. Precios de bypass gástrico y manga gástrica, cobertura de obra social, financiamiento y opciones de pago en GrupoByM.",
   path: "/cirugia-bariatrica-precio",
 });
 
-export default function CirugiaBariatricaPrecioPage() {
+export default function CirugiaBariátricaPrecioPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Cirugia Bariatrica Precio Argentina - GrupoByM",
+    name: "Cirugía Bariátrica Precio Argentina - GrupoByM",
     description: metadata.description,
     url: `${SITE_URL}/cirugia-bariatrica-precio`,
     isPartOf: {
@@ -39,7 +39,7 @@ export default function CirugiaBariatricaPrecioPage() {
       {
         "@type": "ListItem",
         position: 2,
-        name: "Cirugia Bariatrica Precio",
+        name: "Cirugía Bariátrica Precio",
       },
     ],
   };
@@ -59,17 +59,17 @@ export default function CirugiaBariatricaPrecioPage() {
         <nav className="mb-6 text-sm text-secondary-400" aria-label="Breadcrumb">
           <a href="/" className="hover:text-primary-400">Inicio</a>
           <span className="mx-2">/</span>
-          <span className="text-secondary-600">Cirugia Bariatrica Precio</span>
+          <span className="text-secondary-600">Cirugía Bariátrica Precio</span>
         </nav>
 
         <div className="mx-auto max-w-4xl">
           <div className="text-center">
             <h1 className="text-3xl font-extrabold text-secondary-700 sm:text-4xl lg:text-5xl">
-              Cuanto cuesta la cirugia bariatrica en Argentina
+              Cuánto cuesta la cirugía bariátrica en Argentina
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-secondary-500">
-              Informacion clara sobre costos, cobertura de obra social y
-              opciones de financiamiento para tu cirugia bariatrica.
+              Información clara sobre costos, cobertura de obra social y
+              opciones de financiamiento para tu cirugía bariátrica.
             </p>
           </div>
 
@@ -80,11 +80,11 @@ export default function CirugiaBariatricaPrecioPage() {
               </svg>
               <div>
                 <h2 className="text-lg font-bold text-green-800">
-                  La cirugia bariatrica tiene cobertura de obra social
+                  La cirugía bariátrica tiene cobertura de obra social
                 </h2>
                 <p className="mt-1 text-sm text-green-700">
-                  Esta incluida en el Programa Medico Obligatorio (PMO). La
-                  mayoria de las obras sociales y prepagas cubren el
+                  Esta incluida en el Programa Médico Obligatorio (PMO). La
+                  mayoría de las obras sociales y prepagas cubren el
                   procedimiento cuando se cumplen los requisitos medicos.
                 </p>
                 <Link
@@ -99,13 +99,13 @@ export default function CirugiaBariatricaPrecioPage() {
 
           <div className="mt-12">
             <h2 className="text-2xl font-bold text-secondary-700">
-              Que incluye la cirugia bariatrica
+              Qué incluye la cirugía bariátrica
             </h2>
             <div className="mt-6 grid gap-6 sm:grid-cols-2">
               <Card hover={false}>
                 <h3 className="text-lg font-bold text-secondary-700">
                   <Link href="/procedimientos/manga-gastrica" className="hover:text-primary-400">
-                    Manga Gastrica
+                    Manga Gástrica
                   </Link>
                 </h3>
                 <ul className="mt-3 space-y-2 text-sm text-secondary-500">
@@ -113,7 +113,7 @@ export default function CirugiaBariatricaPrecioPage() {
                     <svg className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                     </svg>
-                    Equipo quirurgico completo
+                    Equipo quirúrgico completo
                   </li>
                   <li className="flex items-start gap-2">
                     <svg className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
@@ -125,13 +125,13 @@ export default function CirugiaBariatricaPrecioPage() {
                     <svg className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                     </svg>
-                    48 hs de internacion
+                    48 hs de internación
                   </li>
                   <li className="flex items-start gap-2">
                     <svg className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                     </svg>
-                    Insumos quirurgicos
+                    Insumos quirúrgicos
                   </li>
                   <li className="flex items-start gap-2">
                     <svg className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
@@ -148,7 +148,7 @@ export default function CirugiaBariatricaPrecioPage() {
               <Card hover={false}>
                 <h3 className="text-lg font-bold text-secondary-700">
                   <Link href="/procedimientos/bypass-gastrico" className="hover:text-primary-400">
-                    Bypass Gastrico
+                    Bypass Gástrico
                   </Link>
                 </h3>
                 <ul className="mt-3 space-y-2 text-sm text-secondary-500">
@@ -156,7 +156,7 @@ export default function CirugiaBariatricaPrecioPage() {
                     <svg className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                     </svg>
-                    Equipo quirurgico completo
+                    Equipo quirúrgico completo
                   </li>
                   <li className="flex items-start gap-2">
                     <svg className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
@@ -168,13 +168,13 @@ export default function CirugiaBariatricaPrecioPage() {
                     <svg className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                     </svg>
-                    48-72 hs de internacion
+                    48-72 hs de internación
                   </li>
                   <li className="flex items-start gap-2">
                     <svg className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                     </svg>
-                    Insumos quirurgicos
+                    Insumos quirúrgicos
                   </li>
                   <li className="flex items-start gap-2">
                     <svg className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
@@ -198,7 +198,7 @@ export default function CirugiaBariatricaPrecioPage() {
               <Card hover={false} className="border border-green-200 bg-green-50">
                 <h3 className="text-lg font-bold text-green-800">Obra Social / Prepaga</h3>
                 <p className="mt-2 text-sm text-green-700">
-                  Cobertura total o parcial segun tu plan. Te ayudamos con el tramite de autorizacion.
+                  Cobertura total o parcial segun tu plan. Te ayudamos con el trámite de autorización.
                 </p>
                 <Link
                   href="/blog/cirugia-bariatrica-obra-social"
@@ -224,10 +224,10 @@ export default function CirugiaBariatricaPrecioPage() {
 
           <div className="mt-16">
             <h2 className="text-2xl font-bold text-secondary-700">
-              La cirugia bariatrica es una inversion en tu salud
+              La cirugía bariátrica es una inversion en tu salud
             </h2>
             <p className="mt-4 text-secondary-500 leading-relaxed">
-              Mas alla del costo economico, la cirugia bariatrica representa un
+              Más allá del costo economico, la cirugía bariátrica representa un
               ahorro significativo a largo plazo. Los pacientes que se operan
               reducen o eliminan el gasto en:
             </p>
@@ -252,7 +252,7 @@ export default function CirugiaBariatricaPrecioPage() {
               Ademas, la mejora en la calidad de vida, la movilidad y el
               bienestar emocional no tienen precio. Conoce los{" "}
               <Link href="/blog/beneficios-cirugia-bariatrica" className="text-primary-400 hover:text-primary-500">
-                beneficios completos de la cirugia bariatrica
+                beneficios completos de la cirugía bariátrica
               </Link>
               .
             </p>
@@ -263,10 +263,10 @@ export default function CirugiaBariatricaPrecioPage() {
               Pacientes internacionales
             </h2>
             <p className="mt-4 text-secondary-500 leading-relaxed">
-              Si sos de Paraguay, Brasil u otro pais, ofrecemos paquetes
-              especiales que incluyen coordinacion de logistica, asistencia con
+              Si sos de Paraguay, Brasil u otro país, ofrecemos paquetes
+              especiales que incluyen coordinación de logística, asistencia con
               alojamiento y seguimiento post-operatorio a distancia. El costo
-              de la cirugia bariatrica en Argentina es competitivo a nivel
+              de la cirugía bariátrica en Argentina es competitivo a nivel
               regional con estandares de calidad de primer nivel.
             </p>
             <Link
@@ -282,7 +282,7 @@ export default function CirugiaBariatricaPrecioPage() {
               Consulta tu presupuesto personalizado
             </h2>
             <p className="mt-2 text-secondary-500">
-              Contactanos para recibir informacion detallada sobre costos y
+              Contactanos para recibir información detallada sobre costos y
               cobertura segun tu caso particular.
             </p>
             <div className="mt-4">
@@ -293,7 +293,7 @@ export default function CirugiaBariatricaPrecioPage() {
                 rel="noopener noreferrer"
                 variant="whatsapp"
               >
-                Consultar por WhatsApp
+                Consulta Gratuita por WhatsApp
               </Button>
             </div>
           </div>

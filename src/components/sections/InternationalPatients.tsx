@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import Button from "@/components/ui/Button";
 import { WHATSAPP_URL } from "@/lib/constants";
+import { trackWhatsAppClick } from "@/lib/tracking";
 
 const benefits = [
   {
@@ -13,12 +16,12 @@ const benefits = [
     description: "Controles post-operatorios por videollamada con todo el equipo.",
   },
   {
-    title: "Experiencia internacional",
-    description: "Amplia trayectoria atendiendo pacientes de Paraguay, Brasil y otros paises.",
+    title: "Experiencia internaciónal",
+    description: "Amplia trayectoria atendiendo pacientes de Paraguay, Brasil y otros países.",
   },
   {
     title: "Comunicacion bilingue",
-    description: "Atencion en espanol y portugues para pacientes de Brasil.",
+    description: "Atención en espanol y portugues para pacientes de Brasil.",
   },
 ];
 
@@ -63,8 +66,9 @@ export default function InternationalPatients() {
               target="_blank"
               rel="noopener noreferrer"
               variant="whatsapp"
+              onClick={() => trackWhatsAppClick("international_patients")}
             >
-              Consultar desde el exterior
+              Consulta Gratuita desde el exterior
             </Button>
           </div>
         </div>
@@ -74,7 +78,7 @@ export default function InternationalPatients() {
           <div className="relative aspect-[3/4] overflow-hidden rounded-2xl">
             <Image
               src="/images/cirugia-equipo.png"
-              alt="Equipo quirurgico de GrupoByM en cirugia bariatrica"
+              alt="Equipo quirúrgico de GrupoByM en cirugía bariátrica"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 400px"

@@ -7,7 +7,7 @@ const testimonials = [
   {
     name: "Maria G.",
     age: 38,
-    procedure: "Bypass Gastrico",
+    procedure: "Bypass Gástrico",
     weightLost: "45 kg",
     quote:
       "Hace un ano no podia subir escaleras sin agitarme. Hoy corro 5K cada fin de semana. El equipo de GrupoByM me devolvio la vida.",
@@ -15,15 +15,15 @@ const testimonials = [
   {
     name: "Carlos R.",
     age: 42,
-    procedure: "Manga Gastrica",
+    procedure: "Manga Gástrica",
     weightLost: "52 kg",
     quote:
-      "Despues de anos luchando con la obesidad y la diabetes, la cirugia fue un antes y un despues. Mis valores de glucemia se normalizaron en semanas.",
+      "Después de anos luchando con la obesidad y la diabetes, la cirugía fue un antes y un después. Mis valores de glucemia se normalizaron en semanas.",
   },
   {
     name: "Ana L.",
     age: 35,
-    procedure: "Bypass Gastrico",
+    procedure: "Bypass Gástrico",
     weightLost: "40 kg",
     quote:
       "Vine desde Paraguay y la experiencia fue increible. Me ayudaron con todo, desde el alojamiento hasta el seguimiento por videollamada.",
@@ -42,7 +42,7 @@ export default function CasosDeExito() {
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-secondary-500">
           Cada historia es unica. Conoce a quienes ya transformaron su vida
-          con el acompanamiento de nuestro equipo.
+          con el acompañamiento de nuestro equipo.
         </p>
       </div>
 

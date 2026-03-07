@@ -7,9 +7,9 @@ import Button from "@/components/ui/Button";
 import { SITE_URL, WHATSAPP_URL } from "@/lib/constants";
 
 export const metadata = generatePageMetadata({
-  title: "Casos de Exito - Historias de Transformacion",
+  title: "Casos de Exito - Historias de Transformación",
   description:
-    "Conoce las historias reales de pacientes que transformaron su vida con cirugia bariatrica en GrupoByM. Resultados comprobados con acompanamiento interdisciplinario.",
+    "Conoce las historias reales de pacientes que transformaron su vida con cirugía bariátrica en GrupoByM. Resultados comprobados con acompanamiento interdisciplinario.",
   path: "/casos-de-exito",
 });
 
@@ -80,7 +80,7 @@ export default function CasosDeExitoListingPage() {
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-secondary-500">
             Historias reales de pacientes que transformaron su vida con cirugia
-            bariatrica. Cada caso es unico, y cada resultado es motivo de
+            bariátrica. Cada caso es unico, y cada resultado es motivo de
             orgullo para nuestro equipo.
           </p>
         </div>
@@ -126,7 +126,7 @@ export default function CasosDeExitoListingPage() {
         ) : (
           <div className="mt-12 text-center">
             <p className="text-secondary-500">
-              Proximamente compartiremos mas historias de transformacion.
+              Proximamente compartiremos más historias de transformación.
             </p>
           </div>
         )}
@@ -146,7 +146,7 @@ export default function CasosDeExitoListingPage() {
               rel="noopener noreferrer"
               variant="whatsapp"
             >
-              Consultar por WhatsApp
+              Consulta Gratuita por WhatsApp
             </Button>
           </div>
         </div>

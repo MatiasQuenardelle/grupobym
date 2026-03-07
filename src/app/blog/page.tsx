@@ -7,9 +7,9 @@ import Card from "@/components/ui/Card";
 import { SITE_URL } from "@/lib/constants";
 
 export const metadata = generatePageMetadata({
-  title: "Blog - Articulos sobre Cirugia Bariatrica",
+  title: "Blog - Artículos sobre Cirugía Bariátrica",
   description:
-    "Articulos escritos por nuestro equipo medico sobre cirugia bariatrica, nutricion, recuperacion y calidad de vida. Informacion confiable para tomar decisiones informadas.",
+    "Artículos escritos por nuestro equipo médico sobre cirugía bariátrica, nutrición, recuperación y calidad de vida. Información confiable para tomar decisiones informadas.",
   path: "/blog",
 });
 
@@ -79,7 +79,7 @@ export default function BlogListingPage() {
             Blog
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-secondary-500">
-            Articulos escritos por nuestro equipo medico para que tomes
+            Artículos escritos por nuestro equipo médico para que tomes
             decisiones informadas sobre tu salud.
           </p>
         </div>
@@ -113,7 +113,7 @@ export default function BlogListingPage() {
                     {post.description}
                   </p>
                   <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary-400">
-                    Leer mas
+                    Leer más
                     <svg
                       className="h-4 w-4 transition-transform group-hover:translate-x-1"
                       fill="none"

@@ -3,7 +3,7 @@ import Card from "@/components/ui/Card";
 import { TEAM_MEMBERS, SITE_URL } from "@/lib/constants";
 
 const roleIcons: Record<string, JSX.Element> = {
-  "Cirujano Bariatrico": (
+  "Cirujano Bariátrico": (
     <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
       <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
     </svg>
@@ -33,11 +33,11 @@ export default function Team() {
     name: "GrupoByM",
     url: SITE_URL,
     member: TEAM_MEMBERS.map((m) => ({
-      "@type": m.role === "Cirujano Bariatrico" ? "Physician" : "Person",
+      "@type": m.role === "Cirujano Bariátrico" ? "Physician" : "Person",
       name: m.name,
       jobTitle: m.role,
       description: m.description,
-      ...(m.role === "Cirujano Bariatrico" && {
+      ...(m.role === "Cirujano Bariátrico" && {
         medicalSpecialty: "Bariatric Surgery",
       }),
     })),
@@ -57,7 +57,7 @@ export default function Team() {
           No te acompaña un médico. Te acompaña un equipo.
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-lg text-secondary-500">
-          El exito de la cirugia bariatrica depende de un abordaje integral.
+          El exito de la cirugía bariátrica depende de un abordaje integral.
           Por eso cada paciente cuenta con profesionales de distintas
           especialidades en cada etapa del proceso.
         </p>
