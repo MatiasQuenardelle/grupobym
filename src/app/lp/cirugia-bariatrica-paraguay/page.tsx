@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import ParaguayLanding from "@/components/lp/ParaguayLanding";
+import LandingDoctor from "@/components/lp/LandingDoctor";
+import LandingTeam from "@/components/lp/LandingTeam";
 
 export const metadata: Metadata = {
   title: "Cirugía Bariátrica desde Paraguay — Mitad de Precio, Todo Incluido",
@@ -8,5 +10,11 @@ export const metadata: Metadata = {
 };
 
 export default function ParaguayLP() {
-  return <ParaguayLanding />;
+  return (
+    <>
+      <ParaguayLanding />
+      <LandingDoctor />
+      <LandingTeam />
+    </>
+  );
 }

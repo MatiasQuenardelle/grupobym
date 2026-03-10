@@ -3,6 +3,8 @@ import LandingHero from "@/components/lp/LandingHero";
 import LandingFAQ from "@/components/lp/LandingFAQ";
 import LandingCTA from "@/components/lp/LandingCTA";
 import LandingReviews from "@/components/lp/LandingReviews";
+import LandingDoctor from "@/components/lp/LandingDoctor";
+import LandingTeam from "@/components/lp/LandingTeam";
 
 export const metadata: Metadata = {
   title: "Cirugía Metabólica — Tratamiento Quirúrgico para Diabetes Tipo 2",
@@ -142,6 +144,9 @@ export default function CirugiaMetabolicaLP() {
       </section>
 
       <LandingReviews />
+
+      <LandingDoctor />
+      <LandingTeam />
 
       {/* Candidate checklist */}
       <section className="py-16 md:py-20 bg-white">
