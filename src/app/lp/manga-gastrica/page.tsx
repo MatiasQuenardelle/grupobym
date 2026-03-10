@@ -122,13 +122,6 @@ export default function MangaGastricaLP() {
         </div>
       </section>
 
-      <GoogleReviews />
-
-      <LandingDoctor />
-      <LandingTeam />
-      <LandingProcess />
-      <LandingObraSocial />
-
       {/* Candidate checklist */}
       <section className="py-16 md:py-20 bg-white">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
@@ -154,8 +147,12 @@ export default function MangaGastricaLP() {
         </div>
       </section>
 
+      <LandingDoctor />
+      <LandingProcess />
+      <GoogleReviews />
+      <LandingObraSocial />
       <LandingFAQ faqs={FAQS} />
-
+      <LandingTeam />
       <LandingMap />
 
       <LandingCTA
