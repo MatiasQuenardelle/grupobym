@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { NAV_LINKS, WHATSAPP_URL } from "@/lib/constants";
 
-export default function Header() {
+export default function Header({ solid = false }: { solid?: boolean }) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -19,7 +19,7 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 z-40 w-full transition-all duration-500 ${
-        scrolled
+        solid || scrolled
           ? "bg-secondary-900/95 backdrop-blur-xl shadow-lg shadow-black/10"
           : "bg-transparent"
       }`}

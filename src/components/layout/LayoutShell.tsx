@@ -13,7 +13,7 @@ export default function LayoutShell({ children }: { children: React.ReactNode })
   if (isLandingPage) {
     return (
       <>
-        <Header />
+        <Header solid />
         {children}
       </>
     );
