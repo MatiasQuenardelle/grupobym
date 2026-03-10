@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
-import WhatsAppButton from "@/components/ui/WhatsAppButton";
-import StickyMobileCTA from "@/components/sections/StickyMobileCTA";
+import LayoutShell from "@/components/layout/LayoutShell";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import {
   SITE_NAME,
@@ -178,11 +175,7 @@ export default function RootLayout({
         >
           Saltar al contenido principal
         </a>
-        <Header />
-        <main id="main-content">{children}</main>
-        <Footer />
-        <WhatsAppButton />
-        <StickyMobileCTA />
+        <LayoutShell>{children}</LayoutShell>
       </body>
     </html>
   );
