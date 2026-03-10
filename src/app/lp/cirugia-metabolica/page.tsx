@@ -5,6 +5,10 @@ import LandingCTA from "@/components/lp/LandingCTA";
 import LandingReviews from "@/components/lp/LandingReviews";
 import LandingDoctor from "@/components/lp/LandingDoctor";
 import LandingTeam from "@/components/lp/LandingTeam";
+import LandingTransformaciones from "@/components/lp/LandingTransformaciones";
+import LandingProcess from "@/components/lp/LandingProcess";
+import LandingObraSocial from "@/components/lp/LandingObraSocial";
+import LandingMap from "@/components/lp/LandingMap";
 
 export const metadata: Metadata = {
   title: "Cirugía Metabólica — Tratamiento Quirúrgico para Diabetes Tipo 2",
@@ -148,6 +152,10 @@ export default function CirugiaMetabolicaLP() {
       <LandingDoctor />
       <LandingTeam />
 
+      <LandingTransformaciones />
+      <LandingProcess />
+      <LandingObraSocial />
+
       {/* Candidate checklist */}
       <section className="py-16 md:py-20 bg-white">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
@@ -174,6 +182,8 @@ export default function CirugiaMetabolicaLP() {
       </section>
 
       <LandingFAQ faqs={FAQS} />
+
+      <LandingMap />
 
       <LandingCTA
         title="Recuperá el control de tu diabetes"

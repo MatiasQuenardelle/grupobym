@@ -5,6 +5,10 @@ import LandingCTA from "@/components/lp/LandingCTA";
 import LandingReviews from "@/components/lp/LandingReviews";
 import LandingDoctor from "@/components/lp/LandingDoctor";
 import LandingTeam from "@/components/lp/LandingTeam";
+import LandingTransformaciones from "@/components/lp/LandingTransformaciones";
+import LandingProcess from "@/components/lp/LandingProcess";
+import LandingObraSocial from "@/components/lp/LandingObraSocial";
+import LandingMap from "@/components/lp/LandingMap";
 
 export const metadata: Metadata = {
   title: "Bypass Gástrico en Argentina — Consulta Gratuita",
@@ -145,6 +149,10 @@ export default function BypassGastricoLP() {
       <LandingDoctor />
       <LandingTeam />
 
+      <LandingTransformaciones />
+      <LandingProcess />
+      <LandingObraSocial />
+
       {/* Candidate checklist */}
       <section className="py-16 md:py-20 bg-white">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
@@ -171,6 +179,8 @@ export default function BypassGastricoLP() {
       </section>
 
       <LandingFAQ faqs={FAQS} />
+
+      <LandingMap />
 
       <LandingCTA
         title="Dá el primer paso hacia tu nueva vida"
