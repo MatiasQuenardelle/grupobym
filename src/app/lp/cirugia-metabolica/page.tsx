@@ -5,7 +5,6 @@ import LandingCTA from "@/components/lp/LandingCTA";
 import LandingReviews from "@/components/lp/LandingReviews";
 import LandingDoctor from "@/components/lp/LandingDoctor";
 import LandingTeam from "@/components/lp/LandingTeam";
-import LandingTransformaciones from "@/components/lp/LandingTransformaciones";
 import LandingProcess from "@/components/lp/LandingProcess";
 import LandingObraSocial from "@/components/lp/LandingObraSocial";
 import LandingMap from "@/components/lp/LandingMap";
@@ -152,7 +151,6 @@ export default function CirugiaMetabolicaLP() {
       <LandingDoctor />
       <LandingTeam />
 
-      <LandingTransformaciones />
       <LandingProcess />
       <LandingObraSocial />
 
