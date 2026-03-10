@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import LandingFAQ from "@/components/lp/LandingFAQ";
-import LandingReviews from "@/components/lp/LandingReviews";
+import GoogleReviews from "@/components/sections/GoogleReviews";
 import { WHATSAPP_NUMBER, STATS } from "@/lib/constants";
 import { trackWhatsAppClick } from "@/lib/tracking";
 
@@ -341,7 +341,7 @@ export default function ParaguayLanding() {
         </div>
       </section>
 
-      <LandingReviews />
+      <GoogleReviews />
 
       <LandingFAQ faqs={FAQS} />
 

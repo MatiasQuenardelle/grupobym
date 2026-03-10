@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import LandingHero from "@/components/lp/LandingHero";
 import LandingFAQ from "@/components/lp/LandingFAQ";
 import LandingCTA from "@/components/lp/LandingCTA";
-import LandingReviews from "@/components/lp/LandingReviews";
+import GoogleReviews from "@/components/sections/GoogleReviews";
 import LandingDoctor from "@/components/lp/LandingDoctor";
 import LandingTeam from "@/components/lp/LandingTeam";
 import LandingProcess from "@/components/lp/LandingProcess";
@@ -34,13 +34,6 @@ const BENEFITS = [
     description:
       "Normalización del perfil lipídico, reducción de fármacos y una vida con más energía y libertad.",
   },
-];
-
-const STATS = [
-  { value: "80%", label: "Remisión de diabetes tipo 2" },
-  { value: "70%", label: "Mejora de hipertensión" },
-  { value: "1.5-2 hs", label: "Duración de la cirugía" },
-  { value: "48-72 hs", label: "Internación" },
 ];
 
 const CANDIDATE_CRITERIA = [
@@ -132,25 +125,10 @@ export default function CirugiaMetabolicaLP() {
         </div>
       </section>
 
-      {/* Stats row */}
-      <section className="bg-secondary-800 py-10">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
-            {STATS.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <p className="text-3xl font-extrabold text-white">{stat.value}</p>
-                <p className="mt-1 text-sm text-gray-400">{stat.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <LandingReviews />
+      <GoogleReviews />
 
       <LandingDoctor />
       <LandingTeam />
-
       <LandingProcess />
       <LandingObraSocial />
 

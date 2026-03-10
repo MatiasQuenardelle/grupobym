@@ -11,7 +11,12 @@ export default function LayoutShell({ children }: { children: React.ReactNode })
   const isLandingPage = pathname.startsWith("/lp");
 
   if (isLandingPage) {
-    return <>{children}</>;
+    return (
+      <>
+        <Header />
+        {children}
+      </>
+    );
   }
 
   return (
