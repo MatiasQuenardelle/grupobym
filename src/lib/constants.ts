@@ -276,6 +276,7 @@ export const TEAM_MEMBERS = [
     name: "Lic. Fernanda Farias",
     role: "Nutricionista",
     image: "/images/team/fernanda-farias.jpeg",
+    imagePosition: "center",
   },
   {
     name: "Lic. Luisina Franchini",

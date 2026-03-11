@@ -30,7 +30,7 @@ export default function LandingTeam() {
                   src={member.image}
                   alt={member.name}
                   fill
-                  className="object-cover object-top"
+                  className={`object-cover ${"imagePosition" in member ? `object-${member.imagePosition}` : "object-top"}`}
                   sizes="160px"
                 />
               </div>
