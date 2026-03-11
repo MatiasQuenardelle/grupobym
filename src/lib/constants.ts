@@ -225,26 +225,56 @@ export const TEAM_MEMBERS = [
   {
     name: "Dr. Pablo Rodríguez",
     role: "Cirujano Bariátrico",
-    description: "Lider del equipo. Cirujano general y laparoscopista, especialista en cirugía bariátrica y esófago-gastroduodenal.",
+    image: "/images/pablo-rodriguez.png",
   },
   {
-    name: "Lic. Fernanda Farias",
+    name: "Dr. Luciano Piragino",
+    role: "Cirujano",
+    image: "/images/team/luciano-piragino.jpeg",
+  },
+  {
+    name: "Dra. Gala Guevara",
+    role: "Cirujana",
+    image: "/images/team/gala-guevara.jpeg",
+  },
+  {
+    name: "Lic. Adriana Alvarez",
     role: "Nutricionista",
-    description: "Acompañamiento nutriciónal pre y post-quirúrgico. Plan alimentario personalizado para cada etapa.",
+    image: "/images/team/adriana-alvarez.jpeg",
   },
   {
-    name: "Lic. Dai Svoboda",
+    name: "Lic. Marianela García",
     role: "Nutricionista",
-    description: "Seguimiento nutriciónal dedicado y personalizado. Guia en cada paso del proceso alimentario.",
+    image: "/images/team/marianela-garcia.jpeg",
   },
   {
-    name: "Lic. Ivana Quiroz",
-    role: "Psicologa",
-    description: "Apoyo emocional y evaluación psicológica. Acompañamiento para construir confianza y bienestar.",
+    name: "Lic. Daiana Gazzola",
+    role: "Nutricionista",
+    image: "/images/team/daiana-gazzola.jpeg",
   },
   {
-    name: "Prof. de Educacion Fisica",
-    role: "Actividad Fisica",
-    description: "Plan de actividad fisica adaptado a cada etapa del proceso. Recuperación activa.",
+    name: "Lic. Ayelen Quiña",
+    role: "Nutricionista",
+    image: "/images/team/ayelen-quina.jpeg",
+  },
+  {
+    name: "Lic. Florencia Andres",
+    role: "Nutricionista",
+    image: "/images/team/florencia-andres.jpeg",
+  },
+  {
+    name: "Lic. Daiana Svoboda",
+    role: "Nutricionista",
+    image: "/images/team/daiana-svoboda.jpeg",
+  },
+  {
+    name: "Lic. Luisina Franchini",
+    role: "Psicóloga",
+    image: "/images/team/luisina-franchini.jpeg",
+  },
+  {
+    name: "Lic. Cecilia Fernandez",
+    role: "Psicóloga",
+    image: "/images/team/cecilia-fernandez.jpeg",
   },
 ];
