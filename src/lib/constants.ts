@@ -238,6 +238,11 @@ export const TEAM_MEMBERS = [
     image: "/images/team/gala-guevara.jpeg",
   },
   {
+    name: "Dr. Eduardo Ferro",
+    role: "Cardiólogo",
+    image: "/images/team/eduardo-ferro.jpeg",
+  },
+  {
     name: "Lic. Adriana Alvarez",
     role: "Nutricionista",
     image: "/images/team/adriana-alvarez.jpeg",
@@ -266,6 +271,11 @@ export const TEAM_MEMBERS = [
     name: "Lic. Daiana Svoboda",
     role: "Nutricionista",
     image: "/images/team/daiana-svoboda.jpeg",
+  },
+  {
+    name: "Lic. Fernanda Farias",
+    role: "Nutricionista",
+    image: "/images/team/fernanda-farias.jpeg",
   },
   {
     name: "Lic. Luisina Franchini",
