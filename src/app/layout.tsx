@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import LayoutShell from "@/components/layout/LayoutShell";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import MetaPixel from "@/components/MetaPixel";
 import {
   SITE_NAME,
   SITE_URL,
@@ -163,6 +164,7 @@ export default function RootLayout({
     <html lang="es-AR" className={inter.variable}>
       <head>
         <GoogleAnalytics />
+        <MetaPixel />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
