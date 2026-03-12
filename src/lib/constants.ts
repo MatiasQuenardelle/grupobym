@@ -279,6 +279,11 @@ export const TEAM_MEMBERS = [
     imagePosition: "center",
   },
   {
+    name: "Lic. Lucía Rojas",
+    role: "Nutricionista",
+    image: "/images/team/lucia-rojas.jpeg",
+  },
+  {
     name: "Lic. Luisina Franchini",
     role: "Psicóloga",
     image: "/images/team/luisina-franchini.jpeg",
