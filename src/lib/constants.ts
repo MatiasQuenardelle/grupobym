@@ -7,15 +7,15 @@ export const DOCTOR_NAME = "Dr. Pablo Rodríguez";
 export const PRACTICE_NAME = "GrupoByM";
 
 export const WHATSAPP_RESISTENCIA = "5493625195169";
-export const WHATSAPP_SAENZ_PENA = "5493644302136";
-export const WHATSAPP_GENERAL = "5493644305110";
+export const WHATSAPP_SAENZ_PENA = "5493625195169";
+export const WHATSAPP_GENERAL = "5493625195169";
 export const WHATSAPP_NUMBER = WHATSAPP_GENERAL;
 export const WHATSAPP_MESSAGE = "Hola, me gustaria solicitar una consulta sobre cirugía bariátrica.";
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
-export const PHONE_RESISTENCIA = "362 519 5169";
-export const PHONE_SAENZ_PENA = "364 422 2136";
-export const PHONE_GENERAL = "364 430 5110";
+export const PHONE_RESISTENCIA = "362 519-5169";
+export const PHONE_SAENZ_PENA = "362 519-5169";
+export const PHONE_GENERAL = "362 519-5169";
 export const PHONE_NUMBER = PHONE_GENERAL;
 export const EMAIL = "contacto@grupobym.com.ar";
 
