@@ -163,14 +163,14 @@ export default function RootLayout({
   return (
     <html lang="es-AR" className={inter.variable}>
       <head>
-        <GoogleAnalytics />
-        <MetaPixel />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body className="font-sans antialiased">
+        <GoogleAnalytics />
+        <MetaPixel />
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-lg focus:bg-primary-400 focus:px-4 focus:py-2 focus:text-white focus:outline-none"
