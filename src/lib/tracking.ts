@@ -12,6 +12,7 @@ function reportAdsConversion() {
   if (typeof window !== "undefined" && window.gtag && ADS_ID && ADS_CONVERSION_LABEL) {
     window.gtag("event", "conversion", {
       send_to: `${ADS_ID}/${ADS_CONVERSION_LABEL}`,
+      transport_type: "beacon",
     });
   }
 }
@@ -28,6 +29,7 @@ export function trackWhatsAppClick(location: string) {
       window.gtag("event", "whatsapp_click", {
         event_category: "conversion",
         event_label: location,
+        transport_type: "beacon",
       });
       reportAdsConversion();
     }
@@ -41,6 +43,7 @@ export function trackFormSubmit() {
       window.gtag("event", "form_submit", {
         event_category: "conversion",
         event_label: "contact_form",
+        transport_type: "beacon",
       });
       reportAdsConversion();
     }
@@ -54,6 +57,7 @@ export function trackPhoneClick(location: string) {
       window.gtag("event", "phone_click", {
         event_category: "conversion",
         event_label: location,
+        transport_type: "beacon",
       });
       reportAdsConversion();
     }
