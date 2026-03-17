@@ -26,14 +26,25 @@ export default function LandingTeam() {
               className="flex flex-col items-center text-center"
             >
               <div className="relative mb-4 h-40 w-40 overflow-hidden rounded-full border-4 border-primary-100">
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  fill
-                  className={`object-cover ${"imagePosition" in member ? `object-${member.imagePosition}` : "object-top"}`}
-                  sizes="160px"
-                  style={member.name === "Dr. Pablo Rodríguez" ? { transform: "scale(1.8)", objectPosition: "50% 30%" } : undefined}
-                />
+                {member.name === "Dr. Pablo Rodríguez" ? (
+                  <div className="absolute inset-0" style={{ transform: "scale(1.8) translateY(10%)" }}>
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      className="object-cover object-top"
+                      sizes="160px"
+                    />
+                  </div>
+                ) : (
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className={`object-cover ${"imagePosition" in member ? `object-${member.imagePosition}` : "object-top"}`}
+                    sizes="160px"
+                  />
+                )}
               </div>
               <h3 className="font-bold text-secondary-700">{member.name}</h3>
               <p className="text-sm font-medium text-primary-400">
