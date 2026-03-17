@@ -8,11 +8,14 @@ import LandingTeam from "@/components/lp/LandingTeam";
 import LandingProcess from "@/components/lp/LandingProcess";
 import LandingObraSocial from "@/components/lp/LandingObraSocial";
 import LandingMap from "@/components/lp/LandingMap";
+import LandingBookingForm from "@/components/lp/LandingBookingForm";
+import LandingPriceInfo from "@/components/lp/LandingPriceInfo";
+import LandingConsultationProof from "@/components/lp/LandingConsultationProof";
 
 export const metadata: Metadata = {
-  title: "Bypass Gástrico en Argentina — Consulta Gratuita",
+  title: "Bypass Gástrico en Argentina — Evaluación Gratuita",
   description:
-    "Bypass gástrico con el Dr. Pablo Rodríguez. Técnica gold standard, 60-80% de pérdida de exceso de peso. Más de 250 cirugías realizadas. Consultá gratis por WhatsApp.",
+    "Bypass gástrico con el Dr. Pablo Rodríguez. Técnica gold standard, 60-80% de pérdida de exceso de peso. Más de 250 cirugías realizadas. Reservá tu evaluación gratuita.",
 };
 
 const BENEFITS = [
@@ -36,7 +39,7 @@ const BENEFITS = [
   },
 ];
 
-const CANDIDATE_CRITERIA = [
+const REQUIREMENTS = [
   "IMC (Índice de Masa Corporal) mayor a 40",
   "IMC mayor a 35 con comorbilidades (diabetes, hipertensión, apnea del sueño)",
   "Haber intentado métodos convencionales sin éxito sostenido",
@@ -79,7 +82,7 @@ export default function BypassGastricoLP() {
         title="Bypass Gástrico en Argentina"
         titleAccent="con el Dr. Pablo Rodríguez"
         subtitle="La técnica más efectiva para pérdida de peso sostenida. Equipo interdisciplinario completo. Más de 250 cirugías realizadas con 5.0 estrellas en Google."
-        whatsappMessage="Hola, me interesa una consulta sobre bypass gástrico."
+        whatsappMessage="Hola, quiero reservar una evaluación gratuita para bypass gástrico."
         trackingSource="lp_bypass"
       />
 
@@ -122,33 +125,19 @@ export default function BypassGastricoLP() {
         </div>
       </section>
 
-      {/* Candidate checklist */}
-      <section className="py-16 md:py-20 bg-white">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-center text-3xl font-extrabold text-secondary-700 sm:text-4xl">
-            ¿Soy candidato/a al bypass gástrico?
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-center text-lg text-secondary-500">
-            Generalmente, los candidatos cumplen con alguno de estos criterios:
-          </p>
-          <div className="mt-10 space-y-4">
-            {CANDIDATE_CRITERIA.map((item) => (
-              <div key={item} className="flex items-start gap-3 rounded-xl border border-gray-100 bg-gray-50 p-4">
-                <svg className="mt-0.5 h-6 w-6 flex-shrink-0 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                </svg>
-                <span className="text-secondary-700 font-medium">{item}</span>
-              </div>
-            ))}
-          </div>
-          <p className="mt-6 text-center text-secondary-500">
-            Cada caso se evalúa individualmente. Consultá con nuestro equipo para una evaluación personalizada.
-          </p>
-        </div>
-      </section>
+      <LandingPriceInfo
+        procedure="bypass gástrico"
+        requirements={REQUIREMENTS}
+      />
+
+      <LandingBookingForm
+        procedure="bypass gástrico"
+        trackingSource="lp_bypass_form"
+      />
 
       <LandingDoctor />
       <LandingProcess />
+      <LandingConsultationProof />
       <GoogleReviews />
       <LandingObraSocial />
       <LandingFAQ faqs={FAQS} />
@@ -157,9 +146,10 @@ export default function BypassGastricoLP() {
 
       <LandingCTA
         title="Dá el primer paso hacia tu nueva vida"
-        subtitle="Consultá gratis por WhatsApp. Respondemos en menos de 2 horas."
-        whatsappMessage="Hola, me interesa una consulta sobre bypass gástrico."
+        subtitle="Reservá tu evaluación gratuita. Sin compromiso, respondemos en menos de 2 horas."
+        whatsappMessage="Hola, quiero reservar una evaluación gratuita para bypass gástrico."
         trackingSource="lp_bypass_bottom"
+        procedure="bypass gástrico"
       />
     </>
   );

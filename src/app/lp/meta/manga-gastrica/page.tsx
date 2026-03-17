@@ -5,11 +5,13 @@ import LandingCTA from "@/components/lp/LandingCTA";
 import GoogleReviews from "@/components/sections/GoogleReviews";
 import LandingDoctor from "@/components/lp/LandingDoctor";
 import LandingObraSocial from "@/components/lp/LandingObraSocial";
+import LandingBookingForm from "@/components/lp/LandingBookingForm";
+import LandingConsultationProof from "@/components/lp/LandingConsultationProof";
 
 export const metadata: Metadata = {
   title: "Manga Gástrica — Recuperación Rápida, Resultados Reales",
   description:
-    "Manga gástrica con el Dr. Pablo Rodríguez. Recuperación rápida, 50-70% de pérdida de exceso de peso. +250 cirugías, 5.0 estrellas. Consultá gratis.",
+    "Manga gástrica con el Dr. Pablo Rodríguez. Recuperación rápida, 50-70% de pérdida de exceso de peso. +250 cirugías, 5.0 estrellas. Reservá tu evaluación gratuita.",
 };
 
 const BENEFITS = [
@@ -59,7 +61,7 @@ export default function MetaMangaGastricaLP() {
         title="¿Querés bajar de peso de forma definitiva?"
         titleAccent="La manga gástrica es el primer paso"
         subtitle="Recuperación rápida, sin bypass intestinal. Más de 250 cirugías con 5.0 estrellas en Google. Equipo interdisciplinario que te acompaña todo el proceso."
-        whatsappMessage="Hola, vi la publicidad en redes y me interesa una consulta sobre manga gástrica."
+        whatsappMessage="Hola, vi la publicidad en redes y quiero reservar una evaluación para manga gástrica."
         trackingSource="meta_manga"
       />
 
@@ -102,16 +104,23 @@ export default function MetaMangaGastricaLP() {
         </div>
       </section>
 
+      <LandingBookingForm
+        procedure="manga gástrica"
+        trackingSource="meta_manga_form"
+      />
+
       <LandingDoctor />
+      <LandingConsultationProof />
       <GoogleReviews />
       <LandingObraSocial />
       <LandingFAQ faqs={FAQS} />
 
       <LandingCTA
         title="Dá el primer paso hacia tu nueva vida"
-        subtitle="Consultá gratis por WhatsApp. Respondemos en menos de 2 horas."
-        whatsappMessage="Hola, vi la publicidad en redes y me interesa una consulta sobre manga gástrica."
+        subtitle="Reservá tu evaluación gratuita. Sin compromiso, respondemos en menos de 2 horas."
+        whatsappMessage="Hola, vi la publicidad en redes y quiero reservar una evaluación para manga gástrica."
         trackingSource="meta_manga_bottom"
+        procedure="manga gástrica"
       />
     </>
   );

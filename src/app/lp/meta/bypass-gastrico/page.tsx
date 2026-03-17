@@ -5,11 +5,13 @@ import LandingCTA from "@/components/lp/LandingCTA";
 import GoogleReviews from "@/components/sections/GoogleReviews";
 import LandingDoctor from "@/components/lp/LandingDoctor";
 import LandingObraSocial from "@/components/lp/LandingObraSocial";
+import LandingBookingForm from "@/components/lp/LandingBookingForm";
+import LandingConsultationProof from "@/components/lp/LandingConsultationProof";
 
 export const metadata: Metadata = {
   title: "Bypass Gástrico — Cambiá Tu Vida con el Dr. Pablo Rodríguez",
   description:
-    "Perdé entre el 60% y 80% de tu exceso de peso con bypass gástrico. Equipo interdisciplinario, +250 cirugías, 5.0 estrellas en Google. Consultá gratis.",
+    "Perdé entre el 60% y 80% de tu exceso de peso con bypass gástrico. Equipo interdisciplinario, +250 cirugías, 5.0 estrellas en Google. Reservá tu evaluación gratuita.",
 };
 
 const BENEFITS = [
@@ -58,8 +60,8 @@ export default function MetaBypassGastricoLP() {
         badge="Transformá Tu Vida"
         title="¿Cansado/a de dietas que no funcionan?"
         titleAccent="El bypass gástrico puede ser tu solución"
-        subtitle="Más de 250 cirugías realizadas con 5.0 estrellas en Google. Equipo interdisciplinario que te acompaña antes, durante y después. Consulta gratuita."
-        whatsappMessage="Hola, vi la publicidad en redes y me interesa una consulta sobre bypass gástrico."
+        subtitle="Más de 250 cirugías realizadas con 5.0 estrellas en Google. Equipo interdisciplinario que te acompaña antes, durante y después. Evaluación gratuita."
+        whatsappMessage="Hola, vi la publicidad en redes y quiero reservar una evaluación para bypass gástrico."
         trackingSource="meta_bypass"
       />
 
@@ -102,16 +104,23 @@ export default function MetaBypassGastricoLP() {
         </div>
       </section>
 
+      <LandingBookingForm
+        procedure="bypass gástrico"
+        trackingSource="meta_bypass_form"
+      />
+
       <LandingDoctor />
+      <LandingConsultationProof />
       <GoogleReviews />
       <LandingObraSocial />
       <LandingFAQ faqs={FAQS} />
 
       <LandingCTA
         title="Dá el primer paso hacia tu nueva vida"
-        subtitle="Consultá gratis por WhatsApp. Respondemos en menos de 2 horas."
-        whatsappMessage="Hola, vi la publicidad en redes y me interesa una consulta sobre bypass gástrico."
+        subtitle="Reservá tu evaluación gratuita. Sin compromiso, respondemos en menos de 2 horas."
+        whatsappMessage="Hola, vi la publicidad en redes y quiero reservar una evaluación para bypass gástrico."
         trackingSource="meta_bypass_bottom"
+        procedure="bypass gástrico"
       />
     </>
   );

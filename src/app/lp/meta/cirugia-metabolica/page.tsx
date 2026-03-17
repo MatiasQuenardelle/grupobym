@@ -5,11 +5,13 @@ import LandingCTA from "@/components/lp/LandingCTA";
 import GoogleReviews from "@/components/sections/GoogleReviews";
 import LandingDoctor from "@/components/lp/LandingDoctor";
 import LandingObraSocial from "@/components/lp/LandingObraSocial";
+import LandingBookingForm from "@/components/lp/LandingBookingForm";
+import LandingConsultationProof from "@/components/lp/LandingConsultationProof";
 
 export const metadata: Metadata = {
   title: "Cirugía Metabólica — Recuperá el Control de Tu Diabetes",
   description:
-    "80% de remisión de diabetes tipo 2 con cirugía metabólica. Dr. Pablo Rodríguez, +250 cirugías, equipo interdisciplinario. Consultá gratis.",
+    "80% de remisión de diabetes tipo 2 con cirugía metabólica. Dr. Pablo Rodríguez, +250 cirugías, equipo interdisciplinario. Reservá tu evaluación gratuita.",
 };
 
 const BENEFITS = [
@@ -59,7 +61,7 @@ export default function MetaCirugiaMetabolicaLP() {
         title="¿La diabetes controla tu vida?"
         titleAccent="La cirugía metabólica puede cambiar eso"
         subtitle="80% de remisión de diabetes tipo 2. Mejora de hipertensión, colesterol y síndrome metabólico. Dr. Pablo Rodríguez y equipo interdisciplinario."
-        whatsappMessage="Hola, vi la publicidad en redes y me interesa una consulta sobre cirugía metabólica para diabetes."
+        whatsappMessage="Hola, vi la publicidad en redes y quiero reservar una evaluación para cirugía metabólica."
         trackingSource="meta_metabolica"
       />
 
@@ -102,16 +104,23 @@ export default function MetaCirugiaMetabolicaLP() {
         </div>
       </section>
 
+      <LandingBookingForm
+        procedure="cirugía metabólica"
+        trackingSource="meta_metabolica_form"
+      />
+
       <LandingDoctor />
+      <LandingConsultationProof />
       <GoogleReviews />
       <LandingObraSocial />
       <LandingFAQ faqs={FAQS} />
 
       <LandingCTA
         title="Recuperá el control de tu diabetes"
-        subtitle="Consultá gratis por WhatsApp. Respondemos en menos de 2 horas."
-        whatsappMessage="Hola, vi la publicidad en redes y me interesa una consulta sobre cirugía metabólica para diabetes."
+        subtitle="Reservá tu evaluación gratuita. Sin compromiso, respondemos en menos de 2 horas."
+        whatsappMessage="Hola, vi la publicidad en redes y quiero reservar una evaluación para cirugía metabólica."
         trackingSource="meta_metabolica_bottom"
+        procedure="cirugía metabólica"
       />
     </>
   );

@@ -1,10 +1,12 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import LandingFAQ from "@/components/lp/LandingFAQ";
+import LandingConsultationProof from "@/components/lp/LandingConsultationProof";
 import GoogleReviews from "@/components/sections/GoogleReviews";
 import { WHATSAPP_NUMBER, STATS } from "@/lib/constants";
-import { trackWhatsAppClick } from "@/lib/tracking";
+import { trackWhatsAppClick, trackFormSubmit } from "@/lib/tracking";
 
 const WHATSAPP_PY_MESSAGE =
   "Hola, soy de Paraguay, vi la publicidad en redes y me interesa consultar sobre cirugía bariátrica en Argentina.";
@@ -68,6 +70,132 @@ function WhatsAppIcon({ className }: { className?: string }) {
   );
 }
 
+function MetaParaguayBookingForm() {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [preferredDate, setPreferredDate] = useState("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const dateText = preferredDate ? `Prefiero turno: ${preferredDate}` : "Sin preferencia de fecha";
+    const message = [
+      "Hola, soy de Paraguay, vi la publicidad en redes y quiero reservar una evaluación gratuita para cirugía bariátrica.",
+      `Nombre: ${name}`,
+      `Teléfono: ${phone}`,
+      dateText,
+    ].join("\n");
+    trackFormSubmit();
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
+  return (
+    <section id="reservar" className="py-16 md:py-20 bg-white">
+      <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
+        <div className="rounded-2xl border-2 border-primary-400 bg-white p-8 shadow-xl shadow-primary-400/10">
+          <div className="text-center mb-8">
+            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary-400/10">
+              <svg className="h-7 w-7 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
+              </svg>
+            </div>
+            <h2 className="text-2xl font-extrabold text-secondary-700 sm:text-3xl">
+              Reservá tu Evaluación Virtual Gratuita
+            </h2>
+            <p className="mt-2 text-secondary-500">
+              La primera consulta es por videollamada, sin necesidad de viajar. Completá tus datos y te contactamos.
+            </p>
+          </div>
+          <form onSubmit={handleSubmit} className="space-y-5">
+            <div>
+              <label htmlFor="mpy-name" className="block text-sm font-medium text-secondary-700 mb-1.5">Nombre completo</label>
+              <input id="mpy-name" type="text" required value={name} onChange={(e) => setName(e.target.value)} placeholder="Tu nombre" className="w-full rounded-xl border border-gray-300 px-4 py-3 text-secondary-700 placeholder-gray-400 focus:border-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-400/20" />
+            </div>
+            <div>
+              <label htmlFor="mpy-phone" className="block text-sm font-medium text-secondary-700 mb-1.5">Teléfono / WhatsApp</label>
+              <input id="mpy-phone" type="tel" required value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="+595 9xx xxx xxx" className="w-full rounded-xl border border-gray-300 px-4 py-3 text-secondary-700 placeholder-gray-400 focus:border-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-400/20" />
+            </div>
+            <div>
+              <label htmlFor="mpy-date" className="block text-sm font-medium text-secondary-700 mb-1.5">Preferencia de fecha <span className="text-gray-400 font-normal">(opcional)</span></label>
+              <input id="mpy-date" type="text" value={preferredDate} onChange={(e) => setPreferredDate(e.target.value)} placeholder="Ej: semana que viene, lunes a viernes, etc." className="w-full rounded-xl border border-gray-300 px-4 py-3 text-secondary-700 placeholder-gray-400 focus:border-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-400/20" />
+            </div>
+            <button type="submit" className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-[#25D366]/25 transition-all hover:bg-[#20BD5A] active:scale-[0.98]">
+              <WhatsAppIcon className="h-5 w-5" />
+              Reservar Evaluación por WhatsApp
+            </button>
+          </form>
+          <div className="mt-6 flex items-center justify-center gap-4 text-xs text-secondary-400">
+            <div className="flex items-center gap-1.5">
+              <svg className="h-4 w-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+              Consulta virtual
+            </div>
+            <div className="flex items-center gap-1.5">
+              <svg className="h-4 w-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+              Sin compromiso
+            </div>
+            <div className="flex items-center gap-1.5">
+              <svg className="h-4 w-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg>
+              Respuesta en &lt;2 hs
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function MetaParaguayFinalCTA() {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const message = [
+      "Hola, soy de Paraguay, vi la publicidad en redes y quiero reservar una evaluación gratuita para cirugía bariátrica.",
+      `Nombre: ${name}`,
+      `Teléfono: ${phone}`,
+    ].join("\n");
+    trackFormSubmit();
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
+  return (
+    <section className="bg-primary-50 py-16 md:py-20">
+      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h2 className="text-3xl font-extrabold text-secondary-700 sm:text-4xl">
+            Cambiá tu vida desde Paraguay
+          </h2>
+          <p className="mt-4 text-lg text-secondary-500">
+            La misma cirugía, el mismo seguimiento completo, a mitad de precio.
+            Reservá tu evaluación virtual gratuita.
+          </p>
+        </div>
+        <div className="mt-8 rounded-2xl bg-white p-6 shadow-lg">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-4 sm:flex-row sm:items-end">
+            <div className="flex-1">
+              <label htmlFor="mpy-cta-name" className="block text-sm font-medium text-secondary-700 mb-1">Nombre</label>
+              <input id="mpy-cta-name" type="text" required value={name} onChange={(e) => setName(e.target.value)} placeholder="Tu nombre" className="w-full rounded-xl border border-gray-300 px-4 py-3 text-secondary-700 placeholder-gray-400 focus:border-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-400/20" />
+            </div>
+            <div className="flex-1">
+              <label htmlFor="mpy-cta-phone" className="block text-sm font-medium text-secondary-700 mb-1">WhatsApp</label>
+              <input id="mpy-cta-phone" type="tel" required value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="+595 9xx xxx xxx" className="w-full rounded-xl border border-gray-300 px-4 py-3 text-secondary-700 placeholder-gray-400 focus:border-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-400/20" />
+            </div>
+            <button type="submit" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#25D366] px-6 py-3 text-base font-semibold text-white shadow-lg shadow-[#25D366]/25 transition-all hover:bg-[#20BD5A] active:scale-[0.98]">
+              <WhatsAppIcon className="h-5 w-5" />
+              Reservar Evaluación
+            </button>
+          </form>
+        </div>
+        <p className="mt-4 text-center text-sm text-secondary-400">
+          Dr. Pablo Rodríguez · Más de {STATS.surgeries} cirugías · {STATS.rating} estrellas en Google
+        </p>
+      </div>
+    </section>
+  );
+}
+
 export default function MetaParaguayLP() {
   return (
     <>
@@ -100,19 +228,28 @@ export default function MetaParaguayLP() {
 
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start">
                 <a
+                  href="#reservar"
+                  className="inline-flex items-center gap-2 rounded-full bg-primary-400 px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-primary-400/25 transition-all hover:bg-primary-500 active:scale-[0.98]"
+                >
+                  <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
+                  </svg>
+                  Reservá tu Evaluación Gratuita
+                </a>
+                <a
                   href={WHATSAPP_PY_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => trackWhatsAppClick("meta_paraguay_hero")}
-                  className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-[#25D366]/25 transition-all hover:bg-[#20BD5A] active:scale-[0.98]"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3.5 text-base font-medium text-white transition-all hover:bg-white/10 active:scale-[0.98]"
                 >
                   <WhatsAppIcon className="h-5 w-5" />
-                  Consultá desde Paraguay
+                  Escribinos por WhatsApp
                 </a>
               </div>
 
               <p className="mt-3 text-center text-xs text-gray-400 lg:text-left">
-                Respondemos en menos de 2 horas
+                Evaluación gratuita y sin compromiso · Respondemos en menos de 2 horas
               </p>
 
               {/* Trust stats */}
@@ -189,14 +326,13 @@ export default function MetaParaguayLP() {
 
           <div className="mt-8 text-center">
             <a
-              href={WHATSAPP_PY_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => trackWhatsAppClick("meta_paraguay_included")}
-              className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-[#25D366]/25 transition-all hover:bg-[#20BD5A] active:scale-[0.98]"
+              href="#reservar"
+              className="inline-flex items-center gap-2 rounded-full bg-primary-400 px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-primary-400/25 transition-all hover:bg-primary-500 active:scale-[0.98]"
             >
-              <WhatsAppIcon className="h-5 w-5" />
-              Pedí tu presupuesto desde Paraguay
+              <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
+              </svg>
+              Reservá tu evaluación gratuita
             </a>
           </div>
         </div>
@@ -230,36 +366,13 @@ export default function MetaParaguayLP() {
         </div>
       </section>
 
+      <MetaParaguayBookingForm />
+
+      <LandingConsultationProof />
       <GoogleReviews />
       <LandingFAQ faqs={FAQS} />
 
-      {/* Final CTA */}
-      <section className="bg-primary-50 py-16 md:py-20">
-        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-extrabold text-secondary-700 sm:text-4xl">
-            Cambiá tu vida desde Paraguay
-          </h2>
-          <p className="mt-4 text-lg text-secondary-500">
-            La misma cirugía, el mismo seguimiento completo, a mitad de precio.
-            Consultá hoy y te respondemos en menos de 2 horas.
-          </p>
-          <div className="mt-8">
-            <a
-              href={WHATSAPP_PY_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => trackWhatsAppClick("meta_paraguay_bottom")}
-              className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-[#25D366]/25 transition-all hover:bg-[#20BD5A] active:scale-[0.98]"
-            >
-              <WhatsAppIcon className="h-5 w-5" />
-              Consultá desde Paraguay por WhatsApp
-            </a>
-          </div>
-          <p className="mt-4 text-sm text-secondary-400">
-            Dr. Pablo Rodríguez · Más de {STATS.surgeries} cirugías · {STATS.rating} estrellas en Google
-          </p>
-        </div>
-      </section>
+      <MetaParaguayFinalCTA />
     </>
   );
 }
