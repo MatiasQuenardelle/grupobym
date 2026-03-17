@@ -7,6 +7,7 @@ import LandingDoctor from "@/components/lp/LandingDoctor";
 import LandingObraSocial from "@/components/lp/LandingObraSocial";
 import LandingBookingForm from "@/components/lp/LandingBookingForm";
 import LandingConsultationProof from "@/components/lp/LandingConsultationProof";
+import BmiCalculator from "@/components/lp/BmiCalculator";
 
 export const metadata: Metadata = {
   title: "Bypass Gástrico — Cambiá Tu Vida con el Dr. Pablo Rodríguez",
@@ -103,6 +104,8 @@ export default function MetaBypassGastricoLP() {
           </div>
         </div>
       </section>
+
+      <BmiCalculator />
 
       <LandingBookingForm
         procedure="bypass gástrico"

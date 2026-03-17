@@ -94,7 +94,6 @@ function WhatsAppIcon({ className }: { className?: string }) {
 
 function ParaguayBookingForm() {
   const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
   const [preferredDate, setPreferredDate] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -105,7 +104,6 @@ function ParaguayBookingForm() {
     const message = [
       "Hola, soy de Paraguay y quiero reservar una evaluación gratuita para cirugía bariátrica.",
       `Nombre: ${name}`,
-      `Teléfono: ${phone}`,
       dateText,
     ].join("\n");
     trackFormSubmit();
@@ -134,10 +132,6 @@ function ParaguayBookingForm() {
             <div>
               <label htmlFor="py-name" className="block text-sm font-medium text-secondary-700 mb-1.5">Nombre completo</label>
               <input id="py-name" type="text" required value={name} onChange={(e) => setName(e.target.value)} placeholder="Tu nombre" className="w-full rounded-xl border border-gray-300 px-4 py-3 text-secondary-700 placeholder-gray-400 focus:border-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-400/20" />
-            </div>
-            <div>
-              <label htmlFor="py-phone" className="block text-sm font-medium text-secondary-700 mb-1.5">Teléfono / WhatsApp</label>
-              <input id="py-phone" type="tel" required value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="+595 9xx xxx xxx" className="w-full rounded-xl border border-gray-300 px-4 py-3 text-secondary-700 placeholder-gray-400 focus:border-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-400/20" />
             </div>
             <div>
               <label htmlFor="py-date" className="block text-sm font-medium text-secondary-700 mb-1.5">Preferencia de fecha <span className="text-gray-400 font-normal">(opcional)</span></label>
@@ -170,14 +164,12 @@ function ParaguayBookingForm() {
 
 function ParaguayFinalCTA() {
   const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const message = [
       "Hola, soy de Paraguay y quiero reservar una evaluación gratuita para cirugía bariátrica.",
       `Nombre: ${name}`,
-      `Teléfono: ${phone}`,
     ].join("\n");
     trackFormSubmit();
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
@@ -201,10 +193,6 @@ function ParaguayFinalCTA() {
             <div className="flex-1">
               <label htmlFor="py-cta-name" className="block text-sm font-medium text-secondary-700 mb-1">Nombre</label>
               <input id="py-cta-name" type="text" required value={name} onChange={(e) => setName(e.target.value)} placeholder="Tu nombre" className="w-full rounded-xl border border-gray-300 px-4 py-3 text-secondary-700 placeholder-gray-400 focus:border-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-400/20" />
-            </div>
-            <div className="flex-1">
-              <label htmlFor="py-cta-phone" className="block text-sm font-medium text-secondary-700 mb-1">WhatsApp</label>
-              <input id="py-cta-phone" type="tel" required value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="+595 9xx xxx xxx" className="w-full rounded-xl border border-gray-300 px-4 py-3 text-secondary-700 placeholder-gray-400 focus:border-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-400/20" />
             </div>
             <button type="submit" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#25D366] px-6 py-3 text-base font-semibold text-white shadow-lg shadow-[#25D366]/25 transition-all hover:bg-[#20BD5A] active:scale-[0.98]">
               <WhatsAppIcon className="h-5 w-5" />

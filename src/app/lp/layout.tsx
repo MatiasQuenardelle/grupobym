@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import LpStickyMobileCTA from "@/components/lp/LpStickyMobileCTA";
+import ExitIntentPopup from "@/components/lp/ExitIntentPopup";
 
 export const metadata: Metadata = {
   robots: {
@@ -12,5 +14,11 @@ export default function LandingPageLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return (
+    <>
+      {children}
+      <LpStickyMobileCTA />
+      <ExitIntentPopup />
+    </>
+  );
 }

@@ -14,7 +14,6 @@ export default function LandingBookingForm({
   trackingSource,
 }: LandingBookingFormProps) {
   const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
   const [preferredDate, setPreferredDate] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -27,7 +26,6 @@ export default function LandingBookingForm({
     const message = [
       `Hola, quiero reservar una evaluación gratuita para ${procedure}.`,
       `Nombre: ${name}`,
-      `Teléfono: ${phone}`,
       dateText,
     ].join("\n");
 
@@ -67,21 +65,6 @@ export default function LandingBookingForm({
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Tu nombre"
-                className="w-full rounded-xl border border-gray-300 px-4 py-3 text-secondary-700 placeholder-gray-400 focus:border-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-400/20"
-              />
-            </div>
-
-            <div>
-              <label htmlFor={`phone-${trackingSource}`} className="block text-sm font-medium text-secondary-700 mb-1.5">
-                Teléfono / WhatsApp
-              </label>
-              <input
-                id={`phone-${trackingSource}`}
-                type="tel"
-                required
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                placeholder="+54 362 000-0000"
                 className="w-full rounded-xl border border-gray-300 px-4 py-3 text-secondary-700 placeholder-gray-400 focus:border-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-400/20"
               />
             </div>

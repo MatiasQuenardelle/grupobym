@@ -64,3 +64,61 @@ export function trackPhoneClick(location: string) {
     reportMetaLead(location);
   }
 }
+
+export function trackBookingFormSubmit(source: string) {
+  if (typeof window !== "undefined") {
+    if (window.gtag) {
+      window.gtag("event", "booking_form_submit", {
+        event_category: "conversion",
+        event_label: source,
+        value: 10,
+        transport_type: "beacon",
+      });
+      reportAdsConversion();
+    }
+    reportMetaLead(`booking_${source}`);
+  }
+}
+
+export function trackBmiCalculation(bmiRange: string) {
+  if (typeof window !== "undefined" && window.gtag) {
+    window.gtag("event", "bmi_calculator_used", {
+      event_category: "engagement",
+      event_label: bmiRange,
+      transport_type: "beacon",
+    });
+  }
+}
+
+export function trackExitIntentShown() {
+  if (typeof window !== "undefined" && window.gtag) {
+    window.gtag("event", "exit_intent_shown", {
+      event_category: "engagement",
+      transport_type: "beacon",
+    });
+  }
+}
+
+export function trackExitIntentConversion() {
+  if (typeof window !== "undefined") {
+    if (window.gtag) {
+      window.gtag("event", "exit_intent_conversion", {
+        event_category: "conversion",
+        value: 10,
+        transport_type: "beacon",
+      });
+      reportAdsConversion();
+    }
+    reportMetaLead("exit_intent");
+  }
+}
+
+export function trackStickyCtaClick(action: string) {
+  if (typeof window !== "undefined" && window.gtag) {
+    window.gtag("event", "sticky_cta_click", {
+      event_category: "engagement",
+      event_label: action,
+      transport_type: "beacon",
+    });
+  }
+}

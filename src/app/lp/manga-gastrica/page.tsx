@@ -11,6 +11,7 @@ import LandingMap from "@/components/lp/LandingMap";
 import LandingBookingForm from "@/components/lp/LandingBookingForm";
 import LandingPriceInfo from "@/components/lp/LandingPriceInfo";
 import LandingConsultationProof from "@/components/lp/LandingConsultationProof";
+import BmiCalculator from "@/components/lp/BmiCalculator";
 
 export const metadata: Metadata = {
   title: "Manga Gástrica en Argentina — Evaluación Gratuita",
@@ -124,6 +125,8 @@ export default function MangaGastricaLP() {
           </div>
         </div>
       </section>
+
+      <BmiCalculator />
 
       <LandingPriceInfo
         procedure="manga gástrica"

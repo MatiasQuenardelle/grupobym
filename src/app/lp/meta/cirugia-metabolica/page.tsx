@@ -7,6 +7,7 @@ import LandingDoctor from "@/components/lp/LandingDoctor";
 import LandingObraSocial from "@/components/lp/LandingObraSocial";
 import LandingBookingForm from "@/components/lp/LandingBookingForm";
 import LandingConsultationProof from "@/components/lp/LandingConsultationProof";
+import BmiCalculator from "@/components/lp/BmiCalculator";
 
 export const metadata: Metadata = {
   title: "Cirugía Metabólica — Recuperá el Control de Tu Diabetes",
@@ -103,6 +104,8 @@ export default function MetaCirugiaMetabolicaLP() {
           </div>
         </div>
       </section>
+
+      <BmiCalculator />
 
       <LandingBookingForm
         procedure="cirugía metabólica"

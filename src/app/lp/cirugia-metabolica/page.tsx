@@ -11,6 +11,7 @@ import LandingMap from "@/components/lp/LandingMap";
 import LandingBookingForm from "@/components/lp/LandingBookingForm";
 import LandingPriceInfo from "@/components/lp/LandingPriceInfo";
 import LandingConsultationProof from "@/components/lp/LandingConsultationProof";
+import BmiCalculator from "@/components/lp/BmiCalculator";
 
 export const metadata: Metadata = {
   title: "Cirugía Metabólica — Evaluación Gratuita para Diabetes Tipo 2",
@@ -127,6 +128,8 @@ export default function CirugiaMetabolicaLP() {
           </div>
         </div>
       </section>
+
+      <BmiCalculator />
 
       <LandingPriceInfo
         procedure="cirugía metabólica"
