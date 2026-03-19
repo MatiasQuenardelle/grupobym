@@ -9,7 +9,7 @@ export default function Team() {
     name: "GrupoByM",
     url: SITE_URL,
     member: TEAM_MEMBERS.map((m) => ({
-      "@type": m.role === "Cirujano Bariátrico" || m.role === "Cirujano" || m.role === "Cirujana" ? "Physician" : "Person",
+      "@type": m.role === "Cirujano Bariátrico" || m.role === "Cirujano" || m.role === "Cirujana" || m.role === "Cardiólogo" || m.role === "Neumonóloga" || m.role === "Medicina Familiar | Obesidad" ? "Physician" : "Person",
       name: m.name,
       jobTitle: m.role,
     })),

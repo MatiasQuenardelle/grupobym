@@ -243,6 +243,16 @@ export const TEAM_MEMBERS = [
     image: "/images/team/eduardo-ferro.jpeg",
   },
   {
+    name: "Dra. Cecilia Kniz",
+    role: "Neumonóloga",
+    image: "/images/team/cecilia-kniz.jpeg",
+  },
+  {
+    name: "Dra. Liliana Santacruz",
+    role: "Medicina Familiar | Obesidad",
+    image: "/images/team/liliana-santacruz.jpeg",
+  },
+  {
     name: "Lic. Adriana Alvarez",
     role: "Nutricionista",
     image: "/images/team/adriana-alvarez.jpeg",
