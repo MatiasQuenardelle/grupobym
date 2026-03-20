@@ -14,9 +14,9 @@ import LandingConsultationProof from "@/components/lp/LandingConsultationProof";
 import BmiCalculator from "@/components/lp/BmiCalculator";
 
 export const metadata: Metadata = {
-  title: "Cirugía Metabólica — Evaluación Gratuita para Diabetes Tipo 2",
+  title: "Cirugía Metabólica — Tratamiento para Diabetes Tipo 2",
   description:
-    "Cirugía metabólica con el Dr. Pablo Rodríguez. 80% de remisión de diabetes tipo 2. Reducción de riesgo cardiovascular. Reservá tu evaluación gratuita.",
+    "Cirugía metabólica con el Dr. Pablo Rodríguez. 80% de remisión de diabetes tipo 2. Reducción de riesgo cardiovascular. Reservá tu turno.",
 };
 
 const BENEFITS = [
@@ -83,7 +83,7 @@ export default function CirugiaMetabolicaLP() {
         title="Cirugía Metabólica"
         titleAccent="Tratamiento para Diabetes Tipo 2"
         subtitle="80% de remisión de diabetes tipo 2. Mejora de hipertensión, colesterol y síndrome metabólico. Dr. Pablo Rodríguez y equipo interdisciplinario."
-        whatsappMessage="Hola, quiero reservar una evaluación gratuita para cirugía metabólica."
+        whatsappMessage="Hola, quiero reservar un turno para cirugía metabólica."
         trackingSource="lp_metabolica"
       />
 
@@ -152,8 +152,8 @@ export default function CirugiaMetabolicaLP() {
 
       <LandingCTA
         title="Recuperá el control de tu diabetes"
-        subtitle="Reservá tu evaluación gratuita. Sin compromiso, respondemos en menos de 2 horas."
-        whatsappMessage="Hola, quiero reservar una evaluación gratuita para cirugía metabólica."
+        subtitle="Reservá tu turno. Sin compromiso, respondemos en menos de 2 horas."
+        whatsappMessage="Hola, quiero reservar un turno para cirugía metabólica."
         trackingSource="lp_metabolica_bottom"
         procedure="cirugía metabólica"
       />

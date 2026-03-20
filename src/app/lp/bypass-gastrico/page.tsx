@@ -14,9 +14,9 @@ import LandingConsultationProof from "@/components/lp/LandingConsultationProof";
 import BmiCalculator from "@/components/lp/BmiCalculator";
 
 export const metadata: Metadata = {
-  title: "Bypass Gástrico en Argentina — Evaluación Gratuita",
+  title: "Bypass Gástrico en Argentina — Dr. Pablo Rodríguez",
   description:
-    "Bypass gástrico con el Dr. Pablo Rodríguez. Técnica gold standard, 60-80% de pérdida de exceso de peso. Más de 250 cirugías realizadas. Reservá tu evaluación gratuita.",
+    "Bypass gástrico con el Dr. Pablo Rodríguez. Técnica gold standard, 60-80% de pérdida de exceso de peso. Más de 250 cirugías realizadas. Reservá tu turno.",
 };
 
 const BENEFITS = [
@@ -83,7 +83,7 @@ export default function BypassGastricoLP() {
         title="Bypass Gástrico en Argentina"
         titleAccent="con el Dr. Pablo Rodríguez"
         subtitle="La técnica más efectiva para pérdida de peso sostenida. Equipo interdisciplinario completo. Más de 250 cirugías realizadas con 5.0 estrellas en Google."
-        whatsappMessage="Hola, quiero reservar una evaluación gratuita para bypass gástrico."
+        whatsappMessage="Hola, quiero reservar un turno para bypass gástrico."
         trackingSource="lp_bypass"
       />
 
@@ -149,8 +149,8 @@ export default function BypassGastricoLP() {
 
       <LandingCTA
         title="Dá el primer paso hacia tu nueva vida"
-        subtitle="Reservá tu evaluación gratuita. Sin compromiso, respondemos en menos de 2 horas."
-        whatsappMessage="Hola, quiero reservar una evaluación gratuita para bypass gástrico."
+        subtitle="Reservá tu turno. Sin compromiso, respondemos en menos de 2 horas."
+        whatsappMessage="Hola, quiero reservar un turno para bypass gástrico."
         trackingSource="lp_bypass_bottom"
         procedure="bypass gástrico"
       />

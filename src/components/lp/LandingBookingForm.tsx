@@ -24,7 +24,7 @@ export default function LandingBookingForm({
       : "Sin preferencia de fecha";
 
     const message = [
-      `Hola, quiero reservar una evaluación gratuita para ${procedure}.`,
+      `Hola, quiero reservar un turno para ${procedure}.`,
       `Nombre: ${name}`,
       dateText,
     ].join("\n");
@@ -46,7 +46,7 @@ export default function LandingBookingForm({
               </svg>
             </div>
             <h2 className="text-2xl font-extrabold text-secondary-700 sm:text-3xl">
-              Reservá tu Evaluación Gratuita
+              Reservá tu Turno
             </h2>
             <p className="mt-2 text-secondary-500">
               Completá tus datos y te contactamos para confirmar tu turno. Sin compromiso.
@@ -99,7 +99,7 @@ export default function LandingBookingForm({
               <svg className="h-4 w-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
               </svg>
-              Evaluación gratuita
+              Sin compromiso
             </div>
             <div className="flex items-center gap-1.5">
               <svg className="h-4 w-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>

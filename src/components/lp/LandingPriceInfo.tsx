@@ -70,7 +70,7 @@ export default function LandingPriceInfo({
 
               <div className="rounded-xl bg-primary-50 border border-primary-200 p-4">
                 <p className="font-semibold text-primary-700">
-                  Evaluación gratuita y sin compromiso
+                  Evaluación sin compromiso
                 </p>
                 <p className="mt-1 text-sm text-primary-600">
                   En la consulta te damos el presupuesto exacto para tu caso, te ayudamos con la gestión de obra social y respondemos todas tus dudas.
@@ -91,7 +91,7 @@ export default function LandingPriceInfo({
               href="#reservar"
               className="mt-6 block w-full rounded-full bg-primary-400 px-6 py-3 text-center text-sm font-semibold text-white transition-all hover:bg-primary-500 active:scale-[0.98]"
             >
-              Reservar evaluación gratuita
+              Reservar turno
             </a>
           </div>
         </div>

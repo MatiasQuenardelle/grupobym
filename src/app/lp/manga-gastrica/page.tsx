@@ -14,7 +14,7 @@ import LandingConsultationProof from "@/components/lp/LandingConsultationProof";
 import BmiCalculator from "@/components/lp/BmiCalculator";
 
 export const metadata: Metadata = {
-  title: "Manga Gástrica en Argentina — Evaluación Gratuita",
+  title: "Manga Gástrica en Argentina — Dr. Pablo Rodríguez",
   description:
     "Manga gástrica con el Dr. Pablo Rodríguez. Procedimiento más realizado en cirugía bariátrica. Recuperación rápida, 50-70% de pérdida de exceso de peso. Reservá tu evaluación.",
 };
@@ -83,7 +83,7 @@ export default function MangaGastricaLP() {
         title="Manga Gástrica en Argentina"
         titleAccent="con el Dr. Pablo Rodríguez"
         subtitle="Procedimiento mínimamente invasivo con recuperación rápida. Equipo interdisciplinario completo. Más de 250 cirugías realizadas con 5.0 estrellas en Google."
-        whatsappMessage="Hola, quiero reservar una evaluación gratuita para manga gástrica."
+        whatsappMessage="Hola, quiero reservar un turno para manga gástrica."
         trackingSource="lp_manga"
       />
 
@@ -149,8 +149,8 @@ export default function MangaGastricaLP() {
 
       <LandingCTA
         title="Dá el primer paso hacia tu nueva vida"
-        subtitle="Reservá tu evaluación gratuita. Sin compromiso, respondemos en menos de 2 horas."
-        whatsappMessage="Hola, quiero reservar una evaluación gratuita para manga gástrica."
+        subtitle="Reservá tu turno. Sin compromiso, respondemos en menos de 2 horas."
+        whatsappMessage="Hola, quiero reservar un turno para manga gástrica."
         trackingSource="lp_manga_bottom"
         procedure="manga gástrica"
       />

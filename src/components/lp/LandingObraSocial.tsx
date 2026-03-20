@@ -67,7 +67,7 @@ export default function LandingObraSocial() {
             Verificar mi cobertura
           </a>
           <p className="mt-2 text-xs text-green-600">
-            Consulta sin cargo
+            Respondemos en menos de 2 horas
           </p>
         </div>
       </div>

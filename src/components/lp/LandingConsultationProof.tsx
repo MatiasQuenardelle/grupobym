@@ -23,7 +23,7 @@ export default function LandingConsultationProof() {
           ¿Cómo es la primera consulta?
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-center text-lg text-secondary-500">
-          La evaluación es gratuita y sin compromiso. Te explicamos todo sobre tu caso particular.
+          Sin compromiso. Te explicamos todo sobre tu caso particular.
         </p>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -57,7 +57,7 @@ export default function LandingConsultationProof() {
             <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
             </svg>
-            Reservá tu evaluación gratuita
+            Reservá tu turno
           </a>
         </div>
       </div>

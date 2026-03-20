@@ -102,7 +102,7 @@ function ParaguayBookingForm() {
       ? `Prefiero turno: ${preferredDate}`
       : "Sin preferencia de fecha";
     const message = [
-      "Hola, soy de Paraguay y quiero reservar una evaluación gratuita para cirugía bariátrica.",
+      "Hola, soy de Paraguay y quiero reservar un turno para cirugía bariátrica.",
       `Nombre: ${name}`,
       dateText,
     ].join("\n");
@@ -122,7 +122,7 @@ function ParaguayBookingForm() {
               </svg>
             </div>
             <h2 className="text-2xl font-extrabold text-secondary-700 sm:text-3xl">
-              Reservá tu Evaluación Virtual Gratuita
+              Reservá tu Turno Virtual
             </h2>
             <p className="mt-2 text-secondary-500">
               La primera consulta es por videollamada, sin necesidad de viajar. Completá tus datos y te contactamos.
@@ -168,7 +168,7 @@ function ParaguayFinalCTA() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const message = [
-      "Hola, soy de Paraguay y quiero reservar una evaluación gratuita para cirugía bariátrica.",
+      "Hola, soy de Paraguay y quiero reservar un turno para cirugía bariátrica.",
       `Nombre: ${name}`,
     ].join("\n");
     trackFormSubmit();
@@ -185,7 +185,7 @@ function ParaguayFinalCTA() {
           </h2>
           <p className="mt-4 text-lg text-secondary-500">
             La misma cirugía, el mismo seguimiento completo, a mitad de precio.
-            Reservá tu evaluación virtual gratuita.
+            Reservá tu turno virtual.
           </p>
         </div>
         <div className="mt-8 rounded-2xl bg-white p-6 shadow-lg">
@@ -247,7 +247,7 @@ export default function ParaguayLanding() {
                   <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
                   </svg>
-                  Reservá tu Evaluación Gratuita
+                  Reservá tu Turno
                 </a>
                 <a
                   href={WHATSAPP_PY_URL}
@@ -262,7 +262,7 @@ export default function ParaguayLanding() {
               </div>
 
               <p className="mt-3 text-center text-xs text-gray-400 lg:text-left">
-                Evaluación gratuita y sin compromiso · Respondemos en menos de 2 horas
+                Sin compromiso · Respondemos en menos de 2 horas
               </p>
 
               {/* Trust stats */}
@@ -400,7 +400,7 @@ export default function ParaguayLanding() {
               <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
               </svg>
-              Reservá tu evaluación gratuita
+              Reservá tu turno
             </a>
           </div>
         </div>

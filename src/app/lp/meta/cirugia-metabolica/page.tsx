@@ -12,7 +12,7 @@ import BmiCalculator from "@/components/lp/BmiCalculator";
 export const metadata: Metadata = {
   title: "Cirugía Metabólica — Recuperá el Control de Tu Diabetes",
   description:
-    "80% de remisión de diabetes tipo 2 con cirugía metabólica. Dr. Pablo Rodríguez, +250 cirugías, equipo interdisciplinario. Reservá tu evaluación gratuita.",
+    "80% de remisión de diabetes tipo 2 con cirugía metabólica. Dr. Pablo Rodríguez, +250 cirugías, equipo interdisciplinario. Reservá tu turno.",
 };
 
 const BENEFITS = [
@@ -120,7 +120,7 @@ export default function MetaCirugiaMetabolicaLP() {
 
       <LandingCTA
         title="Recuperá el control de tu diabetes"
-        subtitle="Reservá tu evaluación gratuita. Sin compromiso, respondemos en menos de 2 horas."
+        subtitle="Reservá tu turno. Sin compromiso, respondemos en menos de 2 horas."
         whatsappMessage="Hola, vi la publicidad en redes y quiero reservar una evaluación para cirugía metabólica."
         trackingSource="meta_metabolica_bottom"
         procedure="cirugía metabólica"

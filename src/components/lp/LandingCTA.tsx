@@ -27,7 +27,7 @@ export default function LandingCTA({
     e.preventDefault();
 
     const message = [
-      `Hola, quiero reservar una evaluación gratuita para ${procedure}.`,
+      `Hola, quiero reservar un turno para ${procedure}.`,
       `Nombre: ${name}`,
       `Teléfono: ${phone}`,
     ].join("\n");

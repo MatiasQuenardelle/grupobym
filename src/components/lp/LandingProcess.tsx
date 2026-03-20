@@ -2,7 +2,7 @@ export default function LandingProcess() {
   const steps = [
     {
       number: "1",
-      title: "Consulta inicial gratuita",
+      title: "Consulta inicial",
       description:
         "Escribinos por WhatsApp y te respondemos en menos de 2 horas. Evaluamos tu caso sin compromiso.",
       icon: (

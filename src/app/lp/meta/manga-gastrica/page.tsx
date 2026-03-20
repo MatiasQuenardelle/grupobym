@@ -12,7 +12,7 @@ import BmiCalculator from "@/components/lp/BmiCalculator";
 export const metadata: Metadata = {
   title: "Manga Gástrica — Recuperación Rápida, Resultados Reales",
   description:
-    "Manga gástrica con el Dr. Pablo Rodríguez. Recuperación rápida, 50-70% de pérdida de exceso de peso. +250 cirugías, 5.0 estrellas. Reservá tu evaluación gratuita.",
+    "Manga gástrica con el Dr. Pablo Rodríguez. Recuperación rápida, 50-70% de pérdida de exceso de peso. +250 cirugías, 5.0 estrellas. Reservá tu turno.",
 };
 
 const BENEFITS = [
@@ -120,7 +120,7 @@ export default function MetaMangaGastricaLP() {
 
       <LandingCTA
         title="Dá el primer paso hacia tu nueva vida"
-        subtitle="Reservá tu evaluación gratuita. Sin compromiso, respondemos en menos de 2 horas."
+        subtitle="Reservá tu turno. Sin compromiso, respondemos en menos de 2 horas."
         whatsappMessage="Hola, vi la publicidad en redes y quiero reservar una evaluación para manga gástrica."
         trackingSource="meta_manga_bottom"
         procedure="manga gástrica"
