@@ -126,7 +126,7 @@ export default function MangaGastricaLP() {
         </div>
       </section>
 
-      <BmiCalculator />
+      <BmiCalculator procedure="manga gástrica" />
 
       <LandingPriceInfo
         procedure="manga gástrica"

@@ -105,7 +105,7 @@ export default function MetaMangaGastricaLP() {
         </div>
       </section>
 
-      <BmiCalculator />
+      <BmiCalculator procedure="manga gástrica" />
 
       <LandingBookingForm
         procedure="manga gástrica"

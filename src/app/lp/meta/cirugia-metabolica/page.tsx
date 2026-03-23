@@ -105,7 +105,7 @@ export default function MetaCirugiaMetabolicaLP() {
         </div>
       </section>
 
-      <BmiCalculator />
+      <BmiCalculator procedure="cirugía metabólica" />
 
       <LandingBookingForm
         procedure="cirugía metabólica"

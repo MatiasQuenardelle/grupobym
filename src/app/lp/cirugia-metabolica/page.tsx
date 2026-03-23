@@ -129,7 +129,7 @@ export default function CirugiaMetabolicaLP() {
         </div>
       </section>
 
-      <BmiCalculator />
+      <BmiCalculator procedure="cirugía metabólica" />
 
       <LandingPriceInfo
         procedure="cirugía metabólica"

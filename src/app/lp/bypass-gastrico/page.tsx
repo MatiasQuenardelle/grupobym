@@ -126,7 +126,7 @@ export default function BypassGastricoLP() {
         </div>
       </section>
 
-      <BmiCalculator />
+      <BmiCalculator procedure="bypass gástrico" />
 
       <LandingPriceInfo
         procedure="bypass gástrico"

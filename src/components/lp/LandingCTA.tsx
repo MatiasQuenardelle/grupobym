@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { WHATSAPP_NUMBER, STATS } from "@/lib/constants";
-import { trackFormSubmit, trackWhatsAppClick } from "@/lib/tracking";
+import { WHATSAPP_NUMBER, PHONE_NUMBER, STATS } from "@/lib/constants";
+import { trackFormSubmit, trackWhatsAppClick, trackPhoneClick } from "@/lib/tracking";
+import { useBmi, buildBmiWhatsAppLine } from "./BmiContext";
 
 interface LandingCTAProps {
   title: string;
@@ -21,16 +22,23 @@ export default function LandingCTA({
 }: LandingCTAProps) {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
-  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`;
+  const { bmiData } = useBmi();
+
+  const bmiLine = buildBmiWhatsAppLine(bmiData);
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage + bmiLine)}`;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const message = [
+    const parts = [
       `Hola, quiero reservar un turno para ${procedure}.`,
       `Nombre: ${name}`,
       `Teléfono: ${phone}`,
-    ].join("\n");
+    ];
+
+    if (bmiLine) parts.push(bmiLine);
+
+    const message = parts.join("\n");
 
     trackFormSubmit();
 
@@ -90,11 +98,13 @@ export default function LandingCTA({
           </form>
         </div>
 
-        <div className="mt-4 text-center">
+        <div className="mt-4 text-center space-y-2">
           <p className="text-sm text-secondary-400">
             O si preferís, <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick(trackingSource)} className="text-[#25D366] font-medium hover:underline">escribinos directo por WhatsApp</a>
+            {" · "}
+            <a href={`tel:+${WHATSAPP_NUMBER}`} onClick={() => trackPhoneClick(trackingSource)} className="text-primary-500 font-medium hover:underline">llamanos al {PHONE_NUMBER}</a>
           </p>
-          <p className="mt-2 text-sm text-secondary-400">
+          <p className="text-sm text-secondary-400">
             Dr. Pablo Rodríguez · Más de {STATS.surgeries} cirugías · {STATS.rating} estrellas en Google
           </p>
         </div>

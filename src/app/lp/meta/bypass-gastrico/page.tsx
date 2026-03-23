@@ -105,7 +105,7 @@ export default function MetaBypassGastricoLP() {
         </div>
       </section>
 
-      <BmiCalculator />
+      <BmiCalculator procedure="bypass gástrico" />
 
       <LandingBookingForm
         procedure="bypass gástrico"

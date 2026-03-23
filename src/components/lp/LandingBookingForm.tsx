@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { WHATSAPP_NUMBER } from "@/lib/constants";
-import { trackFormSubmit } from "@/lib/tracking";
+import { WHATSAPP_NUMBER, PHONE_NUMBER } from "@/lib/constants";
+import { trackFormSubmit, trackPhoneClick } from "@/lib/tracking";
+import { useBmi, buildBmiWhatsAppLine } from "./BmiContext";
 
 interface LandingBookingFormProps {
   procedure: string;
@@ -15,6 +16,7 @@ export default function LandingBookingForm({
 }: LandingBookingFormProps) {
   const [name, setName] = useState("");
   const [preferredDate, setPreferredDate] = useState("");
+  const { bmiData } = useBmi();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -23,11 +25,16 @@ export default function LandingBookingForm({
       ? `Prefiero turno: ${preferredDate}`
       : "Sin preferencia de fecha";
 
-    const message = [
+    const parts = [
       `Hola, quiero reservar un turno para ${procedure}.`,
       `Nombre: ${name}`,
       dateText,
-    ].join("\n");
+    ];
+
+    const bmiLine = buildBmiWhatsAppLine(bmiData);
+    if (bmiLine) parts.push(bmiLine);
+
+    const message = parts.join("\n");
 
     trackFormSubmit();
 
@@ -83,6 +90,12 @@ export default function LandingBookingForm({
               />
             </div>
 
+            {bmiData && (
+              <div className="rounded-xl border border-green-200 bg-green-50 px-4 py-3 text-sm text-green-700">
+                Tu IMC calculado: <strong>{bmiData.bmi.toFixed(1)}</strong> ({bmiData.category}) — se incluirá en tu mensaje
+              </div>
+            )}
+
             <button
               type="submit"
               className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-[#25D366]/25 transition-all hover:bg-[#20BD5A] active:scale-[0.98]"
@@ -94,13 +107,20 @@ export default function LandingBookingForm({
             </button>
           </form>
 
-          <div className="mt-6 flex items-center justify-center gap-4 text-xs text-secondary-400">
-            <div className="flex items-center gap-1.5">
-              <svg className="h-4 w-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+          <div className="mt-4 text-center">
+            <a
+              href={`tel:+${WHATSAPP_NUMBER}`}
+              onClick={() => trackPhoneClick(`${trackingSource}_phone`)}
+              className="inline-flex items-center gap-2 text-sm font-medium text-primary-500 hover:text-primary-600 transition-colors"
+            >
+              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
               </svg>
-              Sin compromiso
-            </div>
+              ¿Preferís llamar? {PHONE_NUMBER}
+            </a>
+          </div>
+
+          <div className="mt-4 flex items-center justify-center gap-4 text-xs text-secondary-400">
             <div className="flex items-center gap-1.5">
               <svg className="h-4 w-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />

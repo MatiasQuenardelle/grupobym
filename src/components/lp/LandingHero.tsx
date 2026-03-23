@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { WHATSAPP_NUMBER, STATS } from "@/lib/constants";
-import { trackWhatsAppClick } from "@/lib/tracking";
+import { WHATSAPP_NUMBER, PHONE_NUMBER, STATS } from "@/lib/constants";
+import { trackWhatsAppClick, trackPhoneClick } from "@/lib/tracking";
 
 interface LandingHeroProps {
   badge: string;
@@ -69,9 +69,20 @@ export default function LandingHero({
               </a>
             </div>
 
-            <p className="mt-3 text-center text-xs text-gray-400 lg:text-left">
-              Sin compromiso · Respondemos en menos de 2 horas
-            </p>
+            <div className="mt-3 flex items-center justify-center gap-3 lg:justify-start">
+              <a
+                href={`tel:+${WHATSAPP_NUMBER}`}
+                onClick={() => trackPhoneClick(`${trackingSource}_hero`)}
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-300 transition-colors hover:text-white"
+              >
+                <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                </svg>
+                {PHONE_NUMBER}
+              </a>
+              <span className="text-gray-500">·</span>
+              <span className="text-xs text-gray-400">Respondemos en menos de 2 horas</span>
+            </div>
 
             {/* Trust stats */}
             <div className="mt-8 flex flex-wrap items-center justify-center gap-6 lg:justify-start lg:gap-8">

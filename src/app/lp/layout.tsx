@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import LpStickyMobileCTA from "@/components/lp/LpStickyMobileCTA";
 import ExitIntentPopup from "@/components/lp/ExitIntentPopup";
+import { BmiProvider } from "@/components/lp/BmiContext";
 
 export const metadata: Metadata = {
   robots: {
@@ -15,10 +16,10 @@ export default function LandingPageLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
+    <BmiProvider>
       {children}
       <LpStickyMobileCTA />
       <ExitIntentPopup />
-    </>
+    </BmiProvider>
   );
 }
