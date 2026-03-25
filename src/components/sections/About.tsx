@@ -62,22 +62,15 @@ export default function About() {
             {DOCTOR_NAME}
           </h2>
           <p className="mt-2 text-lg font-medium text-accent-400">
-            Cirujano General | Laparoscopista | Bariátrico | Esófago-Gastroduodenal
+            Cirujano Bariátrico y Laparoscopista
           </p>
 
           <div className="mt-6 space-y-4 text-secondary-600 leading-relaxed">
             <p>
-              Cirujano general y laparoscopista, especialista en cirugia
-              bariátrica y esófago-gastroduodenal, el {DOCTOR_NAME} lidera un
-              equipo interdisciplinario dedicado a transformar la calidad de
-              vida de cada paciente.
-            </p>
-            <p>
-              Formado en las instituciones más prestigiosas del país, con
-              participación activa en congresos nacionales e internacionales
-              de cirugía bariátrica. Representante de SACO en el Congreso
-              Internacional de Cirugía para la Obesidad y Enfermedades
-              Metabólicas.
+              {DOCTOR_NAME} lidera un equipo interdisciplinario dedicado a
+              transformar la calidad de vida de cada paciente. Formado en
+              instituciones de prestigio, participa activamente en congresos
+              nacionales e internacionales de cirugía bariátrica.
             </p>
           </div>
 
@@ -87,7 +80,6 @@ export default function About() {
               "Cirujano General",
               "Especialista en Cirugía Laparoscópica",
               "Especialista en Cirugía Bariátrica",
-              "Especialista en Esófago-Gastroduodenal",
             ].map((credential) => (
               <div key={credential} className="flex items-start gap-2 rounded-lg bg-primary-50 px-3 py-2.5 sm:bg-transparent sm:px-0 sm:py-0 sm:rounded-none">
                 <svg

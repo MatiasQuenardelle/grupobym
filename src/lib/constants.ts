@@ -68,7 +68,7 @@ export const PROCEDURES = [
     title: "Bypass Gástrico",
     slug: "bypass-gastrico",
     description:
-      "Técnica gold standard para el tratamiento de la obesidad severa. Resultados comprobados a largo plazo.",
+      "Uno de los procedimientos más realizados en el mundo. Resultados comprobados y sostenidos en el tiempo.",
     icon: "bypass",
     image: "https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?w=600&h=400&fit=crop",
   },
@@ -84,7 +84,7 @@ export const PROCEDURES = [
     title: "Cirugía Bariátrica y Metabólica",
     slug: "cirugia-metabolica",
     description:
-      "Tratamiento quirúrgico de la diabetes tipo 2 y sindrome metabólico. Mejora significativa de la calidad de vida.",
+      "Tratamiento quirúrgico que puede mejorar significativamente tu calidad de vida y tu salud metabólica.",
     icon: "metabólica",
     image: "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=600&h=400&fit=crop",
   },
@@ -182,17 +182,17 @@ export const FAQ_ITEMS = [
   {
     question: "Soy candidato para una cirugía bariátrica?",
     answer:
-      "Generalmente, los candidatos tienen un IMC mayor a 35 con comorbilidades (diabetes, hipertension, apnea del sueno) o un IMC mayor a 40. Cada caso se evalua individualmente en consulta.",
+      "Cada caso es único. En la consulta evaluamos tu situación particular y te orientamos sobre la mejor opción para vos.",
   },
   {
     question: "Cuál es el tiempo de recuperación?",
     answer:
-      "La mayoría de los pacientes pueden retomar actividades livianas en 1-2 semanas y actividades normales en 4-6 semanas. La cirugía se realiza por via laparoscópica, lo que acelera la recuperación.",
+      "La mayoría de los pacientes retoman sus actividades en pocas semanas. Los tiempos varían según cada caso y se explican en detalle en la consulta.",
   },
   {
     question: "Qué diferencia hay entre bypass gástrico y manga gástrica?",
     answer:
-      "El bypass gástrico crea un pequeño reservorio gastrico y desvio intestinal, logrando pérdida de peso por restriccion y malabsorcion. La manga gástrica reduce el tamaño del estómago sin desvio intestinal. La elección depende de cada caso particular.",
+      "Ambos procedimientos logran una pérdida de peso significativa pero funcionan de forma diferente. La mejor opción para tu caso la evaluamos juntos en la consulta.",
   },
   {
     question: "Atienden pacientes de otros países?",
@@ -202,12 +202,12 @@ export const FAQ_ITEMS = [
   {
     question: "Cómo es el seguimiento post-operatorio?",
     answer:
-      "El seguimiento incluye controles periódicos con nuestro equipo interdisciplinario: cirujano, nutricionista, psicologo y especialista en actividad fisica. El acompañamiento es clave para el exito a largo plazo.",
+      "Incluye controles periódicos con nuestro equipo interdisciplinario. Te acompañamos de por vida para asegurar que tu transformación sea sostenible.",
   },
   {
     question: "Cuánto cuesta la cirugía bariátrica?",
     answer:
-      "El costo varia segun el procedimiento y la cobertura de obra social o prepaga. Muchas obras sociales cubren la cirugía bariátrica. Contactenos para una evaluación personalizada.",
+      "Depende del procedimiento y tu cobertura. Muchas obras sociales la cubren. Contactenos para una evaluación personalizada.",
   },
 ];
 

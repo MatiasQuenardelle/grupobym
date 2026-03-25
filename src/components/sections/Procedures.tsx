@@ -4,20 +4,15 @@ import { PROCEDURES, SITE_URL } from "@/lib/constants";
 
 const PROCEDURE_BENEFITS: Record<string, string[]> = {
   bypass: [
-    "Gold standard mundial",
-    "Resultados a largo plazo",
-    "Mejora diabetes y comorbilidades",
+    "Resultados comprobados",
+    "Mejora integral de la salud",
+    "Seguimiento de por vida",
   ],
   manga: [
-    "Minimamente invasiva",
     "Recuperación rápida",
+    "Procedimiento mínimamente invasivo",
     "Excelentes resultados",
   ],
-};
-
-const PROCEDURE_STATS: Record<string, { value: string; label: string }> = {
-  bypass: { value: "70-80%", label: "exceso de peso perdido" },
-  manga: { value: "60-70%", label: "exceso de peso perdido" },
 };
 
 export default function Procedures() {
@@ -82,13 +77,6 @@ export default function Procedures() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-secondary-800 via-secondary-800/40 to-transparent" />
 
-                  {/* Stat badge on image */}
-                  {PROCEDURE_STATS[proc.icon] && (
-                    <div className="absolute bottom-4 right-4 rounded-xl bg-black/50 backdrop-blur-sm px-4 py-2 text-right">
-                      <p className="text-2xl font-bold text-white">{PROCEDURE_STATS[proc.icon].value}</p>
-                      <p className="text-xs text-gray-300">{PROCEDURE_STATS[proc.icon].label}</p>
-                    </div>
-                  )}
                 </div>
 
                 {/* Subtle corner glow on hover */}
