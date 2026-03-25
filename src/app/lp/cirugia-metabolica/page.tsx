@@ -16,62 +16,40 @@ import BmiCalculator from "@/components/lp/BmiCalculator";
 export const metadata: Metadata = {
   title: "Cirugía Metabólica — Tratamiento para Diabetes Tipo 2",
   description:
-    "Cirugía metabólica con el Dr. Pablo Rodríguez. 80% de remisión de diabetes tipo 2. Reducción de riesgo cardiovascular. Reservá tu turno.",
+    "Cirugía metabólica con el Dr. Pablo Rodríguez. Tratamiento quirúrgico para diabetes tipo 2. Reducción de riesgo cardiovascular. Reservá tu turno.",
 };
 
 const BENEFITS = [
   {
     icon: "heart",
-    title: "80% de remisión de diabetes tipo 2",
+    title: "Control efectivo de la diabetes tipo 2",
     description:
-      "La cirugía metabólica logra lo que años de medicación no pudieron. Muchos pacientes reducen o eliminan su medicación para diabetes.",
+      "La cirugía metabólica logra lo que años de medicación no pudieron. Muchos pacientes logran resultados que les cambian la vida.",
   },
   {
     icon: "shield",
     title: "Reducción del riesgo cardiovascular",
     description:
-      "Mejora de hipertensión, dislipidemia y síndrome metabólico. Protección a largo plazo contra eventos cardiovasculares.",
+      "Mejora de hipertensión, dislipidemia y síndrome metabólico. Protección a largo plazo para tu salud.",
   },
   {
     icon: "sparkles",
     title: "Menos medicación, más calidad de vida",
     description:
-      "Normalización del perfil lipídico, reducción de fármacos y una vida con más energía y libertad.",
+      "Una vida con más energía y libertad. En la consulta te explicamos qué podés esperar en tu caso particular.",
   },
-];
-
-const REQUIREMENTS = [
-  "Diabetes tipo 2 con mal control metabólico a pesar del tratamiento médico",
-  "IMC mayor a 30 con síndrome metabólico",
-  "Hipertensión, dislipidemia u otras comorbilidades metabólicas",
-  "Pacientes que no logran el control glucémico con medicación convencional",
 ];
 
 const FAQS = [
   {
-    question: "¿Puedo dejar la medicación para la diabetes después de la cirugía?",
-    answer:
-      "En el 80% de los casos se logra la remisión completa de la diabetes tipo 2, lo que significa que muchos pacientes pueden discontinuar su medicación. Esto se evalúa y supervisa junto con tu endocrinólogo.",
-  },
-  {
-    question: "¿La cirugía metabólica es lo mismo que la cirugía bariátrica?",
-    answer:
-      "Son similares en técnica pero difieren en objetivo. La cirugía bariátrica busca principalmente la pérdida de peso, mientras que la cirugía metabólica se enfoca en el control de enfermedades metabólicas como la diabetes tipo 2, incluso en pacientes con menor grado de obesidad.",
-  },
-  {
-    question: "¿Qué pasa con mi diabetes después de la cirugía?",
-    answer:
-      "La mayoría de los pacientes experimentan una mejora drástica de sus niveles de glucosa incluso en los primeros días post-operatorios. El seguimiento incluye control con endocrinólogo y ajuste gradual de medicación.",
-  },
-  {
     question: "¿Cubre la obra social la cirugía metabólica?",
     answer:
-      "Sí, está incluida en el PMO (Programa Médico Obligatorio). La mayoría de obras sociales y prepagas cubren la cirugía metabólica cuando se cumplen los criterios médicos. Nuestro equipo te asesora en todo el proceso.",
+      "Sí, la mayoría de obras sociales y prepagas cubren la cirugía metabólica. Nuestro equipo te asesora en todo el proceso administrativo. Consultá para verificar tu cobertura.",
   },
   {
-    question: "¿Cuánto dura la recuperación?",
+    question: "¿La cirugía metabólica puede ayudarme con mi diabetes?",
     answer:
-      "La internación es de 48 a 72 horas. Podés retomar actividades livianas en 1-2 semanas. La cirugía se realiza por vía laparoscópica con mínimas incisiones.",
+      "Los resultados en el control de la diabetes tipo 2 son muy significativos. Cada caso es diferente — en la consulta evaluamos tu situación particular junto con nuestro equipo interdisciplinario.",
   },
 ];
 
@@ -82,7 +60,7 @@ export default function CirugiaMetabolicaLP() {
         badge="Control Metabólico"
         title="Cirugía Metabólica"
         titleAccent="Tratamiento para Diabetes Tipo 2"
-        subtitle="80% de remisión de diabetes tipo 2. Mejora de hipertensión, colesterol y síndrome metabólico. Dr. Pablo Rodríguez y equipo interdisciplinario."
+        subtitle="Tratamiento quirúrgico para el control de la diabetes tipo 2 y enfermedades metabólicas. Dr. Pablo Rodríguez y equipo interdisciplinario."
         whatsappMessage="Hola, quiero reservar un turno para cirugía metabólica."
         trackingSource="lp_metabolica"
       />
@@ -131,10 +109,7 @@ export default function CirugiaMetabolicaLP() {
 
       <BmiCalculator procedure="cirugía metabólica" />
 
-      <LandingPriceInfo
-        procedure="cirugía metabólica"
-        requirements={REQUIREMENTS}
-      />
+      <LandingPriceInfo procedure="cirugía metabólica" />
 
       <LandingBookingForm
         procedure="cirugía metabólica"

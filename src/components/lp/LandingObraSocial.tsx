@@ -25,11 +25,10 @@ export default function LandingObraSocial() {
             </svg>
           </div>
           <h2 className="text-2xl font-extrabold text-green-900 sm:text-3xl">
-            Tu obra social puede cubrir tu cirugía bariátrica
+            Tu obra social puede cubrir tu cirugía
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-lg text-green-700">
-            La cirugía bariátrica está incluida en el Programa Médico Obligatorio (PMO).
-            Te ayudamos con todo el trámite de autorización.
+            Consultá con nuestro equipo para verificar tu cobertura. Te ayudamos con todo el trámite.
           </p>
         </div>
 

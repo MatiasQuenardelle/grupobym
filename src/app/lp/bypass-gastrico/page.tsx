@@ -16,62 +16,40 @@ import BmiCalculator from "@/components/lp/BmiCalculator";
 export const metadata: Metadata = {
   title: "Bypass Gástrico en Argentina — Dr. Pablo Rodríguez",
   description:
-    "Bypass gástrico con el Dr. Pablo Rodríguez. Técnica gold standard, 60-80% de pérdida de exceso de peso. Más de 250 cirugías realizadas. Reservá tu turno.",
+    "Bypass gástrico con el Dr. Pablo Rodríguez. Técnica gold standard en cirugía bariátrica. Más de 250 cirugías realizadas. Reservá tu turno.",
 };
 
 const BENEFITS = [
   {
     icon: "scale",
-    title: "60-80% de pérdida de exceso de peso",
+    title: "Pérdida de peso sostenida a largo plazo",
     description:
-      "Resultados sostenidos a largo plazo. La técnica gold standard en cirugía bariátrica a nivel mundial.",
+      "La técnica gold standard en cirugía bariátrica a nivel mundial. Resultados que cambian vidas.",
   },
   {
     icon: "heart",
-    title: "80% de remisión de diabetes tipo 2",
+    title: "Mejora significativa de enfermedades asociadas",
     description:
-      "Mejora significativa de comorbilidades: hipertensión, apnea del sueño, colesterol alto y más.",
+      "Diabetes, hipertensión, apnea del sueño y más. Tu salud puede mejorar de formas que no imaginás.",
   },
   {
     icon: "clock",
-    title: "Cirugía laparoscópica de 1.5-2 horas",
+    title: "Técnica mínimamente invasiva",
     description:
-      "Técnica mínimamente invasiva. Internación de 48-72 horas y recuperación rápida.",
+      "Cirugía laparoscópica con recuperación rápida. Te explicamos todo el proceso en la consulta.",
   },
-];
-
-const REQUIREMENTS = [
-  "IMC (Índice de Masa Corporal) mayor a 40",
-  "IMC mayor a 35 con comorbilidades (diabetes, hipertensión, apnea del sueño)",
-  "Haber intentado métodos convencionales sin éxito sostenido",
-  "Compromiso con el seguimiento post-quirúrgico",
 ];
 
 const FAQS = [
   {
-    question: "¿Cuánto peso voy a perder con el bypass gástrico?",
-    answer:
-      "En promedio, los pacientes pierden entre el 60% y 80% de su exceso de peso durante los primeros 12 a 18 meses. Los resultados se mantienen a largo plazo con el seguimiento adecuado de nuestro equipo interdisciplinario.",
-  },
-  {
     question: "¿La obra social cubre el bypass gástrico?",
     answer:
-      "Sí, el bypass gástrico está incluido en el Programa Médico Obligatorio (PMO). La mayoría de las obras sociales y prepagas cubren el procedimiento cuando se cumplen los requisitos médicos. Te ayudamos con toda la gestión.",
+      "Sí, la mayoría de las obras sociales y prepagas cubren el procedimiento. Te ayudamos con toda la gestión administrativa. Consultá con nuestro equipo para verificar tu cobertura.",
   },
   {
-    question: "¿Cuánto dura la recuperación?",
+    question: "¿Cómo sé si soy candidato/a para un bypass gástrico?",
     answer:
-      "La internación es de 48 a 72 horas. Podés retomar actividades livianas en 1-2 semanas y actividades normales en 4-6 semanas. La cirugía se realiza por vía laparoscópica, lo que acelera significativamente la recuperación.",
-  },
-  {
-    question: "¿El bypass gástrico es reversible?",
-    answer:
-      "Si bien técnicamente es posible revertirlo, el bypass gástrico se considera un procedimiento permanente. En la consulta evaluamos tu caso particular para determinar si es el procedimiento más adecuado para vos.",
-  },
-  {
-    question: "¿Cómo es la alimentación después del bypass?",
-    answer:
-      "Nuestras nutricionistas te guían en cada etapa: líquidos claros las primeras semanas, luego purés, alimentos blandos y finalmente alimentación normal adaptada. El seguimiento nutricional es parte integral de nuestro servicio.",
+      "Cada caso es único y requiere una evaluación personalizada con nuestro equipo. En la consulta evaluamos tu situación particular y te orientamos sobre el mejor camino para vos.",
   },
 ];
 
@@ -128,10 +106,7 @@ export default function BypassGastricoLP() {
 
       <BmiCalculator procedure="bypass gástrico" />
 
-      <LandingPriceInfo
-        procedure="bypass gástrico"
-        requirements={REQUIREMENTS}
-      />
+      <LandingPriceInfo procedure="bypass gástrico" />
 
       <LandingBookingForm
         procedure="bypass gástrico"

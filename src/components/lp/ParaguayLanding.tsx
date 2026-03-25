@@ -15,12 +15,10 @@ const WHATSAPP_PY_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURICompon
 const INCLUDED_ITEMS = [
   "Cirugía bariátrica (bypass gástrico o manga gástrica)",
   "Equipo quirúrgico completo + anestesia",
-  "Internación de 48-72 horas",
-  "Seguimiento completo por 1 año",
-  "Seguimiento nutricional personalizado",
-  "Acompañamiento psicológico",
-  "Traslado desde Asunción hasta la clínica (Uber incluido)",
-  "Insumos y materiales quirúrgicos",
+  "Internación completa",
+  "Seguimiento integral por 1 año",
+  "Nutricionista y psicóloga incluidas",
+  "Traslado desde Asunción (Uber incluido)",
 ];
 
 const PROCESS_STEPS = [
@@ -32,27 +30,15 @@ const PROCESS_STEPS = [
   },
   {
     step: "2",
-    title: "Estudios pre-quirúrgicos en Paraguay",
+    title: "Viaje a Resistencia",
     description:
-      "Realizás los estudios en tu ciudad. Te indicamos exactamente qué necesitás.",
+      "Te buscamos en Asunción y te llevamos directo a la clínica. Nosotros nos encargamos de todo.",
   },
   {
     step: "3",
-    title: "Viaje a Resistencia (5-7 días)",
+    title: "Cirugía y seguimiento",
     description:
-      "Te buscamos en Asunción con Uber y te llevamos directo a la clínica. Nosotros nos encargamos de todo.",
-  },
-  {
-    step: "4",
-    title: "Cirugía + recuperación",
-    description:
-      "Cirugía laparoscópica con el Dr. Pablo Rodríguez. Internación de 48-72 horas con atención personalizada.",
-  },
-  {
-    step: "5",
-    title: "Seguimiento a distancia por 1 año",
-    description:
-      "Control virtual con cirujano, nutricionista y psicóloga. Te acompañamos durante todo el proceso.",
+      "Cirugía con el Dr. Pablo Rodríguez y seguimiento virtual completo. Te acompañamos durante todo el proceso.",
   },
 ];
 
@@ -63,24 +49,14 @@ const FAQS = [
       "No. Los ciudadanos paraguayos no necesitan visa para ingresar a Argentina. Solo necesitás tu cédula de identidad vigente.",
   },
   {
-    question: "¿Cuántos días tengo que estar en Resistencia?",
+    question: "¿El precio incluye todo?",
     answer:
-      "Entre 5 y 7 días en total: consulta pre-quirúrgica, cirugía, internación de 48-72 horas y control post-operatorio antes de volver a Paraguay.",
+      "Sí. Todo incluido, sin costos ocultos. En la consulta virtual te damos el detalle completo del presupuesto para tu caso.",
   },
   {
     question: "¿Cómo es el seguimiento después de volver a Paraguay?",
     answer:
-      "El seguimiento es virtual durante 1 año completo. Incluye controles periódicos con el cirujano, nutricionista y psicóloga por videollamada. Si surge alguna urgencia, coordinamos atención inmediata.",
-  },
-  {
-    question: "¿Qué procedimientos están disponibles?",
-    answer:
-      "Ofrecemos bypass gástrico, manga gástrica y cirugía metabólica. En la consulta virtual evaluamos cuál es el más adecuado para tu caso particular.",
-  },
-  {
-    question: "¿El precio incluye todo?",
-    answer:
-      "Sí. El precio incluye cirugía, equipo quirúrgico, anestesia, internación, insumos, seguimiento completo por 1 año (nutricional y psicológico) y hasta el traslado desde Asunción. Sin costos ocultos.",
+      "El seguimiento es virtual. Te acompañamos con controles periódicos por videollamada. Te explicamos todo en detalle en la consulta.",
   },
 ];
 
@@ -234,8 +210,8 @@ export default function ParaguayLanding() {
               </h1>
 
               <p className="mt-6 text-lg text-gray-300 md:text-xl">
-                Todo incluido: cirugía, seguimiento completo por 1 año, nutricionista,
-                psicóloga y hasta el Uber que te trae desde Asunción.
+                Todo incluido: cirugía, seguimiento completo, nutricionista,
+                psicóloga y hasta el traslado desde Asunción.
                 Por la mitad de lo que cuesta en Paraguay.
               </p>
 
@@ -433,36 +409,6 @@ export default function ParaguayLanding() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Documentation */}
-      <section className="py-16 md:py-20 bg-white">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-center text-3xl font-extrabold text-secondary-700 sm:text-4xl">
-            ¿Qué documentación necesito?
-          </h2>
-          <div className="mt-10 rounded-2xl border border-gray-200 bg-gray-50 p-6">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="text-2xl">🇵🇾</span>
-              <h3 className="text-lg font-bold text-secondary-700">Desde Paraguay</h3>
-            </div>
-            <ul className="space-y-3">
-              {[
-                "Cédula de identidad vigente (no necesitás visa)",
-                "Estudios pre-quirúrgicos (te indicamos cuáles)",
-                "Historia clínica con antecedentes médicos",
-                "Seguro médico de viaje (recomendado)",
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-2 text-secondary-600">
-                  <svg className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                  </svg>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
       </section>

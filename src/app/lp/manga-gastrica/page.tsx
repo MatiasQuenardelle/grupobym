@@ -16,7 +16,7 @@ import BmiCalculator from "@/components/lp/BmiCalculator";
 export const metadata: Metadata = {
   title: "Manga Gástrica en Argentina — Dr. Pablo Rodríguez",
   description:
-    "Manga gástrica con el Dr. Pablo Rodríguez. Procedimiento más realizado en cirugía bariátrica. Recuperación rápida, 50-70% de pérdida de exceso de peso. Reservá tu evaluación.",
+    "Manga gástrica con el Dr. Pablo Rodríguez. Procedimiento más realizado en cirugía bariátrica. Recuperación rápida. Reservá tu evaluación.",
 };
 
 const BENEFITS = [
@@ -24,54 +24,32 @@ const BENEFITS = [
     icon: "bolt",
     title: "Recuperación más rápida",
     description:
-      "Cirugía de aproximadamente 1 hora. Sin bypass intestinal, con una recuperación más ágil que otras técnicas.",
+      "Sin bypass intestinal, con una recuperación más ágil que otras técnicas. Te explicamos los detalles en la consulta.",
   },
   {
     icon: "scale",
-    title: "50-70% de pérdida de exceso de peso",
+    title: "Resultados efectivos y duraderos",
     description:
-      "Resultados excelentes y sostenidos. El procedimiento más realizado en cirugía bariátrica a nivel mundial.",
+      "El procedimiento más realizado en cirugía bariátrica a nivel mundial. Resultados que se mantienen en el tiempo.",
   },
   {
     icon: "shield",
-    title: "Menor riesgo de deficiencias nutricionales",
+    title: "Menor riesgo nutricional",
     description:
-      "Al preservar el tracto intestinal completo, hay menor riesgo de malabsorción de vitaminas y minerales.",
+      "Preserva el tracto intestinal completo, lo que favorece una mejor absorción de nutrientes.",
   },
-];
-
-const REQUIREMENTS = [
-  "IMC (Índice de Masa Corporal) mayor a 40",
-  "IMC mayor a 35 con comorbilidades (diabetes, hipertensión, apnea del sueño)",
-  "Haber intentado métodos convencionales sin éxito sostenido",
-  "Compromiso con el seguimiento post-quirúrgico",
 ];
 
 const FAQS = [
   {
-    question: "¿Cuál es la diferencia entre manga gástrica y bypass?",
-    answer:
-      "La manga gástrica reduce el tamaño del estómago sin desvío intestinal, actuando principalmente por restricción y reducción de la hormona del hambre (grelina). El bypass además genera malabsorción. Tu cirujano te orientará sobre cuál es mejor para tu caso.",
-  },
-  {
-    question: "¿Voy a tener hambre después de la manga gástrica?",
-    answer:
-      "No. Al remover la parte del estómago que produce grelina (la hormona del hambre), la sensación de apetito se reduce significativamente. Esto facilita la adaptación a porciones más pequeñas.",
-  },
-  {
     question: "¿La obra social cubre la manga gástrica?",
     answer:
-      "Sí, la manga gástrica está incluida en el Programa Médico Obligatorio (PMO). La mayoría de las obras sociales y prepagas cubren el procedimiento. Te ayudamos con toda la gestión administrativa.",
+      "Sí, la mayoría de las obras sociales y prepagas cubren el procedimiento. Te ayudamos con toda la gestión administrativa. Consultá con nuestro equipo para verificar tu cobertura.",
   },
   {
-    question: "¿Puedo quedar embarazada después de la manga gástrica?",
+    question: "¿Cómo sé si la manga gástrica es para mí?",
     answer:
-      "Sí, absolutamente. Se recomienda esperar entre 12 y 18 meses después de la cirugía para buscar un embarazo, permitiendo que el cuerpo se estabilice. Muchas pacientes tienen embarazos saludables después de la cirugía.",
-  },
-  {
-    question: "¿Cuánto dura la recuperación?",
-    answer:
-      "La internación es de aproximadamente 48 horas. Podés retomar actividades livianas en 1-2 semanas y actividades normales en 4-6 semanas. Al ser un procedimiento más simple que el bypass, la recuperación tiende a ser más rápida.",
+      "Cada caso es diferente. En la consulta nuestro equipo evalúa tu situación particular y te orienta sobre cuál es el mejor procedimiento para vos.",
   },
 ];
 
@@ -128,10 +106,7 @@ export default function MangaGastricaLP() {
 
       <BmiCalculator procedure="manga gástrica" />
 
-      <LandingPriceInfo
-        procedure="manga gástrica"
-        requirements={REQUIREMENTS}
-      />
+      <LandingPriceInfo procedure="manga gástrica" />
 
       <LandingBookingForm
         procedure="manga gástrica"

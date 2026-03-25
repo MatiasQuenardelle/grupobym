@@ -82,7 +82,7 @@ export default function BmiCalculator({ procedure }: BmiCalculatorProps) {
             Calculá tu IMC
           </h2>
           <p className="mt-3 text-secondary-500">
-            El Índice de Masa Corporal ayuda a determinar si sos candidato/a para cirugía bariátrica.
+            Calculá tu Índice de Masa Corporal y consultá con nuestro equipo.
           </p>
         </div>
 
@@ -142,10 +142,10 @@ export default function BmiCalculator({ procedure }: BmiCalculatorProps) {
                     </svg>
                     <div>
                       <p className="font-semibold text-green-700">
-                        Sos candidato/a para cirugía bariátrica
+                        Tu caso podría beneficiarse de una evaluación
                       </p>
                       <p className="mt-1 text-sm text-green-600">
-                        Con tu IMC, la cirugía bariátrica puede ayudarte a mejorar tu salud y calidad de vida significativamente.
+                        Consultá con nuestro equipo para una evaluación personalizada de tu situación.
                       </p>
                     </div>
                   </div>
@@ -184,10 +184,10 @@ export default function BmiCalculator({ procedure }: BmiCalculatorProps) {
                     </svg>
                     <div>
                       <p className="font-semibold text-orange-700">
-                        Podrías ser candidato/a
+                        Consultá para una evaluación personalizada
                       </p>
                       <p className="mt-1 text-sm text-orange-600">
-                        Con un IMC entre 30 y 35, podrías ser candidato/a si tenés comorbilidades como diabetes, hipertensión o apnea del sueño.
+                        Cada caso es único. Nuestro equipo puede evaluar tu situación particular y orientarte.
                       </p>
                     </div>
                   </div>
@@ -226,10 +226,10 @@ export default function BmiCalculator({ procedure }: BmiCalculatorProps) {
                     </svg>
                     <div>
                       <p className="font-semibold text-blue-700">
-                        Tu IMC está por debajo del rango quirúrgico
+                        Cada caso es único
                       </p>
                       <p className="mt-1 text-sm text-blue-600">
-                        Generalmente la cirugía bariátrica se indica con IMC mayor a 35, pero cada caso es diferente. Si tenés dudas, podés consultar igualmente.
+                        Si tenés dudas sobre tu situación, podés consultar con nuestro equipo para una orientación personalizada.
                       </p>
                     </div>
                   </div>
