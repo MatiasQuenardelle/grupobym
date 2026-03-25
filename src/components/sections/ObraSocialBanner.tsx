@@ -33,11 +33,8 @@ export default function ObraSocialBanner() {
               variant="whatsapp"
               onClick={() => trackWhatsAppClick("obra_social_banner")}
             >
-              Verificar mi cobertura
+              Agendar Turno
             </Button>
-            <p className="mt-2 text-center text-xs text-green-600">
-              Consulta sin cargo
-            </p>
           </div>
         </div>
       </div>

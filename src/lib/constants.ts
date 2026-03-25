@@ -226,6 +226,7 @@ export const TEAM_MEMBERS = [
     name: "Dr. Pablo Rodríguez",
     role: "Cirujano Bariátrico",
     image: "/images/pablo-rodriguez.png",
+    imagePosition: "75% 15%",
   },
   {
     name: "Dr. Luciano Piragino",

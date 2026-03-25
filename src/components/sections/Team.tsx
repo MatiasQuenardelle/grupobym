@@ -43,7 +43,8 @@ export default function Team() {
                 src={member.image}
                 alt={member.name}
                 fill
-                className={`object-cover ${"imagePosition" in member ? `object-${member.imagePosition}` : "object-top"}`}
+                className="object-cover"
+                style={{ objectPosition: "imagePosition" in member ? member.imagePosition : "top" }}
                 sizes="160px"
               />
             </div>
