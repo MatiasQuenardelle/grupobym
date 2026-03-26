@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { WHATSAPP_NUMBER, PHONE_NUMBER } from "@/lib/constants";
-import { trackFormSubmit, trackPhoneClick } from "@/lib/tracking";
+import { trackBookingFormSubmit, trackPhoneClick } from "@/lib/tracking";
 import { useBmi, buildBmiWhatsAppLine } from "./BmiContext";
 
 interface LandingBookingFormProps {
@@ -36,7 +36,7 @@ export default function LandingBookingForm({
 
     const message = parts.join("\n");
 
-    trackFormSubmit();
+    trackBookingFormSubmit(trackingSource);
 
     const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank", "noopener,noreferrer");

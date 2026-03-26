@@ -47,7 +47,7 @@ export default function LandingCTA({
   };
 
   return (
-    <section className="bg-primary-50 py-16 md:py-20">
+    <section id="reservar" className="bg-primary-50 py-16 md:py-20">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-extrabold text-secondary-700 sm:text-4xl">

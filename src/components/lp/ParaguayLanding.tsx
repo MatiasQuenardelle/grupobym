@@ -2,11 +2,9 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import LandingFAQ from "@/components/lp/LandingFAQ";
-import LandingConsultationProof from "@/components/lp/LandingConsultationProof";
 import GoogleReviews from "@/components/sections/GoogleReviews";
 import { WHATSAPP_NUMBER, STATS } from "@/lib/constants";
-import { trackWhatsAppClick, trackFormSubmit } from "@/lib/tracking";
+import { trackWhatsAppClick, trackBookingFormSubmit } from "@/lib/tracking";
 
 const WHATSAPP_PY_MESSAGE =
   "Hola, soy de Paraguay y me interesa consultar sobre cirugía bariátrica en Argentina.";
@@ -21,44 +19,6 @@ const INCLUDED_ITEMS = [
   "Traslado desde Asunción (Uber incluido)",
 ];
 
-const PROCESS_STEPS = [
-  {
-    step: "1",
-    title: "Consulta virtual desde Paraguay",
-    description:
-      "Evaluamos tu caso por videollamada. Sin necesidad de viajar para la primera consulta.",
-  },
-  {
-    step: "2",
-    title: "Viaje a Resistencia",
-    description:
-      "Te buscamos en Asunción y te llevamos directo a la clínica. Nosotros nos encargamos de todo.",
-  },
-  {
-    step: "3",
-    title: "Cirugía y seguimiento",
-    description:
-      "Cirugía con el Dr. Pablo Rodríguez y seguimiento virtual completo. Te acompañamos durante todo el proceso.",
-  },
-];
-
-const FAQS = [
-  {
-    question: "¿Necesito visa para operarme en Argentina?",
-    answer:
-      "No. Los ciudadanos paraguayos no necesitan visa para ingresar a Argentina. Solo necesitás tu cédula de identidad vigente.",
-  },
-  {
-    question: "¿El precio incluye todo?",
-    answer:
-      "Sí. Todo incluido, sin costos ocultos. En la consulta virtual te damos el detalle completo del presupuesto para tu caso.",
-  },
-  {
-    question: "¿Cómo es el seguimiento después de volver a Paraguay?",
-    answer:
-      "El seguimiento es virtual. Te acompañamos con controles periódicos por videollamada. Te explicamos todo en detalle en la consulta.",
-  },
-];
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
@@ -82,7 +42,7 @@ function ParaguayBookingForm() {
       `Nombre: ${name}`,
       dateText,
     ].join("\n");
-    trackFormSubmit();
+    trackBookingFormSubmit("lp_paraguay_booking");
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank", "noopener,noreferrer");
   };
@@ -138,51 +98,6 @@ function ParaguayBookingForm() {
   );
 }
 
-function ParaguayFinalCTA() {
-  const [name, setName] = useState("");
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const message = [
-      "Hola, soy de Paraguay y quiero reservar un turno para cirugía bariátrica.",
-      `Nombre: ${name}`,
-    ].join("\n");
-    trackFormSubmit();
-    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-    window.open(url, "_blank", "noopener,noreferrer");
-  };
-
-  return (
-    <section className="bg-primary-50 py-16 md:py-20">
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h2 className="text-3xl font-extrabold text-secondary-700 sm:text-4xl">
-            Cambiá tu vida desde Paraguay
-          </h2>
-          <p className="mt-4 text-lg text-secondary-500">
-            La misma cirugía, el mismo seguimiento completo, a mitad de precio.
-            Reservá tu turno virtual.
-          </p>
-        </div>
-        <div className="mt-8 rounded-2xl bg-white p-6 shadow-lg">
-          <form onSubmit={handleSubmit} className="flex flex-col gap-4 sm:flex-row sm:items-end">
-            <div className="flex-1">
-              <label htmlFor="py-cta-name" className="block text-sm font-medium text-secondary-700 mb-1">Nombre</label>
-              <input id="py-cta-name" type="text" required value={name} onChange={(e) => setName(e.target.value)} placeholder="Tu nombre" className="w-full rounded-xl border border-gray-300 px-4 py-3 text-secondary-700 placeholder-gray-400 focus:border-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-400/20" />
-            </div>
-            <button type="submit" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#25D366] px-6 py-3 text-base font-semibold text-white shadow-lg shadow-[#25D366]/25 transition-all hover:bg-[#20BD5A] active:scale-[0.98]">
-              <WhatsAppIcon className="h-5 w-5" />
-              Reservar Evaluación
-            </button>
-          </form>
-        </div>
-        <p className="mt-4 text-center text-sm text-secondary-400">
-          Dr. Pablo Rodríguez · Más de {STATS.surgeries} cirugías · {STATS.rating} estrellas en Google
-        </p>
-      </div>
-    </section>
-  );
-}
 
 export default function ParaguayLanding() {
   return (
@@ -382,47 +297,10 @@ export default function ParaguayLanding() {
         </div>
       </section>
 
-      {/* Process steps */}
-      <section className="py-16 md:py-20 bg-gray-50">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-center text-3xl font-extrabold text-secondary-700 sm:text-4xl">
-            ¿Cómo es el proceso desde Paraguay?
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-center text-lg text-secondary-500">
-            Nosotros nos encargamos de todo. Vos solo concentrate en tu salud.
-          </p>
-
-          <div className="mt-12 space-y-8">
-            {PROCESS_STEPS.map((step, index) => (
-              <div key={step.step} className="flex gap-4 sm:gap-6">
-                <div className="flex flex-col items-center">
-                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary-400 text-lg font-bold text-white">
-                    {step.step}
-                  </div>
-                  {index < PROCESS_STEPS.length - 1 && (
-                    <div className="mt-2 h-full w-0.5 bg-primary-200" />
-                  )}
-                </div>
-                <div className="pb-8">
-                  <h3 className="text-lg font-bold text-secondary-700">{step.title}</h3>
-                  <p className="mt-1 text-secondary-500">{step.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Booking Form */}
       <ParaguayBookingForm />
 
-      <LandingConsultationProof />
       <GoogleReviews />
-
-      <LandingFAQ faqs={FAQS} />
-
-      {/* Final CTA */}
-      <ParaguayFinalCTA />
     </>
   );
 }
