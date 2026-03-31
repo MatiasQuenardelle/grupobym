@@ -146,7 +146,7 @@ export default function CasosDeExitoListingPage() {
               rel="noopener noreferrer"
               variant="whatsapp"
             >
-              Consulta Gratuita por WhatsApp
+              Consulta por WhatsApp
             </Button>
           </div>
         </div>

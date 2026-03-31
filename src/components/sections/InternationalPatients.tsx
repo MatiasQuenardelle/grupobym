@@ -68,7 +68,7 @@ export default function InternationalPatients() {
               variant="whatsapp"
               onClick={() => trackWhatsAppClick("international_patients")}
             >
-              Consulta Gratuita desde el exterior
+              Consulta desde el exterior
             </Button>
           </div>
         </div>

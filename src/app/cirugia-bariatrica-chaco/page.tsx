@@ -287,7 +287,7 @@ export default function CirugiaBariátricaChacoPage() {
                 rel="noopener noreferrer"
                 variant="whatsapp"
               >
-                Consulta Gratuita por WhatsApp
+                Consulta por WhatsApp
               </Button>
               <a
                 href={GOOGLE_MAPS_URL}

@@ -312,7 +312,7 @@ export default function DoctorProfilePage() {
                 rel="noopener noreferrer"
                 variant="whatsapp"
               >
-                Consulta Gratuita por WhatsApp
+                Consulta por WhatsApp
               </Button>
             </div>
           </div>

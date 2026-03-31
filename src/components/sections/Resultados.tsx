@@ -88,7 +88,7 @@ export default function Resultados() {
             variant="whatsapp"
             onClick={() => trackWhatsAppClick("resultados")}
           >
-            Consulta Gratuita por WhatsApp
+            Consulta por WhatsApp
           </Button>
         </div>
       </div>

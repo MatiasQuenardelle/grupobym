@@ -353,7 +353,7 @@ export default function ProcedimientosListingPage() {
               rel="noopener noreferrer"
               variant="whatsapp"
             >
-              Consulta Gratuita por WhatsApp
+              Consulta por WhatsApp
             </Button>
             <Button
               as="a"
